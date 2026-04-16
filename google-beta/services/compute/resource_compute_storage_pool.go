@@ -27,7 +27,6 @@ import (
 	"fmt"
 	"log"
 	"net/http"
-	"net/url"
 	"reflect"
 	"regexp"
 	"slices"
@@ -832,110 +831,6 @@ func resourceComputeStoragePoolUpdate(d *schema.ResourceData, meta interface{}) 
 	return resourceComputeStoragePoolRead(d, meta)
 }
 
-// removeComputeStoragePoolTagBindings lists and deletes all tag bindings
-// attached to a storage pool. This must be done before deleting the resource
-// because GCP removes tag bindings asynchronously after resource deletion,
-// which can cause subsequent tag value deletions to fail with
-// "Cannot delete tag value because it is still attached to resources".
-func removeComputeStoragePoolTagBindings(d *schema.ResourceData, config *transport_tpg.Config, billingProject, userAgent string, timeout time.Duration) error {
-	project, err := tpgresource.GetProject(d, config)
-	if err != nil {
-		return err
-	}
-	zone := d.Get("zone").(string)
-	poolID := d.Get("id").(string)
-	if poolID == "" {
-		// No numeric ID available; nothing to unbind.
-		return nil
-	}
-
-	parent := fmt.Sprintf("//compute.googleapis.com/projects/%s/zones/%s/storagePools/%s", project, zone, poolID)
-	basePath := strings.Replace(config.TagsLocationBasePath, "{{location}}", zone, 1)
-	listURL := fmt.Sprintf("%stagBindings/?parent=%s&pageSize=300", basePath, url.QueryEscape(parent))
-
-	log.Printf("[DEBUG] Listing tag bindings for StoragePool %s", parent)
-	resp, err := transport_tpg.SendRequest(transport_tpg.SendRequestOptions{
-		Config:    config,
-		Method:    "GET",
-		Project:   billingProject,
-		RawURL:    listURL,
-		UserAgent: userAgent,
-	})
-	if err != nil {
-		// If the resource is already gone, there are no bindings to remove.
-		if transport_tpg.IsGoogleApiErrorWithCode(err, 404) {
-			return nil
-		}
-		return fmt.Errorf("error listing tag bindings for StoragePool %s: %s", parent, err)
-	}
-
-	bindingsVal, ok := resp["tagBindings"]
-	if !ok {
-		return nil
-	}
-	bindings, ok := bindingsVal.([]interface{})
-	if !ok || len(bindings) == 0 {
-		return nil
-	}
-
-	for _, b := range bindings {
-		binding, ok := b.(map[string]interface{})
-		if !ok {
-			continue
-		}
-		name, ok := binding["name"].(string)
-		if !ok || name == "" {
-			continue
-		}
-
-		deleteURL := fmt.Sprintf("%s%s", basePath, name)
-		log.Printf("[DEBUG] Deleting tag binding %s for StoragePool %s", name, parent)
-		res, err := transport_tpg.SendRequest(transport_tpg.SendRequestOptions{
-			Config:    config,
-			Method:    "DELETE",
-			Project:   billingProject,
-			RawURL:    deleteURL,
-			UserAgent: userAgent,
-		})
-		if err != nil {
-			if transport_tpg.IsGoogleApiErrorWithCode(err, 404) {
-				continue
-			}
-			return fmt.Errorf("error deleting tag binding %s: %s", name, err)
-		}
-
-		// Wait for the delete operation to complete.
-		opName, _ := res["name"].(string)
-		if opName == "" {
-			continue
-		}
-		opURL := fmt.Sprintf("%s%s", basePath, opName)
-		err = retry.RetryContext(context.Background(), timeout, func() *retry.RetryError {
-			opResp, reqErr := transport_tpg.SendRequest(transport_tpg.SendRequestOptions{
-				Config:    config,
-				Method:    "GET",
-				RawURL:    opURL,
-				UserAgent: userAgent,
-			})
-			if reqErr != nil {
-				return retry.NonRetryableError(reqErr)
-			}
-			if done, _ := opResp["done"].(bool); !done {
-				return retry.RetryableError(fmt.Errorf("tag binding delete operation %s not yet done", opName))
-			}
-			if errVal, ok := opResp["error"]; ok && errVal != nil {
-				return retry.NonRetryableError(fmt.Errorf("tag binding delete operation %s failed: %v", opName, errVal))
-			}
-			return nil
-		})
-		if err != nil {
-			return fmt.Errorf("error waiting for tag binding %s deletion: %s", name, err)
-		}
-		log.Printf("[DEBUG] Finished deleting tag binding %s", name)
-	}
-	return nil
-}
-
 func resourceComputeStoragePoolDelete(d *schema.ResourceData, meta interface{}) error {
 	config := meta.(*transport_tpg.Config)
 	userAgent, err := tpgresource.GenerateUserAgentString(d, config.UserAgent)
@@ -966,13 +861,6 @@ func resourceComputeStoragePoolDelete(d *schema.ResourceData, meta interface{}) 
 	headers := make(http.Header)
 	if d.Get("deletion_protection").(bool) {
 		return fmt.Errorf("cannot destroy storage pool without setting deletion_protection=false and running `terraform apply`")
-	}
-
-	// Remove tag bindings before deleting the storage pool. GCP removes tag
-	// bindings asynchronously after resource deletion, so deleting the tag
-	// values immediately after the resource can fail with "still attached".
-	if err := removeComputeStoragePoolTagBindings(d, config, billingProject, userAgent, d.Timeout(schema.TimeoutDelete)); err != nil {
-		return fmt.Errorf("error removing tag bindings before deleting StoragePool: %s", err)
 	}
 
 	log.Printf("[DEBUG] Deleting StoragePool %q", d.Id())

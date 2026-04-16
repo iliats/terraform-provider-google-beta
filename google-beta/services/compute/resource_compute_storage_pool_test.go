@@ -290,6 +290,14 @@ func TestAccComputeStoragePool_resourceManagerTags(t *testing.T) {
 				ImportStateVerify:       true,
 				ImportStateVerifyIgnore: []string{"deletion_protection", "params", "zone"},
 			},
+			{
+				// Remove resource_manager_tags before destroy. GCP removes tag
+				// bindings asynchronously after resource deletion, so the tag
+				// value deletes in the final destroy can race and fail with
+				// "Cannot delete tag value because it is still attached to resources".
+				// Recreating the pool without tags avoids that race entirely.
+				Config: testAccComputeStoragePool_resourceManagerTagsRemoved(context),
+			},
 		},
 	})
 }
@@ -395,6 +403,56 @@ resource "google_compute_storage_pool" "test-storage-pool-with-resource-manager-
       (google_tags_tag_key.tag_key.id) = google_tags_tag_value.tag_value_2.id
     }
   }
+}
+
+data "google_project" "project" {}
+
+data "google_compute_storage_pool_types" "balanced" {
+  zone = "us-central1-a"
+	storage_pool_type = "hyperdisk-balanced"
+}
+`, context)
+}
+
+func testAccComputeStoragePool_resourceManagerTagsRemoved(context map[string]interface{}) string {
+	return acctest.Nprintf(`
+resource "google_tags_tag_key" "tag_key" {
+  parent      = "projects/%{project_id}"
+  short_name  = "storage-pool-tag-%{random_suffix}"
+  description = "Tag key for storage pool acceptance tests"
+}
+
+resource "google_tags_tag_value" "tag_value_1" {
+  parent      = google_tags_tag_key.tag_key.id
+  short_name  = "value-one-%{random_suffix}"
+  description = "First tag value for storage pool acceptance tests"
+}
+
+resource "google_tags_tag_value" "tag_value_2" {
+  parent      = google_tags_tag_key.tag_key.id
+  short_name  = "value-two-%{random_suffix}"
+  description = "Second tag value for storage pool acceptance tests"
+
+  # Serialize value creation for stable VCR recordings.
+  depends_on = [google_tags_tag_value.tag_value_1]
+}
+
+resource "google_compute_storage_pool" "test-storage-pool-with-resource-manager-tags" {
+  name = "tf-test-storage-pool-rmt%{random_suffix}"
+
+  description = "Hyperdisk Balanced storage pool with resource manager tags"
+
+  capacity_provisioning_type    = "STANDARD"
+  pool_provisioned_capacity_gb  = "10240"
+  performance_provisioning_type = "STANDARD"
+  pool_provisioned_iops         = "10000"
+  pool_provisioned_throughput   = "1024"
+
+  storage_pool_type = data.google_compute_storage_pool_types.balanced.self_link
+
+  zone = "us-central1-a"
+
+  deletion_protection = false
 }
 
 data "google_project" "project" {}
