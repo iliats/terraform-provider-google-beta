@@ -27,6 +27,7 @@ import (
 	"fmt"
 	"log"
 	"net/http"
+	"net/url"
 	"reflect"
 	"regexp"
 	"slices"
@@ -200,6 +201,30 @@ following are valid values:
 **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
 Please refer to the field 'effective_labels' for all of the labels present on the resource.`,
 				Elem: &schema.Schema{Type: schema.TypeString},
+			},
+			"params": {
+				Type:        schema.TypeList,
+				Optional:    true,
+				ForceNew:    true,
+				Description: `Additional params passed with the request, but not persisted as part of resource payload`,
+				MaxItems:    1,
+				Elem: &schema.Resource{
+					Schema: map[string]*schema.Schema{
+						"resource_manager_tags": {
+							Type:     schema.TypeMap,
+							Optional: true,
+							ForceNew: true,
+							Description: `Resource manager tags to be bound to the storage pool. Tag keys and values have the
+same definition as resource manager tags. Keys and values can be either in numeric format,
+such as tagKeys/{tag_key_id} and tagValues/{tag_value_id} or in namespaced format such as
+{org_id|projectId}/{tag_key_short_name} and {tag_value_short_name}. The field is ignored when empty.
+The field is immutable and causes resource replacement when mutated. This field is only
+set at create time and modifying this field after creation will trigger recreation.
+To apply tags to an existing resource, see the google_tags_tag_binding resource.`,
+							Elem: &schema.Schema{Type: schema.TypeString},
+						},
+					},
+				},
 			},
 			"performance_provisioning_type": {
 				Type:         schema.TypeString,
@@ -464,6 +489,12 @@ func resourceComputeStoragePoolCreate(d *schema.ResourceData, meta interface{}) 
 		return err
 	} else if v, ok := d.GetOkExists("performance_provisioning_type"); !tpgresource.IsEmptyValue(reflect.ValueOf(performanceProvisioningTypeProp)) && (ok || !reflect.DeepEqual(v, performanceProvisioningTypeProp)) {
 		obj["performanceProvisioningType"] = performanceProvisioningTypeProp
+	}
+	paramsProp, err := expandComputeStoragePoolParams(d.Get("params"), d, config)
+	if err != nil {
+		return err
+	} else if v, ok := d.GetOkExists("params"); !tpgresource.IsEmptyValue(reflect.ValueOf(paramsProp)) && (ok || !reflect.DeepEqual(v, paramsProp)) {
+		obj["params"] = paramsProp
 	}
 	effectiveLabelsProp, err := expandComputeStoragePoolEffectiveLabels(d.Get("effective_labels"), d, config)
 	if err != nil {
@@ -801,6 +832,110 @@ func resourceComputeStoragePoolUpdate(d *schema.ResourceData, meta interface{}) 
 	return resourceComputeStoragePoolRead(d, meta)
 }
 
+// removeComputeStoragePoolTagBindings lists and deletes all tag bindings
+// attached to a storage pool. This must be done before deleting the resource
+// because GCP removes tag bindings asynchronously after resource deletion,
+// which can cause subsequent tag value deletions to fail with
+// "Cannot delete tag value because it is still attached to resources".
+func removeComputeStoragePoolTagBindings(d *schema.ResourceData, config *transport_tpg.Config, billingProject, userAgent string, timeout time.Duration) error {
+	project, err := tpgresource.GetProject(d, config)
+	if err != nil {
+		return err
+	}
+	zone := d.Get("zone").(string)
+	poolID := d.Get("id").(string)
+	if poolID == "" {
+		// No numeric ID available; nothing to unbind.
+		return nil
+	}
+
+	parent := fmt.Sprintf("//compute.googleapis.com/projects/%s/zones/%s/storagePools/%s", project, zone, poolID)
+	basePath := strings.Replace(config.TagsLocationBasePath, "{{location}}", zone, 1)
+	listURL := fmt.Sprintf("%stagBindings/?parent=%s&pageSize=300", basePath, url.QueryEscape(parent))
+
+	log.Printf("[DEBUG] Listing tag bindings for StoragePool %s", parent)
+	resp, err := transport_tpg.SendRequest(transport_tpg.SendRequestOptions{
+		Config:    config,
+		Method:    "GET",
+		Project:   billingProject,
+		RawURL:    listURL,
+		UserAgent: userAgent,
+	})
+	if err != nil {
+		// If the resource is already gone, there are no bindings to remove.
+		if transport_tpg.IsGoogleApiErrorWithCode(err, 404) {
+			return nil
+		}
+		return fmt.Errorf("error listing tag bindings for StoragePool %s: %s", parent, err)
+	}
+
+	bindingsVal, ok := resp["tagBindings"]
+	if !ok {
+		return nil
+	}
+	bindings, ok := bindingsVal.([]interface{})
+	if !ok || len(bindings) == 0 {
+		return nil
+	}
+
+	for _, b := range bindings {
+		binding, ok := b.(map[string]interface{})
+		if !ok {
+			continue
+		}
+		name, ok := binding["name"].(string)
+		if !ok || name == "" {
+			continue
+		}
+
+		deleteURL := fmt.Sprintf("%s%s", basePath, name)
+		log.Printf("[DEBUG] Deleting tag binding %s for StoragePool %s", name, parent)
+		res, err := transport_tpg.SendRequest(transport_tpg.SendRequestOptions{
+			Config:    config,
+			Method:    "DELETE",
+			Project:   billingProject,
+			RawURL:    deleteURL,
+			UserAgent: userAgent,
+		})
+		if err != nil {
+			if transport_tpg.IsGoogleApiErrorWithCode(err, 404) {
+				continue
+			}
+			return fmt.Errorf("error deleting tag binding %s: %s", name, err)
+		}
+
+		// Wait for the delete operation to complete.
+		opName, _ := res["name"].(string)
+		if opName == "" {
+			continue
+		}
+		opURL := fmt.Sprintf("%s%s", basePath, opName)
+		err = retry.RetryContext(context.Background(), timeout, func() *retry.RetryError {
+			opResp, reqErr := transport_tpg.SendRequest(transport_tpg.SendRequestOptions{
+				Config:    config,
+				Method:    "GET",
+				RawURL:    opURL,
+				UserAgent: userAgent,
+			})
+			if reqErr != nil {
+				return retry.NonRetryableError(reqErr)
+			}
+			if done, _ := opResp["done"].(bool); !done {
+				return retry.RetryableError(fmt.Errorf("tag binding delete operation %s not yet done", opName))
+			}
+			if errVal, ok := opResp["error"]; ok && errVal != nil {
+				return retry.NonRetryableError(fmt.Errorf("tag binding delete operation %s failed: %v", opName, errVal))
+			}
+			return nil
+		})
+		if err != nil {
+			return fmt.Errorf("error waiting for tag binding %s deletion: %s", name, err)
+		}
+		log.Printf("[DEBUG] Finished deleting tag binding %s", name)
+	}
+	return nil
+}
+
 func resourceComputeStoragePoolDelete(d *schema.ResourceData, meta interface{}) error {
 	config := meta.(*transport_tpg.Config)
 	userAgent, err := tpgresource.GenerateUserAgentString(d, config.UserAgent)
@@ -831,6 +966,13 @@ func resourceComputeStoragePoolDelete(d *schema.ResourceData, meta interface{}) 
 	headers := make(http.Header)
 	if d.Get("deletion_protection").(bool) {
 		return fmt.Errorf("cannot destroy storage pool without setting deletion_protection=false and running `terraform apply`")
+	}
+
+	// Remove tag bindings before deleting the storage pool. GCP removes tag
+	// bindings asynchronously after resource deletion, so deleting the tag
+	// values immediately after the resource can fail with "still attached".
+	if err := removeComputeStoragePoolTagBindings(d, config, billingProject, userAgent, d.Timeout(schema.TimeoutDelete)); err != nil {
+		return fmt.Errorf("error removing tag bindings before deleting StoragePool: %s", err)
 	}
 
 	log.Printf("[DEBUG] Deleting StoragePool %q", d.Id())
@@ -1158,6 +1300,39 @@ func expandComputeStoragePoolCapacityProvisioningType(v interface{}, d tpgresour
 
 func expandComputeStoragePoolPerformanceProvisioningType(v interface{}, d tpgresource.TerraformResourceData, config *transport_tpg.Config) (interface{}, error) {
 	return v, nil
+}
+
+func expandComputeStoragePoolParams(v interface{}, d tpgresource.TerraformResourceData, config *transport_tpg.Config) (interface{}, error) {
+	if v == nil {
+		return nil, nil
+	}
+	l := v.([]interface{})
+	if len(l) == 0 || l[0] == nil {
+		return nil, nil
+	}
+	raw := l[0]
+	original := raw.(map[string]interface{})
+	transformed := make(map[string]interface{})
+
+	transformedResourceManagerTags, err := expandComputeStoragePoolParamsResourceManagerTags(original["resource_manager_tags"], d, config)
+	if err != nil {
+		return nil, err
+	} else if val := reflect.ValueOf(transformedResourceManagerTags); val.IsValid() && !tpgresource.IsEmptyValue(val) {
+		transformed["resourceManagerTags"] = transformedResourceManagerTags
+	}
+
+	return transformed, nil
+}
+
+func expandComputeStoragePoolParamsResourceManagerTags(v interface{}, d tpgresource.TerraformResourceData, config *transport_tpg.Config) (map[string]string, error) {
+	if v == nil {
+		return map[string]string{}, nil
+	}
+	m := make(map[string]string)
+	for k, val := range v.(map[string]interface{}) {
+		m[k] = val.(string)
+	}
+	return m, nil
 }
 
 func expandComputeStoragePoolEffectiveLabels(v interface{}, d tpgresource.TerraformResourceData, config *transport_tpg.Config) (map[string]string, error) {

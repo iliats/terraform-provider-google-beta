@@ -1,0 +1,3687 @@
+---
+version: 1
+interactions:
+- request:
+    body: ""
+    form: {}
+    headers:
+      User-Agent:
+      - google-api-go-client/0.5 Terraform/1.14.6 (+https://www.terraform.io) Terraform-Plugin-SDK/2.38.1
+        terraform-provider-google-beta/acc
+      X-Goog-Api-Client:
+      - gl-go/1.26.0 gdcl/0.274.0
+    url: https://compute.googleapis.com/compute/beta/projects/debian-cloud/global/images/family/debian-12?alt=json&prettyPrint=false
+    method: GET
+  response:
+    body: '{"kind":"compute#image","id":"1808140243525760693","creationTimestamp":"2026-04-13T12:47:38.346-07:00","name":"debian-12-bookworm-v20260413","description":"Debian,
+      Debian GNU/Linux, 12 (bookworm), amd64 built on 20260413","sourceType":"RAW","rawDisk":{"source":"","containerType":"TAR"},"status":"READY","archiveSizeBytes":"2400854784","diskSizeGb":"10","licenses":["https://www.googleapis.com/compute/beta/projects/debian-cloud/global/licenses/debian-12-bookworm"],"family":"debian-12","selfLink":"https://www.googleapis.com/compute/beta/projects/debian-cloud/global/images/debian-12-bookworm-v20260413","labels":{"public-image":"true"},"labelFingerprint":"iNBmVNCFF9w=","guestOsFeatures":[{"type":"UEFI_COMPATIBLE"},{"type":"VIRTIO_SCSI_MULTIQUEUE"},{"type":"GVNIC"},{"type":"SEV_CAPABLE"},{"type":"SEV_LIVE_MIGRATABLE_V2"}],"licenseCodes":["2147286739765738111"],"storageLocations":["us","eu","asia"],"rolloutOverride":{"locationRolloutPolicies":{"zones/africa-south1-a":"2026-04-14T02:47:35Z","zones/africa-south1-b":"2026-04-15T22:47:35Z","zones/africa-south1-c":"2026-04-19T08:47:35Z","zones/asia-east1-a":"2026-04-14T09:47:35Z","zones/asia-east1-b":"2026-04-16T05:47:35Z","zones/asia-east1-c":"2026-04-19T15:47:35Z","zones/asia-east2-a":"2026-04-15T00:47:35Z","zones/asia-east2-b":"2026-04-16T20:47:35Z","zones/asia-east2-c":"2026-04-18T07:47:35Z","zones/asia-northeast1-a":"2026-04-14T01:47:35Z","zones/asia-northeast1-b":"2026-04-15T21:47:35Z","zones/asia-northeast1-c":"2026-04-19T07:47:35Z","zones/asia-northeast2-a":"2026-04-15T09:47:35Z","zones/asia-northeast2-b":"2026-04-17T05:47:35Z","zones/asia-northeast2-c":"2026-04-18T16:47:35Z","zones/asia-northeast3-a":"2026-04-13T19:47:35Z","zones/asia-northeast3-b":"2026-04-17T14:47:35Z","zones/asia-northeast3-c":"2026-04-19T01:47:35Z","zones/asia-south1-a":"2026-04-15T17:47:35Z","zones/asia-south1-b":"2026-04-17T13:47:35Z","zones/asia-south1-c":"2026-04-19T00:47:35Z","zones/asia-south2-a":"2026-04-14T11:47:35Z","zones/asia-south2-b":"2026-04-16T07:47:35Z","zones/asia-south2-c":"2026-04-17T18:47:35Z","zones/asia-southeast1-a":"2026-04-15T04:47:35Z","zones/asia-southeast1-b":"2026-04-17T00:47:35Z","zones/asia-southeast1-c":"2026-04-18T11:47:35Z","zones/asia-southeast2-a":"2026-04-14T03:47:35Z","zones/asia-southeast2-b":"2026-04-15T23:47:35Z","zones/asia-southeast2-c":"2026-04-19T09:47:35Z","zones/asia-southeast3-a":"2026-04-15T10:47:35Z","zones/asia-southeast3-b":"2026-04-17T06:47:35Z","zones/asia-southeast3-c":"2026-04-18T17:47:35Z","zones/australia-southeast1-a":"2026-04-14T10:47:35Z","zones/australia-southeast1-b":"2026-04-16T06:47:35Z","zones/australia-southeast1-c":"2026-04-17T17:47:35Z","zones/australia-southeast2-a":"2026-04-15T11:47:35Z","zones/australia-southeast2-b":"2026-04-17T07:47:35Z","zones/australia-southeast2-c":"2026-04-18T18:47:35Z","zones/europe-central2-a":"2026-04-15T01:47:35Z","zones/europe-central2-b":"2026-04-16T21:47:35Z","zones/europe-central2-c":"2026-04-18T08:47:35Z","zones/europe-north1-a":"2026-04-15T06:47:35Z","zones/europe-north1-b":"2026-04-17T02:47:35Z","zones/europe-north1-c":"2026-04-18T13:47:35Z","zones/europe-north2-a":"2026-04-14T20:47:35Z","zones/europe-north2-b":"2026-04-16T16:47:35Z","zones/europe-north2-c":"2026-04-18T03:47:35Z","zones/europe-southwest1-a":"2026-04-14T12:47:35Z","zones/europe-southwest1-b":"2026-04-16T08:47:35Z","zones/europe-southwest1-c":"2026-04-17T19:47:35Z","zones/europe-west1-b":"2026-04-14T16:47:35Z","zones/europe-west1-c":"2026-04-16T12:47:35Z","zones/europe-west1-d":"2026-04-17T23:47:35Z","zones/europe-west10-a":"2026-04-14T13:47:35Z","zones/europe-west10-b":"2026-04-16T09:47:35Z","zones/europe-west10-c":"2026-04-17T20:47:35Z","zones/europe-west12-a":"2026-04-15T12:47:35Z","zones/europe-west12-b":"2026-04-17T08:47:35Z","zones/europe-west12-c":"2026-04-18T19:47:35Z","zones/europe-west15-a":"2026-04-14T17:47:35Z","zones/europe-west15-b":"2026-04-16T13:47:35Z","zones/europe-west15-c":"2026-04-18T00:47:35Z","zones/europe-west2-a":"2026-04-14T00:47:35Z","zones/europe-west2-b":"2026-04-15T20:47:35Z","zones/europe-west2-c":"2026-04-19T06:47:35Z","zones/europe-west3-a":"2026-04-15T16:47:35Z","zones/europe-west3-b":"2026-04-17T12:47:35Z","zones/europe-west3-c":"2026-04-18T23:47:35Z","zones/europe-west4-a":"2026-04-14T08:47:35Z","zones/europe-west4-b":"2026-04-16T04:47:35Z","zones/europe-west4-c":"2026-04-19T14:47:35Z","zones/europe-west6-a":"2026-04-15T13:47:35Z","zones/europe-west6-b":"2026-04-17T09:47:35Z","zones/europe-west6-c":"2026-04-18T20:47:35Z","zones/europe-west8-a":"2026-04-15T07:47:35Z","zones/europe-west8-b":"2026-04-17T03:47:35Z","zones/europe-west8-c":"2026-04-18T14:47:35Z","zones/europe-west9-a":"2026-04-14T14:47:35Z","zones/europe-west9-b":"2026-04-16T10:47:35Z","zones/europe-west9-c":"2026-04-17T21:47:35Z","zones/me-central1-a":"2026-04-15T14:47:35Z","zones/me-central1-b":"2026-04-17T10:47:35Z","zones/me-central1-c":"2026-04-18T21:47:35Z","zones/me-central2-a":"2026-04-14T04:47:35Z","zones/me-central2-b":"2026-04-16T00:47:35Z","zones/me-central2-c":"2026-04-19T10:47:35Z","zones/me-west1-a":"2026-04-14T05:47:35Z","zones/me-west1-b":"2026-04-16T01:47:35Z","zones/me-west1-c":"2026-04-19T11:47:35Z","zones/northamerica-northeast1-a":"2026-04-14T18:47:35Z","zones/northamerica-northeast1-b":"2026-04-16T14:47:35Z","zones/northamerica-northeast1-c":"2026-04-18T01:47:35Z","zones/northamerica-northeast2-a":"2026-04-14T06:47:35Z","zones/northamerica-northeast2-b":"2026-04-16T02:47:35Z","zones/northamerica-northeast2-c":"2026-04-19T12:47:35Z","zones/northamerica-south1-a":"2026-04-14T15:47:35Z","zones/northamerica-south1-b":"2026-04-16T11:47:35Z","zones/northamerica-south1-c":"2026-04-17T22:47:35Z","zones/southamerica-east1-a":"2026-04-15T05:47:35Z","zones/southamerica-east1-b":"2026-04-17T01:47:35Z","zones/southamerica-east1-c":"2026-04-18T12:47:35Z","zones/southamerica-west1-a":"2026-04-14T07:47:35Z","zones/southamerica-west1-b":"2026-04-16T03:47:35Z","zones/southamerica-west1-c":"2026-04-19T13:47:35Z","zones/us-central1-a":"2026-04-15T15:47:35Z","zones/us-central1-b":"2026-04-17T11:47:35Z","zones/us-central1-c":"2026-04-18T22:47:35Z","zones/us-central1-f":"2026-04-19T17:47:35Z","zones/us-central2-a":"2026-04-15T03:47:35Z","zones/us-central2-b":"2026-04-16T23:47:35Z","zones/us-central2-c":"2026-04-18T10:47:35Z","zones/us-central2-d":"2026-04-19T16:47:35Z","zones/us-east1-b":"2026-04-14T22:47:35Z","zones/us-east1-c":"2026-04-16T18:47:35Z","zones/us-east1-d":"2026-04-18T05:47:35Z","zones/us-east4-a":"2026-04-14T23:47:35Z","zones/us-east4-b":"2026-04-16T19:47:35Z","zones/us-east4-c":"2026-04-18T06:47:35Z","zones/us-east5-a":"2026-04-13T20:47:35Z","zones/us-east5-b":"2026-04-17T15:47:35Z","zones/us-east5-c":"2026-04-19T02:47:35Z","zones/us-east7-a":"2026-04-15T02:47:35Z","zones/us-east7-b":"2026-04-16T22:47:35Z","zones/us-east7-c":"2026-04-18T09:47:35Z","zones/us-south1-a":"2026-04-15T08:47:35Z","zones/us-south1-b":"2026-04-17T04:47:35Z","zones/us-south1-c":"2026-04-18T15:47:35Z","zones/us-west1-a":"2026-04-14T19:47:35Z","zones/us-west1-b":"2026-04-16T15:47:35Z","zones/us-west1-c":"2026-04-18T02:47:35Z","zones/us-west2-a":"2026-04-13T21:47:35Z","zones/us-west2-b":"2026-04-17T16:47:35Z","zones/us-west2-c":"2026-04-19T03:47:35Z","zones/us-west3-a":"2026-04-13T22:47:35Z","zones/us-west3-b":"2026-04-15T18:47:35Z","zones/us-west3-c":"2026-04-19T04:47:35Z","zones/us-west4-a":"2026-04-14T21:47:35Z","zones/us-west4-b":"2026-04-16T17:47:35Z","zones/us-west4-c":"2026-04-18T04:47:35Z","zones/us-west8-a":"2026-04-13T23:47:35Z","zones/us-west8-b":"2026-04-15T19:47:35Z","zones/us-west8-c":"2026-04-19T05:47:35Z"},"defaultRolloutTime":"2026-04-19T17:47:35Z"},"architecture":"X86_64","enableConfidentialCompute":false}'
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 15 Apr 2026 11:38:31 GMT
+      Server:
+      - ESF
+      Vary:
+      - Origin
+      - X-Origin
+      - Referer
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - "0"
+    status: 200 OK
+    code: 200
+    duration: ""
+- request:
+    body: |
+      {"description":"Tag key for image acceptance tests","parent":"projects/project-7d9b6b6d-b532-49f1-b60","shortName":"image-tag-rvjncqn1wp"}
+    form: {}
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Terraform/1.14.6 (+https://www.terraform.io) Terraform-Plugin-SDK/2.38.1 terraform-provider-google-beta/acc
+    url: https://cloudresourcemanager.googleapis.com/v3/tagKeys?alt=json
+    method: POST
+  response:
+    body: |
+      {
+        "name": "operations/rctk.global.6691984025519797630",
+        "metadata": {
+          "@type": "type.googleapis.com/google.cloud.resourcemanager.v3.CreateTagKeyMetadata"
+        }
+      }
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 15 Apr 2026 11:38:32 GMT
+      Server:
+      - ESF
+      Vary:
+      - Origin
+      - X-Origin
+      - Referer
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - "0"
+    status: 200 OK
+    code: 200
+    duration: ""
+- request:
+    body: ""
+    form: {}
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Terraform/1.14.6 (+https://www.terraform.io) Terraform-Plugin-SDK/2.38.1 terraform-provider-google-beta/acc
+    url: https://cloudresourcemanager.googleapis.com/v3/operations/rctk.global.6691984025519797630?alt=json
+    method: GET
+  response:
+    body: |
+      {
+        "name": "operations/rctk.global.6691984025519797630",
+        "metadata": {
+          "@type": "type.googleapis.com/google.cloud.resourcemanager.v3.CreateTagKeyMetadata"
+        },
+        "done": true,
+        "response": {
+          "@type": "type.googleapis.com/google.cloud.resourcemanager.v3.TagKey",
+          "name": "tagKeys/281483539551707",
+          "parent": "projects/58309184865",
+          "shortName": "image-tag-rvjncqn1wp",
+          "namespacedName": "project-7d9b6b6d-b532-49f1-b60/image-tag-rvjncqn1wp",
+          "description": "Tag key for image acceptance tests",
+          "createTime": "2026-04-15T11:38:33.011346Z",
+          "updateTime": "2026-04-15T11:38:33.011346Z",
+          "etag": "/R3fKhYAhFmyLWFG573PWA=="
+        }
+      }
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 15 Apr 2026 11:38:33 GMT
+      Server:
+      - ESF
+      Vary:
+      - Origin
+      - X-Origin
+      - Referer
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - "0"
+    status: 200 OK
+    code: 200
+    duration: ""
+- request:
+    body: ""
+    form: {}
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Terraform/1.14.6 (+https://www.terraform.io) Terraform-Plugin-SDK/2.38.1 terraform-provider-google-beta/acc
+    url: https://cloudresourcemanager.googleapis.com/v3/tagKeys/281483539551707?alt=json
+    method: GET
+  response:
+    body: |
+      {
+        "name": "tagKeys/281483539551707",
+        "parent": "projects/58309184865",
+        "shortName": "image-tag-rvjncqn1wp",
+        "namespacedName": "project-7d9b6b6d-b532-49f1-b60/image-tag-rvjncqn1wp",
+        "description": "Tag key for image acceptance tests",
+        "createTime": "2026-04-15T11:38:33.011346Z",
+        "updateTime": "2026-04-15T11:38:33.011346Z",
+        "etag": "/R3fKhYAhFmyLWFG573PWA=="
+      }
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 15 Apr 2026 11:38:34 GMT
+      Server:
+      - ESF
+      Vary:
+      - Origin
+      - X-Origin
+      - Referer
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - "0"
+    status: 200 OK
+    code: 200
+    duration: ""
+- request:
+    body: |
+      {"description":"First tag value for image acceptance tests","parent":"tagKeys/281483539551707","shortName":"value-one-rvjncqn1wp"}
+    form: {}
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Terraform/1.14.6 (+https://www.terraform.io) Terraform-Plugin-SDK/2.38.1 terraform-provider-google-beta/acc
+    url: https://cloudresourcemanager.googleapis.com/v3/tagValues?alt=json
+    method: POST
+  response:
+    body: |
+      {
+        "name": "operations/rctv.global.7858825448243154966",
+        "metadata": {
+          "@type": "type.googleapis.com/google.cloud.resourcemanager.v3.CreateTagValueMetadata"
+        }
+      }
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 15 Apr 2026 11:38:35 GMT
+      Server:
+      - ESF
+      Vary:
+      - Origin
+      - X-Origin
+      - Referer
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - "0"
+    status: 200 OK
+    code: 200
+    duration: ""
+- request:
+    body: ""
+    form: {}
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Terraform/1.14.6 (+https://www.terraform.io) Terraform-Plugin-SDK/2.38.1 terraform-provider-google-beta/acc
+    url: https://cloudresourcemanager.googleapis.com/v3/operations/rctv.global.7858825448243154966?alt=json
+    method: GET
+  response:
+    body: |
+      {
+        "name": "operations/rctv.global.7858825448243154966",
+        "metadata": {
+          "@type": "type.googleapis.com/google.cloud.resourcemanager.v3.CreateTagValueMetadata"
+        }
+      }
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 15 Apr 2026 11:38:35 GMT
+      Server:
+      - ESF
+      Vary:
+      - Origin
+      - X-Origin
+      - Referer
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - "0"
+    status: 200 OK
+    code: 200
+    duration: ""
+- request:
+    body: ""
+    form: {}
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Terraform/1.14.6 (+https://www.terraform.io) Terraform-Plugin-SDK/2.38.1 terraform-provider-google-beta/acc
+    url: https://cloudresourcemanager.googleapis.com/v3/operations/rctv.global.7858825448243154966?alt=json
+    method: GET
+  response:
+    body: |
+      {
+        "name": "operations/rctv.global.7858825448243154966",
+        "metadata": {
+          "@type": "type.googleapis.com/google.cloud.resourcemanager.v3.CreateTagValueMetadata"
+        },
+        "done": true,
+        "response": {
+          "@type": "type.googleapis.com/google.cloud.resourcemanager.v3.TagValue",
+          "name": "tagValues/281484123941379",
+          "parent": "tagKeys/281483539551707",
+          "shortName": "value-one-rvjncqn1wp",
+          "namespacedName": "project-7d9b6b6d-b532-49f1-b60/image-tag-rvjncqn1wp/value-one-rvjncqn1wp",
+          "description": "First tag value for image acceptance tests",
+          "createTime": "2026-04-15T11:38:35.641943Z",
+          "updateTime": "2026-04-15T11:38:35.641943Z",
+          "etag": "6gv4gVIfPcI2g9YlbjSqHA=="
+        }
+      }
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 15 Apr 2026 11:38:46 GMT
+      Server:
+      - ESF
+      Vary:
+      - Origin
+      - X-Origin
+      - Referer
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - "0"
+    status: 200 OK
+    code: 200
+    duration: ""
+- request:
+    body: ""
+    form: {}
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Terraform/1.14.6 (+https://www.terraform.io) Terraform-Plugin-SDK/2.38.1 terraform-provider-google-beta/acc
+    url: https://cloudresourcemanager.googleapis.com/v3/tagValues/281484123941379?alt=json
+    method: GET
+  response:
+    body: |
+      {
+        "name": "tagValues/281484123941379",
+        "parent": "tagKeys/281483539551707",
+        "shortName": "value-one-rvjncqn1wp",
+        "namespacedName": "project-7d9b6b6d-b532-49f1-b60/image-tag-rvjncqn1wp/value-one-rvjncqn1wp",
+        "description": "First tag value for image acceptance tests",
+        "createTime": "2026-04-15T11:38:35.641943Z",
+        "updateTime": "2026-04-15T11:38:35.641943Z",
+        "etag": "6gv4gVIfPcI2g9YlbjSqHA=="
+      }
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 15 Apr 2026 11:38:46 GMT
+      Server:
+      - ESF
+      Vary:
+      - Origin
+      - X-Origin
+      - Referer
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - "0"
+    status: 200 OK
+    code: 200
+    duration: ""
+- request:
+    body: |
+      {"labels":{"goog-terraform-provisioned":"true"},"name":"tf-test-image-rmtrvjncqn1wp","params":{"resourceManagerTags":{"tagKeys/281483539551707":"tagValues/281484123941379"}},"sourceImage":"projects/debian-cloud/global/images/debian-12-bookworm-v20260413"}
+    form: {}
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Terraform/1.14.6 (+https://www.terraform.io) Terraform-Plugin-SDK/2.38.1 terraform-provider-google-beta/acc
+    url: https://compute.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/images?alt=json
+    method: POST
+  response:
+    body: |
+      {
+        "kind": "compute#operation",
+        "id": "3155683720090011176",
+        "name": "operation-1776253127052-64f7e28ab4c2e-e902b74c-23040d66",
+        "operationType": "insert",
+        "targetLink": "https://www.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/images/tf-test-image-rmtrvjncqn1wp",
+        "targetId": "7496525050677478952",
+        "status": "RUNNING",
+        "user": "tsuprik.ilia@gmail.com",
+        "progress": 0,
+        "insertTime": "2026-04-15T04:38:47.368-07:00",
+        "startTime": "2026-04-15T04:38:47.373-07:00",
+        "selfLink": "https://www.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/operations/operation-1776253127052-64f7e28ab4c2e-e902b74c-23040d66"
+      }
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 15 Apr 2026 11:38:47 GMT
+      Server:
+      - ESF
+      Vary:
+      - Origin
+      - X-Origin
+      - Referer
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - "0"
+    status: 200 OK
+    code: 200
+    duration: ""
+- request:
+    body: |
+      {"description":"Second tag value for image acceptance tests","parent":"tagKeys/281483539551707","shortName":"value-two-rvjncqn1wp"}
+    form: {}
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Terraform/1.14.6 (+https://www.terraform.io) Terraform-Plugin-SDK/2.38.1 terraform-provider-google-beta/acc
+    url: https://cloudresourcemanager.googleapis.com/v3/tagValues?alt=json
+    method: POST
+  response:
+    body: |
+      {
+        "name": "operations/rctv.global.4637665311398889899",
+        "metadata": {
+          "@type": "type.googleapis.com/google.cloud.resourcemanager.v3.CreateTagValueMetadata"
+        }
+      }
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 15 Apr 2026 11:38:47 GMT
+      Server:
+      - ESF
+      Vary:
+      - Origin
+      - X-Origin
+      - Referer
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - "0"
+    status: 200 OK
+    code: 200
+    duration: ""
+- request:
+    body: ""
+    form: {}
+    headers:
+      User-Agent:
+      - google-api-go-client/0.5 Terraform/1.14.6 (+https://www.terraform.io) Terraform-Plugin-SDK/2.38.1
+        terraform-provider-google-beta/acc
+      X-Goog-Api-Client:
+      - gl-go/1.26.0 gdcl/0.274.0
+    url: https://compute.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/operations/operation-1776253127052-64f7e28ab4c2e-e902b74c-23040d66?alt=json&prettyPrint=false
+    method: GET
+  response:
+    body: '{"kind":"compute#operation","id":"3155683720090011176","name":"operation-1776253127052-64f7e28ab4c2e-e902b74c-23040d66","operationType":"insert","targetLink":"https://www.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/images/tf-test-image-rmtrvjncqn1wp","targetId":"7496525050677478952","status":"RUNNING","user":"tsuprik.ilia@gmail.com","progress":0,"insertTime":"2026-04-15T04:38:47.368-07:00","startTime":"2026-04-15T04:38:47.373-07:00","selfLink":"https://www.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/operations/operation-1776253127052-64f7e28ab4c2e-e902b74c-23040d66"}'
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 15 Apr 2026 11:38:47 GMT
+      Etag:
+      - flOcPMcN9xxQ4HP-SIZkwM2How0=/7KExDlk7ALKwR0hlgHfFDM6ZxxE=
+      Server:
+      - ESF
+      Vary:
+      - Origin
+      - X-Origin
+      - Referer
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - "0"
+    status: 200 OK
+    code: 200
+    duration: ""
+- request:
+    body: ""
+    form: {}
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Terraform/1.14.6 (+https://www.terraform.io) Terraform-Plugin-SDK/2.38.1 terraform-provider-google-beta/acc
+    url: https://cloudresourcemanager.googleapis.com/v3/operations/rctv.global.4637665311398889899?alt=json
+    method: GET
+  response:
+    body: |
+      {
+        "name": "operations/rctv.global.4637665311398889899",
+        "metadata": {
+          "@type": "type.googleapis.com/google.cloud.resourcemanager.v3.CreateTagValueMetadata"
+        }
+      }
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 15 Apr 2026 11:38:48 GMT
+      Server:
+      - ESF
+      Vary:
+      - Origin
+      - X-Origin
+      - Referer
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - "0"
+    status: 200 OK
+    code: 200
+    duration: ""
+- request:
+    body: ""
+    form: {}
+    headers:
+      User-Agent:
+      - google-api-go-client/0.5 Terraform/1.14.6 (+https://www.terraform.io) Terraform-Plugin-SDK/2.38.1
+        terraform-provider-google-beta/acc
+      X-Goog-Api-Client:
+      - gl-go/1.26.0 gdcl/0.274.0
+    url: https://compute.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/operations/operation-1776253127052-64f7e28ab4c2e-e902b74c-23040d66?alt=json&prettyPrint=false
+    method: GET
+  response:
+    body: '{"kind":"compute#operation","id":"3155683720090011176","name":"operation-1776253127052-64f7e28ab4c2e-e902b74c-23040d66","operationType":"insert","targetLink":"https://www.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/images/tf-test-image-rmtrvjncqn1wp","targetId":"7496525050677478952","status":"RUNNING","user":"tsuprik.ilia@gmail.com","progress":0,"insertTime":"2026-04-15T04:38:47.368-07:00","startTime":"2026-04-15T04:38:47.373-07:00","selfLink":"https://www.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/operations/operation-1776253127052-64f7e28ab4c2e-e902b74c-23040d66"}'
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 15 Apr 2026 11:38:58 GMT
+      Etag:
+      - Vpc3TKVU4rdwOTZ7Os7vpCktIMc=/cABTbJ_eibyQxYQtJqczZEieYNY=
+      Server:
+      - ESF
+      Vary:
+      - Origin
+      - X-Origin
+      - Referer
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - "0"
+    status: 200 OK
+    code: 200
+    duration: ""
+- request:
+    body: ""
+    form: {}
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Terraform/1.14.6 (+https://www.terraform.io) Terraform-Plugin-SDK/2.38.1 terraform-provider-google-beta/acc
+    url: https://cloudresourcemanager.googleapis.com/v3/operations/rctv.global.4637665311398889899?alt=json
+    method: GET
+  response:
+    body: |
+      {
+        "name": "operations/rctv.global.4637665311398889899",
+        "metadata": {
+          "@type": "type.googleapis.com/google.cloud.resourcemanager.v3.CreateTagValueMetadata"
+        },
+        "done": true,
+        "response": {
+          "@type": "type.googleapis.com/google.cloud.resourcemanager.v3.TagValue",
+          "name": "tagValues/281478381708055",
+          "parent": "tagKeys/281483539551707",
+          "shortName": "value-two-rvjncqn1wp",
+          "namespacedName": "project-7d9b6b6d-b532-49f1-b60/image-tag-rvjncqn1wp/value-two-rvjncqn1wp",
+          "description": "Second tag value for image acceptance tests",
+          "createTime": "2026-04-15T11:38:48.048253Z",
+          "updateTime": "2026-04-15T11:38:48.048253Z",
+          "etag": "Z564zYB3+9vaZ3NotvljBg=="
+        }
+      }
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 15 Apr 2026 11:38:58 GMT
+      Server:
+      - ESF
+      Vary:
+      - Origin
+      - X-Origin
+      - Referer
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - "0"
+    status: 200 OK
+    code: 200
+    duration: ""
+- request:
+    body: ""
+    form: {}
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Terraform/1.14.6 (+https://www.terraform.io) Terraform-Plugin-SDK/2.38.1 terraform-provider-google-beta/acc
+    url: https://cloudresourcemanager.googleapis.com/v3/tagValues/281478381708055?alt=json
+    method: GET
+  response:
+    body: |
+      {
+        "name": "tagValues/281478381708055",
+        "parent": "tagKeys/281483539551707",
+        "shortName": "value-two-rvjncqn1wp",
+        "namespacedName": "project-7d9b6b6d-b532-49f1-b60/image-tag-rvjncqn1wp/value-two-rvjncqn1wp",
+        "description": "Second tag value for image acceptance tests",
+        "createTime": "2026-04-15T11:38:48.048253Z",
+        "updateTime": "2026-04-15T11:38:48.048253Z",
+        "etag": "Z564zYB3+9vaZ3NotvljBg=="
+      }
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 15 Apr 2026 11:38:59 GMT
+      Server:
+      - ESF
+      Vary:
+      - Origin
+      - X-Origin
+      - Referer
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - "0"
+    status: 200 OK
+    code: 200
+    duration: ""
+- request:
+    body: ""
+    form: {}
+    headers:
+      User-Agent:
+      - google-api-go-client/0.5 Terraform/1.14.6 (+https://www.terraform.io) Terraform-Plugin-SDK/2.38.1
+        terraform-provider-google-beta/acc
+      X-Goog-Api-Client:
+      - gl-go/1.26.0 gdcl/0.274.0
+    url: https://compute.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/operations/operation-1776253127052-64f7e28ab4c2e-e902b74c-23040d66?alt=json&prettyPrint=false
+    method: GET
+  response:
+    body: '{"kind":"compute#operation","id":"3155683720090011176","name":"operation-1776253127052-64f7e28ab4c2e-e902b74c-23040d66","operationType":"insert","targetLink":"https://www.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/images/tf-test-image-rmtrvjncqn1wp","targetId":"7496525050677478952","status":"RUNNING","user":"tsuprik.ilia@gmail.com","progress":0,"insertTime":"2026-04-15T04:38:47.368-07:00","startTime":"2026-04-15T04:38:47.373-07:00","selfLink":"https://www.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/operations/operation-1776253127052-64f7e28ab4c2e-e902b74c-23040d66"}'
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 15 Apr 2026 11:39:08 GMT
+      Etag:
+      - OmTaGkHWUhHcppt238D1vUysLH0=/OMdi1ar_AdDrtHoERRwMQJfXk1M=
+      Server:
+      - ESF
+      Vary:
+      - Origin
+      - X-Origin
+      - Referer
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - "0"
+    status: 200 OK
+    code: 200
+    duration: ""
+- request:
+    body: ""
+    form: {}
+    headers:
+      User-Agent:
+      - google-api-go-client/0.5 Terraform/1.14.6 (+https://www.terraform.io) Terraform-Plugin-SDK/2.38.1
+        terraform-provider-google-beta/acc
+      X-Goog-Api-Client:
+      - gl-go/1.26.0 gdcl/0.274.0
+    url: https://compute.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/operations/operation-1776253127052-64f7e28ab4c2e-e902b74c-23040d66?alt=json&prettyPrint=false
+    method: GET
+  response:
+    body: '{"kind":"compute#operation","id":"3155683720090011176","name":"operation-1776253127052-64f7e28ab4c2e-e902b74c-23040d66","operationType":"insert","targetLink":"https://www.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/images/tf-test-image-rmtrvjncqn1wp","targetId":"7496525050677478952","status":"RUNNING","user":"tsuprik.ilia@gmail.com","progress":0,"insertTime":"2026-04-15T04:38:47.368-07:00","startTime":"2026-04-15T04:38:47.373-07:00","selfLink":"https://www.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/operations/operation-1776253127052-64f7e28ab4c2e-e902b74c-23040d66"}'
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 15 Apr 2026 11:39:19 GMT
+      Etag:
+      - d0mwu97pjoeeqVb11EMm1rFD_9o=/pZe4zbj2DS7JHbnev4Cxw-bi_yo=
+      Server:
+      - ESF
+      Vary:
+      - Origin
+      - X-Origin
+      - Referer
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - "0"
+    status: 200 OK
+    code: 200
+    duration: ""
+- request:
+    body: ""
+    form: {}
+    headers:
+      User-Agent:
+      - google-api-go-client/0.5 Terraform/1.14.6 (+https://www.terraform.io) Terraform-Plugin-SDK/2.38.1
+        terraform-provider-google-beta/acc
+      X-Goog-Api-Client:
+      - gl-go/1.26.0 gdcl/0.274.0
+    url: https://compute.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/operations/operation-1776253127052-64f7e28ab4c2e-e902b74c-23040d66?alt=json&prettyPrint=false
+    method: GET
+  response:
+    body: '{"kind":"compute#operation","id":"3155683720090011176","name":"operation-1776253127052-64f7e28ab4c2e-e902b74c-23040d66","operationType":"insert","targetLink":"https://www.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/images/tf-test-image-rmtrvjncqn1wp","targetId":"7496525050677478952","status":"RUNNING","user":"tsuprik.ilia@gmail.com","progress":0,"insertTime":"2026-04-15T04:38:47.368-07:00","startTime":"2026-04-15T04:38:47.373-07:00","selfLink":"https://www.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/operations/operation-1776253127052-64f7e28ab4c2e-e902b74c-23040d66"}'
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 15 Apr 2026 11:39:29 GMT
+      Etag:
+      - 66x76AEQdfV_sf8t9pu5zUOudr4=/rsWYGEI-b1fOgAFLMMx37WPOlVc=
+      Server:
+      - ESF
+      Vary:
+      - Origin
+      - X-Origin
+      - Referer
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - "0"
+    status: 200 OK
+    code: 200
+    duration: ""
+- request:
+    body: ""
+    form: {}
+    headers:
+      User-Agent:
+      - google-api-go-client/0.5 Terraform/1.14.6 (+https://www.terraform.io) Terraform-Plugin-SDK/2.38.1
+        terraform-provider-google-beta/acc
+      X-Goog-Api-Client:
+      - gl-go/1.26.0 gdcl/0.274.0
+    url: https://compute.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/operations/operation-1776253127052-64f7e28ab4c2e-e902b74c-23040d66?alt=json&prettyPrint=false
+    method: GET
+  response:
+    body: '{"kind":"compute#operation","id":"3155683720090011176","name":"operation-1776253127052-64f7e28ab4c2e-e902b74c-23040d66","operationType":"insert","targetLink":"https://www.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/images/tf-test-image-rmtrvjncqn1wp","targetId":"7496525050677478952","status":"RUNNING","user":"tsuprik.ilia@gmail.com","progress":0,"insertTime":"2026-04-15T04:38:47.368-07:00","startTime":"2026-04-15T04:38:47.373-07:00","selfLink":"https://www.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/operations/operation-1776253127052-64f7e28ab4c2e-e902b74c-23040d66"}'
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 15 Apr 2026 11:39:39 GMT
+      Etag:
+      - iDIcuectJh6-n1qOTV9cOpGWpd8=/mCsBo8mq2WR6XMnvOfVfyAh-ea0=
+      Server:
+      - ESF
+      Vary:
+      - Origin
+      - X-Origin
+      - Referer
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - "0"
+    status: 200 OK
+    code: 200
+    duration: ""
+- request:
+    body: ""
+    form: {}
+    headers:
+      User-Agent:
+      - google-api-go-client/0.5 Terraform/1.14.6 (+https://www.terraform.io) Terraform-Plugin-SDK/2.38.1
+        terraform-provider-google-beta/acc
+      X-Goog-Api-Client:
+      - gl-go/1.26.0 gdcl/0.274.0
+    url: https://compute.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/operations/operation-1776253127052-64f7e28ab4c2e-e902b74c-23040d66?alt=json&prettyPrint=false
+    method: GET
+  response:
+    body: '{"kind":"compute#operation","id":"3155683720090011176","name":"operation-1776253127052-64f7e28ab4c2e-e902b74c-23040d66","operationType":"insert","targetLink":"https://www.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/images/tf-test-image-rmtrvjncqn1wp","targetId":"7496525050677478952","status":"RUNNING","user":"tsuprik.ilia@gmail.com","progress":0,"insertTime":"2026-04-15T04:38:47.368-07:00","startTime":"2026-04-15T04:38:47.373-07:00","selfLink":"https://www.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/operations/operation-1776253127052-64f7e28ab4c2e-e902b74c-23040d66"}'
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 15 Apr 2026 11:39:49 GMT
+      Etag:
+      - bqOr9ntckwR0wtY5vxbhm5Bm3jI=/Tt7cm-P-NJHIWF3y6lZAFySI0t0=
+      Server:
+      - ESF
+      Vary:
+      - Origin
+      - X-Origin
+      - Referer
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - "0"
+    status: 200 OK
+    code: 200
+    duration: ""
+- request:
+    body: ""
+    form: {}
+    headers:
+      User-Agent:
+      - google-api-go-client/0.5 Terraform/1.14.6 (+https://www.terraform.io) Terraform-Plugin-SDK/2.38.1
+        terraform-provider-google-beta/acc
+      X-Goog-Api-Client:
+      - gl-go/1.26.0 gdcl/0.274.0
+    url: https://compute.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/operations/operation-1776253127052-64f7e28ab4c2e-e902b74c-23040d66?alt=json&prettyPrint=false
+    method: GET
+  response:
+    body: '{"kind":"compute#operation","id":"3155683720090011176","name":"operation-1776253127052-64f7e28ab4c2e-e902b74c-23040d66","operationType":"insert","targetLink":"https://www.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/images/tf-test-image-rmtrvjncqn1wp","targetId":"7496525050677478952","status":"RUNNING","user":"tsuprik.ilia@gmail.com","progress":0,"insertTime":"2026-04-15T04:38:47.368-07:00","startTime":"2026-04-15T04:38:47.373-07:00","selfLink":"https://www.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/operations/operation-1776253127052-64f7e28ab4c2e-e902b74c-23040d66"}'
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 15 Apr 2026 11:40:00 GMT
+      Etag:
+      - VM4r9CUkaMh3pkhADYHb5OkovTQ=/hLvgGMQidBxkmeY0fgV0Zwe9KdA=
+      Server:
+      - ESF
+      Vary:
+      - Origin
+      - X-Origin
+      - Referer
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - "0"
+    status: 200 OK
+    code: 200
+    duration: ""
+- request:
+    body: ""
+    form: {}
+    headers:
+      User-Agent:
+      - google-api-go-client/0.5 Terraform/1.14.6 (+https://www.terraform.io) Terraform-Plugin-SDK/2.38.1
+        terraform-provider-google-beta/acc
+      X-Goog-Api-Client:
+      - gl-go/1.26.0 gdcl/0.274.0
+    url: https://compute.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/operations/operation-1776253127052-64f7e28ab4c2e-e902b74c-23040d66?alt=json&prettyPrint=false
+    method: GET
+  response:
+    body: '{"kind":"compute#operation","id":"3155683720090011176","name":"operation-1776253127052-64f7e28ab4c2e-e902b74c-23040d66","operationType":"insert","targetLink":"https://www.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/images/tf-test-image-rmtrvjncqn1wp","targetId":"7496525050677478952","status":"RUNNING","user":"tsuprik.ilia@gmail.com","progress":0,"insertTime":"2026-04-15T04:38:47.368-07:00","startTime":"2026-04-15T04:38:47.373-07:00","selfLink":"https://www.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/operations/operation-1776253127052-64f7e28ab4c2e-e902b74c-23040d66"}'
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 15 Apr 2026 11:40:10 GMT
+      Etag:
+      - fYEW0eAG5O4KRPKaICP4J1kdszk=/VmCqvw8GVBwRurdycKcz_37WYpY=
+      Server:
+      - ESF
+      Vary:
+      - Origin
+      - X-Origin
+      - Referer
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - "0"
+    status: 200 OK
+    code: 200
+    duration: ""
+- request:
+    body: ""
+    form: {}
+    headers:
+      User-Agent:
+      - google-api-go-client/0.5 Terraform/1.14.6 (+https://www.terraform.io) Terraform-Plugin-SDK/2.38.1
+        terraform-provider-google-beta/acc
+      X-Goog-Api-Client:
+      - gl-go/1.26.0 gdcl/0.274.0
+    url: https://compute.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/operations/operation-1776253127052-64f7e28ab4c2e-e902b74c-23040d66?alt=json&prettyPrint=false
+    method: GET
+  response:
+    body: '{"kind":"compute#operation","id":"3155683720090011176","name":"operation-1776253127052-64f7e28ab4c2e-e902b74c-23040d66","operationType":"insert","targetLink":"https://www.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/images/tf-test-image-rmtrvjncqn1wp","targetId":"7496525050677478952","status":"DONE","user":"tsuprik.ilia@gmail.com","progress":100,"insertTime":"2026-04-15T04:38:47.368-07:00","startTime":"2026-04-15T04:38:47.373-07:00","endTime":"2026-04-15T04:40:19.218-07:00","selfLink":"https://www.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/operations/operation-1776253127052-64f7e28ab4c2e-e902b74c-23040d66"}'
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 15 Apr 2026 11:40:21 GMT
+      Etag:
+      - AzEvKozQw6BEFfqn77pl3ewDuSs=/0Zkey81zE3YnSu2roX2TeHJGbEo=
+      Server:
+      - ESF
+      Vary:
+      - Origin
+      - X-Origin
+      - Referer
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - "0"
+    status: 200 OK
+    code: 200
+    duration: ""
+- request:
+    body: ""
+    form: {}
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Terraform/1.14.6 (+https://www.terraform.io) Terraform-Plugin-SDK/2.38.1 terraform-provider-google-beta/acc
+    url: https://compute.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/images/tf-test-image-rmtrvjncqn1wp?alt=json
+    method: GET
+  response:
+    body: |
+      {
+        "kind": "compute#image",
+        "id": "7496525050677478952",
+        "creationTimestamp": "2026-04-15T04:38:47.372-07:00",
+        "name": "tf-test-image-rmtrvjncqn1wp",
+        "sourceType": "RAW",
+        "status": "READY",
+        "archiveSizeBytes": "800284928",
+        "diskSizeGb": "10",
+        "licenses": [
+          "https://www.googleapis.com/compute/beta/projects/debian-cloud/global/licenses/debian-12-bookworm"
+        ],
+        "selfLink": "https://www.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/images/tf-test-image-rmtrvjncqn1wp",
+        "labels": {
+          "goog-terraform-provisioned": "true"
+        },
+        "labelFingerprint": "vezUS-42LLM=",
+        "guestOsFeatures": [
+          {
+            "type": "UEFI_COMPATIBLE"
+          },
+          {
+            "type": "VIRTIO_SCSI_MULTIQUEUE"
+          },
+          {
+            "type": "GVNIC"
+          },
+          {
+            "type": "SEV_CAPABLE"
+          },
+          {
+            "type": "SEV_LIVE_MIGRATABLE_V2"
+          }
+        ],
+        "licenseCodes": [
+          "2147286739765738111"
+        ],
+        "sourceImage": "https://www.googleapis.com/compute/beta/projects/debian-cloud/global/images/debian-12-bookworm-v20260413",
+        "sourceImageId": "1808140243525760693",
+        "storageLocations": [
+          "us"
+        ],
+        "architecture": "X86_64",
+        "enableConfidentialCompute": false
+      }
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 15 Apr 2026 11:40:21 GMT
+      Server:
+      - ESF
+      Vary:
+      - Origin
+      - X-Origin
+      - Referer
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - "0"
+    status: 200 OK
+    code: 200
+    duration: ""
+- request:
+    body: ""
+    form: {}
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Terraform/1.14.6 (+https://www.terraform.io) Terraform-Plugin-SDK/2.38.1 terraform-provider-google-beta/acc
+    url: https://compute.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/images/tf-test-image-rmtrvjncqn1wp?alt=json
+    method: GET
+  response:
+    body: |
+      {
+        "kind": "compute#image",
+        "id": "7496525050677478952",
+        "creationTimestamp": "2026-04-15T04:38:47.372-07:00",
+        "name": "tf-test-image-rmtrvjncqn1wp",
+        "sourceType": "RAW",
+        "status": "READY",
+        "archiveSizeBytes": "800284928",
+        "diskSizeGb": "10",
+        "licenses": [
+          "https://www.googleapis.com/compute/beta/projects/debian-cloud/global/licenses/debian-12-bookworm"
+        ],
+        "selfLink": "https://www.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/images/tf-test-image-rmtrvjncqn1wp",
+        "labels": {
+          "goog-terraform-provisioned": "true"
+        },
+        "labelFingerprint": "vezUS-42LLM=",
+        "guestOsFeatures": [
+          {
+            "type": "UEFI_COMPATIBLE"
+          },
+          {
+            "type": "VIRTIO_SCSI_MULTIQUEUE"
+          },
+          {
+            "type": "GVNIC"
+          },
+          {
+            "type": "SEV_CAPABLE"
+          },
+          {
+            "type": "SEV_LIVE_MIGRATABLE_V2"
+          }
+        ],
+        "licenseCodes": [
+          "2147286739765738111"
+        ],
+        "sourceImage": "https://www.googleapis.com/compute/beta/projects/debian-cloud/global/images/debian-12-bookworm-v20260413",
+        "sourceImageId": "1808140243525760693",
+        "storageLocations": [
+          "us"
+        ],
+        "architecture": "X86_64",
+        "enableConfidentialCompute": false
+      }
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 15 Apr 2026 11:40:21 GMT
+      Server:
+      - ESF
+      Vary:
+      - Origin
+      - X-Origin
+      - Referer
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - "0"
+    status: 200 OK
+    code: 200
+    duration: ""
+- request:
+    body: ""
+    form: {}
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Terraform/1.14.6 (+https://www.terraform.io) Terraform-Plugin-SDK/2.38.1 terraform-provider-google-beta/acc
+    url: https://cloudresourcemanager.googleapis.com/v3/tagBindings/?alt=json&pageSize=300&parent=%2F%2Fcompute.googleapis.com%2Fprojects%2Fproject-7d9b6b6d-b532-49f1-b60%2Fglobal%2Fimages%2F7496525050677478952
+    method: GET
+  response:
+    body: |
+      {
+        "tagBindings": [
+          {
+            "name": "tagBindings/%2F%2Fcompute.googleapis.com%2Fprojects%2F58309184865%2Fglobal%2Fimages%2F7496525050677478952/tagValues/281484123941379",
+            "parent": "//compute.googleapis.com/projects/58309184865/global/images/7496525050677478952",
+            "tagValue": "tagValues/281484123941379",
+            "tagValueNamespacedName": "project-7d9b6b6d-b532-49f1-b60/image-tag-rvjncqn1wp/value-one-rvjncqn1wp"
+          }
+        ]
+      }
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 15 Apr 2026 11:40:22 GMT
+      Server:
+      - ESF
+      Vary:
+      - Origin
+      - X-Origin
+      - Referer
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - "0"
+    status: 200 OK
+    code: 200
+    duration: ""
+- request:
+    body: ""
+    form: {}
+    headers:
+      User-Agent:
+      - google-api-go-client/0.5 Terraform/1.14.6 (+https://www.terraform.io) Terraform-Plugin-SDK/2.38.1
+        terraform-provider-google-beta/acc
+      X-Goog-Api-Client:
+      - gl-go/1.26.0 gdcl/0.274.0
+    url: https://compute.googleapis.com/compute/beta/projects/debian-cloud/global/images/family/debian-12?alt=json&prettyPrint=false
+    method: GET
+  response:
+    body: '{"kind":"compute#image","id":"1808140243525760693","creationTimestamp":"2026-04-13T12:47:38.346-07:00","name":"debian-12-bookworm-v20260413","description":"Debian,
+      Debian GNU/Linux, 12 (bookworm), amd64 built on 20260413","sourceType":"RAW","rawDisk":{"source":"","containerType":"TAR"},"status":"READY","archiveSizeBytes":"2400854784","diskSizeGb":"10","licenses":["https://www.googleapis.com/compute/beta/projects/debian-cloud/global/licenses/debian-12-bookworm"],"family":"debian-12","selfLink":"https://www.googleapis.com/compute/beta/projects/debian-cloud/global/images/debian-12-bookworm-v20260413","labels":{"public-image":"true"},"labelFingerprint":"iNBmVNCFF9w=","guestOsFeatures":[{"type":"UEFI_COMPATIBLE"},{"type":"VIRTIO_SCSI_MULTIQUEUE"},{"type":"GVNIC"},{"type":"SEV_CAPABLE"},{"type":"SEV_LIVE_MIGRATABLE_V2"}],"licenseCodes":["2147286739765738111"],"storageLocations":["us","eu","asia"],"rolloutOverride":{"locationRolloutPolicies":{"zones/africa-south1-a":"2026-04-14T02:47:35Z","zones/africa-south1-b":"2026-04-15T22:47:35Z","zones/africa-south1-c":"2026-04-19T08:47:35Z","zones/asia-east1-a":"2026-04-14T09:47:35Z","zones/asia-east1-b":"2026-04-16T05:47:35Z","zones/asia-east1-c":"2026-04-19T15:47:35Z","zones/asia-east2-a":"2026-04-15T00:47:35Z","zones/asia-east2-b":"2026-04-16T20:47:35Z","zones/asia-east2-c":"2026-04-18T07:47:35Z","zones/asia-northeast1-a":"2026-04-14T01:47:35Z","zones/asia-northeast1-b":"2026-04-15T21:47:35Z","zones/asia-northeast1-c":"2026-04-19T07:47:35Z","zones/asia-northeast2-a":"2026-04-15T09:47:35Z","zones/asia-northeast2-b":"2026-04-17T05:47:35Z","zones/asia-northeast2-c":"2026-04-18T16:47:35Z","zones/asia-northeast3-a":"2026-04-13T19:47:35Z","zones/asia-northeast3-b":"2026-04-17T14:47:35Z","zones/asia-northeast3-c":"2026-04-19T01:47:35Z","zones/asia-south1-a":"2026-04-15T17:47:35Z","zones/asia-south1-b":"2026-04-17T13:47:35Z","zones/asia-south1-c":"2026-04-19T00:47:35Z","zones/asia-south2-a":"2026-04-14T11:47:35Z","zones/asia-south2-b":"2026-04-16T07:47:35Z","zones/asia-south2-c":"2026-04-17T18:47:35Z","zones/asia-southeast1-a":"2026-04-15T04:47:35Z","zones/asia-southeast1-b":"2026-04-17T00:47:35Z","zones/asia-southeast1-c":"2026-04-18T11:47:35Z","zones/asia-southeast2-a":"2026-04-14T03:47:35Z","zones/asia-southeast2-b":"2026-04-15T23:47:35Z","zones/asia-southeast2-c":"2026-04-19T09:47:35Z","zones/asia-southeast3-a":"2026-04-15T10:47:35Z","zones/asia-southeast3-b":"2026-04-17T06:47:35Z","zones/asia-southeast3-c":"2026-04-18T17:47:35Z","zones/australia-southeast1-a":"2026-04-14T10:47:35Z","zones/australia-southeast1-b":"2026-04-16T06:47:35Z","zones/australia-southeast1-c":"2026-04-17T17:47:35Z","zones/australia-southeast2-a":"2026-04-15T11:47:35Z","zones/australia-southeast2-b":"2026-04-17T07:47:35Z","zones/australia-southeast2-c":"2026-04-18T18:47:35Z","zones/europe-central2-a":"2026-04-15T01:47:35Z","zones/europe-central2-b":"2026-04-16T21:47:35Z","zones/europe-central2-c":"2026-04-18T08:47:35Z","zones/europe-north1-a":"2026-04-15T06:47:35Z","zones/europe-north1-b":"2026-04-17T02:47:35Z","zones/europe-north1-c":"2026-04-18T13:47:35Z","zones/europe-north2-a":"2026-04-14T20:47:35Z","zones/europe-north2-b":"2026-04-16T16:47:35Z","zones/europe-north2-c":"2026-04-18T03:47:35Z","zones/europe-southwest1-a":"2026-04-14T12:47:35Z","zones/europe-southwest1-b":"2026-04-16T08:47:35Z","zones/europe-southwest1-c":"2026-04-17T19:47:35Z","zones/europe-west1-b":"2026-04-14T16:47:35Z","zones/europe-west1-c":"2026-04-16T12:47:35Z","zones/europe-west1-d":"2026-04-17T23:47:35Z","zones/europe-west10-a":"2026-04-14T13:47:35Z","zones/europe-west10-b":"2026-04-16T09:47:35Z","zones/europe-west10-c":"2026-04-17T20:47:35Z","zones/europe-west12-a":"2026-04-15T12:47:35Z","zones/europe-west12-b":"2026-04-17T08:47:35Z","zones/europe-west12-c":"2026-04-18T19:47:35Z","zones/europe-west15-a":"2026-04-14T17:47:35Z","zones/europe-west15-b":"2026-04-16T13:47:35Z","zones/europe-west15-c":"2026-04-18T00:47:35Z","zones/europe-west2-a":"2026-04-14T00:47:35Z","zones/europe-west2-b":"2026-04-15T20:47:35Z","zones/europe-west2-c":"2026-04-19T06:47:35Z","zones/europe-west3-a":"2026-04-15T16:47:35Z","zones/europe-west3-b":"2026-04-17T12:47:35Z","zones/europe-west3-c":"2026-04-18T23:47:35Z","zones/europe-west4-a":"2026-04-14T08:47:35Z","zones/europe-west4-b":"2026-04-16T04:47:35Z","zones/europe-west4-c":"2026-04-19T14:47:35Z","zones/europe-west6-a":"2026-04-15T13:47:35Z","zones/europe-west6-b":"2026-04-17T09:47:35Z","zones/europe-west6-c":"2026-04-18T20:47:35Z","zones/europe-west8-a":"2026-04-15T07:47:35Z","zones/europe-west8-b":"2026-04-17T03:47:35Z","zones/europe-west8-c":"2026-04-18T14:47:35Z","zones/europe-west9-a":"2026-04-14T14:47:35Z","zones/europe-west9-b":"2026-04-16T10:47:35Z","zones/europe-west9-c":"2026-04-17T21:47:35Z","zones/me-central1-a":"2026-04-15T14:47:35Z","zones/me-central1-b":"2026-04-17T10:47:35Z","zones/me-central1-c":"2026-04-18T21:47:35Z","zones/me-central2-a":"2026-04-14T04:47:35Z","zones/me-central2-b":"2026-04-16T00:47:35Z","zones/me-central2-c":"2026-04-19T10:47:35Z","zones/me-west1-a":"2026-04-14T05:47:35Z","zones/me-west1-b":"2026-04-16T01:47:35Z","zones/me-west1-c":"2026-04-19T11:47:35Z","zones/northamerica-northeast1-a":"2026-04-14T18:47:35Z","zones/northamerica-northeast1-b":"2026-04-16T14:47:35Z","zones/northamerica-northeast1-c":"2026-04-18T01:47:35Z","zones/northamerica-northeast2-a":"2026-04-14T06:47:35Z","zones/northamerica-northeast2-b":"2026-04-16T02:47:35Z","zones/northamerica-northeast2-c":"2026-04-19T12:47:35Z","zones/northamerica-south1-a":"2026-04-14T15:47:35Z","zones/northamerica-south1-b":"2026-04-16T11:47:35Z","zones/northamerica-south1-c":"2026-04-17T22:47:35Z","zones/southamerica-east1-a":"2026-04-15T05:47:35Z","zones/southamerica-east1-b":"2026-04-17T01:47:35Z","zones/southamerica-east1-c":"2026-04-18T12:47:35Z","zones/southamerica-west1-a":"2026-04-14T07:47:35Z","zones/southamerica-west1-b":"2026-04-16T03:47:35Z","zones/southamerica-west1-c":"2026-04-19T13:47:35Z","zones/us-central1-a":"2026-04-15T15:47:35Z","zones/us-central1-b":"2026-04-17T11:47:35Z","zones/us-central1-c":"2026-04-18T22:47:35Z","zones/us-central1-f":"2026-04-19T17:47:35Z","zones/us-central2-a":"2026-04-15T03:47:35Z","zones/us-central2-b":"2026-04-16T23:47:35Z","zones/us-central2-c":"2026-04-18T10:47:35Z","zones/us-central2-d":"2026-04-19T16:47:35Z","zones/us-east1-b":"2026-04-14T22:47:35Z","zones/us-east1-c":"2026-04-16T18:47:35Z","zones/us-east1-d":"2026-04-18T05:47:35Z","zones/us-east4-a":"2026-04-14T23:47:35Z","zones/us-east4-b":"2026-04-16T19:47:35Z","zones/us-east4-c":"2026-04-18T06:47:35Z","zones/us-east5-a":"2026-04-13T20:47:35Z","zones/us-east5-b":"2026-04-17T15:47:35Z","zones/us-east5-c":"2026-04-19T02:47:35Z","zones/us-east7-a":"2026-04-15T02:47:35Z","zones/us-east7-b":"2026-04-16T22:47:35Z","zones/us-east7-c":"2026-04-18T09:47:35Z","zones/us-south1-a":"2026-04-15T08:47:35Z","zones/us-south1-b":"2026-04-17T04:47:35Z","zones/us-south1-c":"2026-04-18T15:47:35Z","zones/us-west1-a":"2026-04-14T19:47:35Z","zones/us-west1-b":"2026-04-16T15:47:35Z","zones/us-west1-c":"2026-04-18T02:47:35Z","zones/us-west2-a":"2026-04-13T21:47:35Z","zones/us-west2-b":"2026-04-17T16:47:35Z","zones/us-west2-c":"2026-04-19T03:47:35Z","zones/us-west3-a":"2026-04-13T22:47:35Z","zones/us-west3-b":"2026-04-15T18:47:35Z","zones/us-west3-c":"2026-04-19T04:47:35Z","zones/us-west4-a":"2026-04-14T21:47:35Z","zones/us-west4-b":"2026-04-16T17:47:35Z","zones/us-west4-c":"2026-04-18T04:47:35Z","zones/us-west8-a":"2026-04-13T23:47:35Z","zones/us-west8-b":"2026-04-15T19:47:35Z","zones/us-west8-c":"2026-04-19T05:47:35Z"},"defaultRolloutTime":"2026-04-19T17:47:35Z"},"architecture":"X86_64","enableConfidentialCompute":false}'
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 15 Apr 2026 11:40:22 GMT
+      Server:
+      - ESF
+      Vary:
+      - Origin
+      - X-Origin
+      - Referer
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - "0"
+    status: 200 OK
+    code: 200
+    duration: ""
+- request:
+    body: ""
+    form: {}
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Terraform/1.14.6 (+https://www.terraform.io) Terraform-Plugin-SDK/2.38.1 terraform-provider-google-beta/acc
+    url: https://cloudresourcemanager.googleapis.com/v3/tagKeys/281483539551707?alt=json
+    method: GET
+  response:
+    body: |
+      {
+        "name": "tagKeys/281483539551707",
+        "parent": "projects/58309184865",
+        "shortName": "image-tag-rvjncqn1wp",
+        "namespacedName": "project-7d9b6b6d-b532-49f1-b60/image-tag-rvjncqn1wp",
+        "description": "Tag key for image acceptance tests",
+        "createTime": "2026-04-15T11:38:33.011346Z",
+        "updateTime": "2026-04-15T11:38:33.011346Z",
+        "etag": "/R3fKhYAhFmyLWFG573PWA=="
+      }
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 15 Apr 2026 11:40:23 GMT
+      Server:
+      - ESF
+      Vary:
+      - Origin
+      - X-Origin
+      - Referer
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - "0"
+    status: 200 OK
+    code: 200
+    duration: ""
+- request:
+    body: ""
+    form: {}
+    headers:
+      User-Agent:
+      - google-api-go-client/0.5 Terraform/1.14.6 (+https://www.terraform.io) Terraform-Plugin-SDK/2.38.1
+        terraform-provider-google-beta/acc
+      X-Goog-Api-Client:
+      - gl-go/1.26.0 gdcl/0.274.0
+    url: https://compute.googleapis.com/compute/beta/projects/debian-cloud/global/images/family/debian-12?alt=json&prettyPrint=false
+    method: GET
+  response:
+    body: '{"kind":"compute#image","id":"1808140243525760693","creationTimestamp":"2026-04-13T12:47:38.346-07:00","name":"debian-12-bookworm-v20260413","description":"Debian,
+      Debian GNU/Linux, 12 (bookworm), amd64 built on 20260413","sourceType":"RAW","rawDisk":{"source":"","containerType":"TAR"},"status":"READY","archiveSizeBytes":"2400854784","diskSizeGb":"10","licenses":["https://www.googleapis.com/compute/beta/projects/debian-cloud/global/licenses/debian-12-bookworm"],"family":"debian-12","selfLink":"https://www.googleapis.com/compute/beta/projects/debian-cloud/global/images/debian-12-bookworm-v20260413","labels":{"public-image":"true"},"labelFingerprint":"iNBmVNCFF9w=","guestOsFeatures":[{"type":"UEFI_COMPATIBLE"},{"type":"VIRTIO_SCSI_MULTIQUEUE"},{"type":"GVNIC"},{"type":"SEV_CAPABLE"},{"type":"SEV_LIVE_MIGRATABLE_V2"}],"licenseCodes":["2147286739765738111"],"storageLocations":["us","eu","asia"],"rolloutOverride":{"locationRolloutPolicies":{"zones/africa-south1-a":"2026-04-14T02:47:35Z","zones/africa-south1-b":"2026-04-15T22:47:35Z","zones/africa-south1-c":"2026-04-19T08:47:35Z","zones/asia-east1-a":"2026-04-14T09:47:35Z","zones/asia-east1-b":"2026-04-16T05:47:35Z","zones/asia-east1-c":"2026-04-19T15:47:35Z","zones/asia-east2-a":"2026-04-15T00:47:35Z","zones/asia-east2-b":"2026-04-16T20:47:35Z","zones/asia-east2-c":"2026-04-18T07:47:35Z","zones/asia-northeast1-a":"2026-04-14T01:47:35Z","zones/asia-northeast1-b":"2026-04-15T21:47:35Z","zones/asia-northeast1-c":"2026-04-19T07:47:35Z","zones/asia-northeast2-a":"2026-04-15T09:47:35Z","zones/asia-northeast2-b":"2026-04-17T05:47:35Z","zones/asia-northeast2-c":"2026-04-18T16:47:35Z","zones/asia-northeast3-a":"2026-04-13T19:47:35Z","zones/asia-northeast3-b":"2026-04-17T14:47:35Z","zones/asia-northeast3-c":"2026-04-19T01:47:35Z","zones/asia-south1-a":"2026-04-15T17:47:35Z","zones/asia-south1-b":"2026-04-17T13:47:35Z","zones/asia-south1-c":"2026-04-19T00:47:35Z","zones/asia-south2-a":"2026-04-14T11:47:35Z","zones/asia-south2-b":"2026-04-16T07:47:35Z","zones/asia-south2-c":"2026-04-17T18:47:35Z","zones/asia-southeast1-a":"2026-04-15T04:47:35Z","zones/asia-southeast1-b":"2026-04-17T00:47:35Z","zones/asia-southeast1-c":"2026-04-18T11:47:35Z","zones/asia-southeast2-a":"2026-04-14T03:47:35Z","zones/asia-southeast2-b":"2026-04-15T23:47:35Z","zones/asia-southeast2-c":"2026-04-19T09:47:35Z","zones/asia-southeast3-a":"2026-04-15T10:47:35Z","zones/asia-southeast3-b":"2026-04-17T06:47:35Z","zones/asia-southeast3-c":"2026-04-18T17:47:35Z","zones/australia-southeast1-a":"2026-04-14T10:47:35Z","zones/australia-southeast1-b":"2026-04-16T06:47:35Z","zones/australia-southeast1-c":"2026-04-17T17:47:35Z","zones/australia-southeast2-a":"2026-04-15T11:47:35Z","zones/australia-southeast2-b":"2026-04-17T07:47:35Z","zones/australia-southeast2-c":"2026-04-18T18:47:35Z","zones/europe-central2-a":"2026-04-15T01:47:35Z","zones/europe-central2-b":"2026-04-16T21:47:35Z","zones/europe-central2-c":"2026-04-18T08:47:35Z","zones/europe-north1-a":"2026-04-15T06:47:35Z","zones/europe-north1-b":"2026-04-17T02:47:35Z","zones/europe-north1-c":"2026-04-18T13:47:35Z","zones/europe-north2-a":"2026-04-14T20:47:35Z","zones/europe-north2-b":"2026-04-16T16:47:35Z","zones/europe-north2-c":"2026-04-18T03:47:35Z","zones/europe-southwest1-a":"2026-04-14T12:47:35Z","zones/europe-southwest1-b":"2026-04-16T08:47:35Z","zones/europe-southwest1-c":"2026-04-17T19:47:35Z","zones/europe-west1-b":"2026-04-14T16:47:35Z","zones/europe-west1-c":"2026-04-16T12:47:35Z","zones/europe-west1-d":"2026-04-17T23:47:35Z","zones/europe-west10-a":"2026-04-14T13:47:35Z","zones/europe-west10-b":"2026-04-16T09:47:35Z","zones/europe-west10-c":"2026-04-17T20:47:35Z","zones/europe-west12-a":"2026-04-15T12:47:35Z","zones/europe-west12-b":"2026-04-17T08:47:35Z","zones/europe-west12-c":"2026-04-18T19:47:35Z","zones/europe-west15-a":"2026-04-14T17:47:35Z","zones/europe-west15-b":"2026-04-16T13:47:35Z","zones/europe-west15-c":"2026-04-18T00:47:35Z","zones/europe-west2-a":"2026-04-14T00:47:35Z","zones/europe-west2-b":"2026-04-15T20:47:35Z","zones/europe-west2-c":"2026-04-19T06:47:35Z","zones/europe-west3-a":"2026-04-15T16:47:35Z","zones/europe-west3-b":"2026-04-17T12:47:35Z","zones/europe-west3-c":"2026-04-18T23:47:35Z","zones/europe-west4-a":"2026-04-14T08:47:35Z","zones/europe-west4-b":"2026-04-16T04:47:35Z","zones/europe-west4-c":"2026-04-19T14:47:35Z","zones/europe-west6-a":"2026-04-15T13:47:35Z","zones/europe-west6-b":"2026-04-17T09:47:35Z","zones/europe-west6-c":"2026-04-18T20:47:35Z","zones/europe-west8-a":"2026-04-15T07:47:35Z","zones/europe-west8-b":"2026-04-17T03:47:35Z","zones/europe-west8-c":"2026-04-18T14:47:35Z","zones/europe-west9-a":"2026-04-14T14:47:35Z","zones/europe-west9-b":"2026-04-16T10:47:35Z","zones/europe-west9-c":"2026-04-17T21:47:35Z","zones/me-central1-a":"2026-04-15T14:47:35Z","zones/me-central1-b":"2026-04-17T10:47:35Z","zones/me-central1-c":"2026-04-18T21:47:35Z","zones/me-central2-a":"2026-04-14T04:47:35Z","zones/me-central2-b":"2026-04-16T00:47:35Z","zones/me-central2-c":"2026-04-19T10:47:35Z","zones/me-west1-a":"2026-04-14T05:47:35Z","zones/me-west1-b":"2026-04-16T01:47:35Z","zones/me-west1-c":"2026-04-19T11:47:35Z","zones/northamerica-northeast1-a":"2026-04-14T18:47:35Z","zones/northamerica-northeast1-b":"2026-04-16T14:47:35Z","zones/northamerica-northeast1-c":"2026-04-18T01:47:35Z","zones/northamerica-northeast2-a":"2026-04-14T06:47:35Z","zones/northamerica-northeast2-b":"2026-04-16T02:47:35Z","zones/northamerica-northeast2-c":"2026-04-19T12:47:35Z","zones/northamerica-south1-a":"2026-04-14T15:47:35Z","zones/northamerica-south1-b":"2026-04-16T11:47:35Z","zones/northamerica-south1-c":"2026-04-17T22:47:35Z","zones/southamerica-east1-a":"2026-04-15T05:47:35Z","zones/southamerica-east1-b":"2026-04-17T01:47:35Z","zones/southamerica-east1-c":"2026-04-18T12:47:35Z","zones/southamerica-west1-a":"2026-04-14T07:47:35Z","zones/southamerica-west1-b":"2026-04-16T03:47:35Z","zones/southamerica-west1-c":"2026-04-19T13:47:35Z","zones/us-central1-a":"2026-04-15T15:47:35Z","zones/us-central1-b":"2026-04-17T11:47:35Z","zones/us-central1-c":"2026-04-18T22:47:35Z","zones/us-central1-f":"2026-04-19T17:47:35Z","zones/us-central2-a":"2026-04-15T03:47:35Z","zones/us-central2-b":"2026-04-16T23:47:35Z","zones/us-central2-c":"2026-04-18T10:47:35Z","zones/us-central2-d":"2026-04-19T16:47:35Z","zones/us-east1-b":"2026-04-14T22:47:35Z","zones/us-east1-c":"2026-04-16T18:47:35Z","zones/us-east1-d":"2026-04-18T05:47:35Z","zones/us-east4-a":"2026-04-14T23:47:35Z","zones/us-east4-b":"2026-04-16T19:47:35Z","zones/us-east4-c":"2026-04-18T06:47:35Z","zones/us-east5-a":"2026-04-13T20:47:35Z","zones/us-east5-b":"2026-04-17T15:47:35Z","zones/us-east5-c":"2026-04-19T02:47:35Z","zones/us-east7-a":"2026-04-15T02:47:35Z","zones/us-east7-b":"2026-04-16T22:47:35Z","zones/us-east7-c":"2026-04-18T09:47:35Z","zones/us-south1-a":"2026-04-15T08:47:35Z","zones/us-south1-b":"2026-04-17T04:47:35Z","zones/us-south1-c":"2026-04-18T15:47:35Z","zones/us-west1-a":"2026-04-14T19:47:35Z","zones/us-west1-b":"2026-04-16T15:47:35Z","zones/us-west1-c":"2026-04-18T02:47:35Z","zones/us-west2-a":"2026-04-13T21:47:35Z","zones/us-west2-b":"2026-04-17T16:47:35Z","zones/us-west2-c":"2026-04-19T03:47:35Z","zones/us-west3-a":"2026-04-13T22:47:35Z","zones/us-west3-b":"2026-04-15T18:47:35Z","zones/us-west3-c":"2026-04-19T04:47:35Z","zones/us-west4-a":"2026-04-14T21:47:35Z","zones/us-west4-b":"2026-04-16T17:47:35Z","zones/us-west4-c":"2026-04-18T04:47:35Z","zones/us-west8-a":"2026-04-13T23:47:35Z","zones/us-west8-b":"2026-04-15T19:47:35Z","zones/us-west8-c":"2026-04-19T05:47:35Z"},"defaultRolloutTime":"2026-04-19T17:47:35Z"},"architecture":"X86_64","enableConfidentialCompute":false}'
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 15 Apr 2026 11:40:23 GMT
+      Server:
+      - ESF
+      Vary:
+      - Origin
+      - X-Origin
+      - Referer
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - "0"
+    status: 200 OK
+    code: 200
+    duration: ""
+- request:
+    body: ""
+    form: {}
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Terraform/1.14.6 (+https://www.terraform.io) Terraform-Plugin-SDK/2.38.1 terraform-provider-google-beta/acc
+    url: https://cloudresourcemanager.googleapis.com/v3/tagValues/281484123941379?alt=json
+    method: GET
+  response:
+    body: |
+      {
+        "name": "tagValues/281484123941379",
+        "parent": "tagKeys/281483539551707",
+        "shortName": "value-one-rvjncqn1wp",
+        "namespacedName": "project-7d9b6b6d-b532-49f1-b60/image-tag-rvjncqn1wp/value-one-rvjncqn1wp",
+        "description": "First tag value for image acceptance tests",
+        "createTime": "2026-04-15T11:38:35.641943Z",
+        "updateTime": "2026-04-15T11:38:35.641943Z",
+        "etag": "6gv4gVIfPcI2g9YlbjSqHA=="
+      }
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 15 Apr 2026 11:40:23 GMT
+      Server:
+      - ESF
+      Vary:
+      - Origin
+      - X-Origin
+      - Referer
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - "0"
+    status: 200 OK
+    code: 200
+    duration: ""
+- request:
+    body: ""
+    form: {}
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Terraform/1.14.6 (+https://www.terraform.io) Terraform-Plugin-SDK/2.38.1 terraform-provider-google-beta/acc
+    url: https://compute.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/images/tf-test-image-rmtrvjncqn1wp?alt=json
+    method: GET
+  response:
+    body: |
+      {
+        "kind": "compute#image",
+        "id": "7496525050677478952",
+        "creationTimestamp": "2026-04-15T04:38:47.372-07:00",
+        "name": "tf-test-image-rmtrvjncqn1wp",
+        "sourceType": "RAW",
+        "status": "READY",
+        "archiveSizeBytes": "800284928",
+        "diskSizeGb": "10",
+        "licenses": [
+          "https://www.googleapis.com/compute/beta/projects/debian-cloud/global/licenses/debian-12-bookworm"
+        ],
+        "selfLink": "https://www.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/images/tf-test-image-rmtrvjncqn1wp",
+        "labels": {
+          "goog-terraform-provisioned": "true"
+        },
+        "labelFingerprint": "vezUS-42LLM=",
+        "guestOsFeatures": [
+          {
+            "type": "UEFI_COMPATIBLE"
+          },
+          {
+            "type": "VIRTIO_SCSI_MULTIQUEUE"
+          },
+          {
+            "type": "GVNIC"
+          },
+          {
+            "type": "SEV_CAPABLE"
+          },
+          {
+            "type": "SEV_LIVE_MIGRATABLE_V2"
+          }
+        ],
+        "licenseCodes": [
+          "2147286739765738111"
+        ],
+        "sourceImage": "https://www.googleapis.com/compute/beta/projects/debian-cloud/global/images/debian-12-bookworm-v20260413",
+        "sourceImageId": "1808140243525760693",
+        "storageLocations": [
+          "us"
+        ],
+        "architecture": "X86_64",
+        "enableConfidentialCompute": false
+      }
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 15 Apr 2026 11:40:24 GMT
+      Server:
+      - ESF
+      Vary:
+      - Origin
+      - X-Origin
+      - Referer
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - "0"
+    status: 200 OK
+    code: 200
+    duration: ""
+- request:
+    body: ""
+    form: {}
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Terraform/1.14.6 (+https://www.terraform.io) Terraform-Plugin-SDK/2.38.1 terraform-provider-google-beta/acc
+    url: https://cloudresourcemanager.googleapis.com/v3/tagValues/281478381708055?alt=json
+    method: GET
+  response:
+    body: |
+      {
+        "name": "tagValues/281478381708055",
+        "parent": "tagKeys/281483539551707",
+        "shortName": "value-two-rvjncqn1wp",
+        "namespacedName": "project-7d9b6b6d-b532-49f1-b60/image-tag-rvjncqn1wp/value-two-rvjncqn1wp",
+        "description": "Second tag value for image acceptance tests",
+        "createTime": "2026-04-15T11:38:48.048253Z",
+        "updateTime": "2026-04-15T11:38:48.048253Z",
+        "etag": "Z564zYB3+9vaZ3NotvljBg=="
+      }
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 15 Apr 2026 11:40:24 GMT
+      Server:
+      - ESF
+      Vary:
+      - Origin
+      - X-Origin
+      - Referer
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - "0"
+    status: 200 OK
+    code: 200
+    duration: ""
+- request:
+    body: ""
+    form: {}
+    headers:
+      User-Agent:
+      - google-api-go-client/0.5 Terraform/1.14.6 (+https://www.terraform.io) Terraform-Plugin-SDK/2.38.1
+        terraform-provider-google-beta/acc
+      X-Goog-Api-Client:
+      - gl-go/1.26.0 gdcl/0.274.0
+    url: https://compute.googleapis.com/compute/beta/projects/debian-cloud/global/images/family/debian-12?alt=json&prettyPrint=false
+    method: GET
+  response:
+    body: '{"kind":"compute#image","id":"1808140243525760693","creationTimestamp":"2026-04-13T12:47:38.346-07:00","name":"debian-12-bookworm-v20260413","description":"Debian,
+      Debian GNU/Linux, 12 (bookworm), amd64 built on 20260413","sourceType":"RAW","rawDisk":{"source":"","containerType":"TAR"},"status":"READY","archiveSizeBytes":"2400854784","diskSizeGb":"10","licenses":["https://www.googleapis.com/compute/beta/projects/debian-cloud/global/licenses/debian-12-bookworm"],"family":"debian-12","selfLink":"https://www.googleapis.com/compute/beta/projects/debian-cloud/global/images/debian-12-bookworm-v20260413","labels":{"public-image":"true"},"labelFingerprint":"iNBmVNCFF9w=","guestOsFeatures":[{"type":"UEFI_COMPATIBLE"},{"type":"VIRTIO_SCSI_MULTIQUEUE"},{"type":"GVNIC"},{"type":"SEV_CAPABLE"},{"type":"SEV_LIVE_MIGRATABLE_V2"}],"licenseCodes":["2147286739765738111"],"storageLocations":["us","eu","asia"],"rolloutOverride":{"locationRolloutPolicies":{"zones/africa-south1-a":"2026-04-14T02:47:35Z","zones/africa-south1-b":"2026-04-15T22:47:35Z","zones/africa-south1-c":"2026-04-19T08:47:35Z","zones/asia-east1-a":"2026-04-14T09:47:35Z","zones/asia-east1-b":"2026-04-16T05:47:35Z","zones/asia-east1-c":"2026-04-19T15:47:35Z","zones/asia-east2-a":"2026-04-15T00:47:35Z","zones/asia-east2-b":"2026-04-16T20:47:35Z","zones/asia-east2-c":"2026-04-18T07:47:35Z","zones/asia-northeast1-a":"2026-04-14T01:47:35Z","zones/asia-northeast1-b":"2026-04-15T21:47:35Z","zones/asia-northeast1-c":"2026-04-19T07:47:35Z","zones/asia-northeast2-a":"2026-04-15T09:47:35Z","zones/asia-northeast2-b":"2026-04-17T05:47:35Z","zones/asia-northeast2-c":"2026-04-18T16:47:35Z","zones/asia-northeast3-a":"2026-04-13T19:47:35Z","zones/asia-northeast3-b":"2026-04-17T14:47:35Z","zones/asia-northeast3-c":"2026-04-19T01:47:35Z","zones/asia-south1-a":"2026-04-15T17:47:35Z","zones/asia-south1-b":"2026-04-17T13:47:35Z","zones/asia-south1-c":"2026-04-19T00:47:35Z","zones/asia-south2-a":"2026-04-14T11:47:35Z","zones/asia-south2-b":"2026-04-16T07:47:35Z","zones/asia-south2-c":"2026-04-17T18:47:35Z","zones/asia-southeast1-a":"2026-04-15T04:47:35Z","zones/asia-southeast1-b":"2026-04-17T00:47:35Z","zones/asia-southeast1-c":"2026-04-18T11:47:35Z","zones/asia-southeast2-a":"2026-04-14T03:47:35Z","zones/asia-southeast2-b":"2026-04-15T23:47:35Z","zones/asia-southeast2-c":"2026-04-19T09:47:35Z","zones/asia-southeast3-a":"2026-04-15T10:47:35Z","zones/asia-southeast3-b":"2026-04-17T06:47:35Z","zones/asia-southeast3-c":"2026-04-18T17:47:35Z","zones/australia-southeast1-a":"2026-04-14T10:47:35Z","zones/australia-southeast1-b":"2026-04-16T06:47:35Z","zones/australia-southeast1-c":"2026-04-17T17:47:35Z","zones/australia-southeast2-a":"2026-04-15T11:47:35Z","zones/australia-southeast2-b":"2026-04-17T07:47:35Z","zones/australia-southeast2-c":"2026-04-18T18:47:35Z","zones/europe-central2-a":"2026-04-15T01:47:35Z","zones/europe-central2-b":"2026-04-16T21:47:35Z","zones/europe-central2-c":"2026-04-18T08:47:35Z","zones/europe-north1-a":"2026-04-15T06:47:35Z","zones/europe-north1-b":"2026-04-17T02:47:35Z","zones/europe-north1-c":"2026-04-18T13:47:35Z","zones/europe-north2-a":"2026-04-14T20:47:35Z","zones/europe-north2-b":"2026-04-16T16:47:35Z","zones/europe-north2-c":"2026-04-18T03:47:35Z","zones/europe-southwest1-a":"2026-04-14T12:47:35Z","zones/europe-southwest1-b":"2026-04-16T08:47:35Z","zones/europe-southwest1-c":"2026-04-17T19:47:35Z","zones/europe-west1-b":"2026-04-14T16:47:35Z","zones/europe-west1-c":"2026-04-16T12:47:35Z","zones/europe-west1-d":"2026-04-17T23:47:35Z","zones/europe-west10-a":"2026-04-14T13:47:35Z","zones/europe-west10-b":"2026-04-16T09:47:35Z","zones/europe-west10-c":"2026-04-17T20:47:35Z","zones/europe-west12-a":"2026-04-15T12:47:35Z","zones/europe-west12-b":"2026-04-17T08:47:35Z","zones/europe-west12-c":"2026-04-18T19:47:35Z","zones/europe-west15-a":"2026-04-14T17:47:35Z","zones/europe-west15-b":"2026-04-16T13:47:35Z","zones/europe-west15-c":"2026-04-18T00:47:35Z","zones/europe-west2-a":"2026-04-14T00:47:35Z","zones/europe-west2-b":"2026-04-15T20:47:35Z","zones/europe-west2-c":"2026-04-19T06:47:35Z","zones/europe-west3-a":"2026-04-15T16:47:35Z","zones/europe-west3-b":"2026-04-17T12:47:35Z","zones/europe-west3-c":"2026-04-18T23:47:35Z","zones/europe-west4-a":"2026-04-14T08:47:35Z","zones/europe-west4-b":"2026-04-16T04:47:35Z","zones/europe-west4-c":"2026-04-19T14:47:35Z","zones/europe-west6-a":"2026-04-15T13:47:35Z","zones/europe-west6-b":"2026-04-17T09:47:35Z","zones/europe-west6-c":"2026-04-18T20:47:35Z","zones/europe-west8-a":"2026-04-15T07:47:35Z","zones/europe-west8-b":"2026-04-17T03:47:35Z","zones/europe-west8-c":"2026-04-18T14:47:35Z","zones/europe-west9-a":"2026-04-14T14:47:35Z","zones/europe-west9-b":"2026-04-16T10:47:35Z","zones/europe-west9-c":"2026-04-17T21:47:35Z","zones/me-central1-a":"2026-04-15T14:47:35Z","zones/me-central1-b":"2026-04-17T10:47:35Z","zones/me-central1-c":"2026-04-18T21:47:35Z","zones/me-central2-a":"2026-04-14T04:47:35Z","zones/me-central2-b":"2026-04-16T00:47:35Z","zones/me-central2-c":"2026-04-19T10:47:35Z","zones/me-west1-a":"2026-04-14T05:47:35Z","zones/me-west1-b":"2026-04-16T01:47:35Z","zones/me-west1-c":"2026-04-19T11:47:35Z","zones/northamerica-northeast1-a":"2026-04-14T18:47:35Z","zones/northamerica-northeast1-b":"2026-04-16T14:47:35Z","zones/northamerica-northeast1-c":"2026-04-18T01:47:35Z","zones/northamerica-northeast2-a":"2026-04-14T06:47:35Z","zones/northamerica-northeast2-b":"2026-04-16T02:47:35Z","zones/northamerica-northeast2-c":"2026-04-19T12:47:35Z","zones/northamerica-south1-a":"2026-04-14T15:47:35Z","zones/northamerica-south1-b":"2026-04-16T11:47:35Z","zones/northamerica-south1-c":"2026-04-17T22:47:35Z","zones/southamerica-east1-a":"2026-04-15T05:47:35Z","zones/southamerica-east1-b":"2026-04-17T01:47:35Z","zones/southamerica-east1-c":"2026-04-18T12:47:35Z","zones/southamerica-west1-a":"2026-04-14T07:47:35Z","zones/southamerica-west1-b":"2026-04-16T03:47:35Z","zones/southamerica-west1-c":"2026-04-19T13:47:35Z","zones/us-central1-a":"2026-04-15T15:47:35Z","zones/us-central1-b":"2026-04-17T11:47:35Z","zones/us-central1-c":"2026-04-18T22:47:35Z","zones/us-central1-f":"2026-04-19T17:47:35Z","zones/us-central2-a":"2026-04-15T03:47:35Z","zones/us-central2-b":"2026-04-16T23:47:35Z","zones/us-central2-c":"2026-04-18T10:47:35Z","zones/us-central2-d":"2026-04-19T16:47:35Z","zones/us-east1-b":"2026-04-14T22:47:35Z","zones/us-east1-c":"2026-04-16T18:47:35Z","zones/us-east1-d":"2026-04-18T05:47:35Z","zones/us-east4-a":"2026-04-14T23:47:35Z","zones/us-east4-b":"2026-04-16T19:47:35Z","zones/us-east4-c":"2026-04-18T06:47:35Z","zones/us-east5-a":"2026-04-13T20:47:35Z","zones/us-east5-b":"2026-04-17T15:47:35Z","zones/us-east5-c":"2026-04-19T02:47:35Z","zones/us-east7-a":"2026-04-15T02:47:35Z","zones/us-east7-b":"2026-04-16T22:47:35Z","zones/us-east7-c":"2026-04-18T09:47:35Z","zones/us-south1-a":"2026-04-15T08:47:35Z","zones/us-south1-b":"2026-04-17T04:47:35Z","zones/us-south1-c":"2026-04-18T15:47:35Z","zones/us-west1-a":"2026-04-14T19:47:35Z","zones/us-west1-b":"2026-04-16T15:47:35Z","zones/us-west1-c":"2026-04-18T02:47:35Z","zones/us-west2-a":"2026-04-13T21:47:35Z","zones/us-west2-b":"2026-04-17T16:47:35Z","zones/us-west2-c":"2026-04-19T03:47:35Z","zones/us-west3-a":"2026-04-13T22:47:35Z","zones/us-west3-b":"2026-04-15T18:47:35Z","zones/us-west3-c":"2026-04-19T04:47:35Z","zones/us-west4-a":"2026-04-14T21:47:35Z","zones/us-west4-b":"2026-04-16T17:47:35Z","zones/us-west4-c":"2026-04-18T04:47:35Z","zones/us-west8-a":"2026-04-13T23:47:35Z","zones/us-west8-b":"2026-04-15T19:47:35Z","zones/us-west8-c":"2026-04-19T05:47:35Z"},"defaultRolloutTime":"2026-04-19T17:47:35Z"},"architecture":"X86_64","enableConfidentialCompute":false}'
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 15 Apr 2026 11:40:25 GMT
+      Server:
+      - ESF
+      Vary:
+      - Origin
+      - X-Origin
+      - Referer
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - "0"
+    status: 200 OK
+    code: 200
+    duration: ""
+- request:
+    body: ""
+    form: {}
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Terraform/1.14.6 (+https://www.terraform.io) Terraform-Plugin-SDK/2.38.1 terraform-provider-google-beta/acc
+    url: https://compute.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/images/tf-test-image-rmtrvjncqn1wp?alt=json
+    method: GET
+  response:
+    body: |
+      {
+        "kind": "compute#image",
+        "id": "7496525050677478952",
+        "creationTimestamp": "2026-04-15T04:38:47.372-07:00",
+        "name": "tf-test-image-rmtrvjncqn1wp",
+        "sourceType": "RAW",
+        "status": "READY",
+        "archiveSizeBytes": "800284928",
+        "diskSizeGb": "10",
+        "licenses": [
+          "https://www.googleapis.com/compute/beta/projects/debian-cloud/global/licenses/debian-12-bookworm"
+        ],
+        "selfLink": "https://www.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/images/tf-test-image-rmtrvjncqn1wp",
+        "labels": {
+          "goog-terraform-provisioned": "true"
+        },
+        "labelFingerprint": "vezUS-42LLM=",
+        "guestOsFeatures": [
+          {
+            "type": "UEFI_COMPATIBLE"
+          },
+          {
+            "type": "VIRTIO_SCSI_MULTIQUEUE"
+          },
+          {
+            "type": "GVNIC"
+          },
+          {
+            "type": "SEV_CAPABLE"
+          },
+          {
+            "type": "SEV_LIVE_MIGRATABLE_V2"
+          }
+        ],
+        "licenseCodes": [
+          "2147286739765738111"
+        ],
+        "sourceImage": "https://www.googleapis.com/compute/beta/projects/debian-cloud/global/images/debian-12-bookworm-v20260413",
+        "sourceImageId": "1808140243525760693",
+        "storageLocations": [
+          "us"
+        ],
+        "architecture": "X86_64",
+        "enableConfidentialCompute": false
+      }
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 15 Apr 2026 11:40:25 GMT
+      Server:
+      - ESF
+      Vary:
+      - Origin
+      - X-Origin
+      - Referer
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - "0"
+    status: 200 OK
+    code: 200
+    duration: ""
+- request:
+    body: ""
+    form: {}
+    headers:
+      User-Agent:
+      - google-api-go-client/0.5 Terraform/1.14.6 (+https://www.terraform.io) Terraform-Plugin-SDK/2.38.1
+        terraform-provider-google-beta/acc
+      X-Goog-Api-Client:
+      - gl-go/1.26.0 gdcl/0.274.0
+    url: https://compute.googleapis.com/compute/beta/projects/debian-cloud/global/images/family/debian-12?alt=json&prettyPrint=false
+    method: GET
+  response:
+    body: '{"kind":"compute#image","id":"1808140243525760693","creationTimestamp":"2026-04-13T12:47:38.346-07:00","name":"debian-12-bookworm-v20260413","description":"Debian,
+      Debian GNU/Linux, 12 (bookworm), amd64 built on 20260413","sourceType":"RAW","rawDisk":{"source":"","containerType":"TAR"},"status":"READY","archiveSizeBytes":"2400854784","diskSizeGb":"10","licenses":["https://www.googleapis.com/compute/beta/projects/debian-cloud/global/licenses/debian-12-bookworm"],"family":"debian-12","selfLink":"https://www.googleapis.com/compute/beta/projects/debian-cloud/global/images/debian-12-bookworm-v20260413","labels":{"public-image":"true"},"labelFingerprint":"iNBmVNCFF9w=","guestOsFeatures":[{"type":"UEFI_COMPATIBLE"},{"type":"VIRTIO_SCSI_MULTIQUEUE"},{"type":"GVNIC"},{"type":"SEV_CAPABLE"},{"type":"SEV_LIVE_MIGRATABLE_V2"}],"licenseCodes":["2147286739765738111"],"storageLocations":["us","eu","asia"],"rolloutOverride":{"locationRolloutPolicies":{"zones/africa-south1-a":"2026-04-14T02:47:35Z","zones/africa-south1-b":"2026-04-15T22:47:35Z","zones/africa-south1-c":"2026-04-19T08:47:35Z","zones/asia-east1-a":"2026-04-14T09:47:35Z","zones/asia-east1-b":"2026-04-16T05:47:35Z","zones/asia-east1-c":"2026-04-19T15:47:35Z","zones/asia-east2-a":"2026-04-15T00:47:35Z","zones/asia-east2-b":"2026-04-16T20:47:35Z","zones/asia-east2-c":"2026-04-18T07:47:35Z","zones/asia-northeast1-a":"2026-04-14T01:47:35Z","zones/asia-northeast1-b":"2026-04-15T21:47:35Z","zones/asia-northeast1-c":"2026-04-19T07:47:35Z","zones/asia-northeast2-a":"2026-04-15T09:47:35Z","zones/asia-northeast2-b":"2026-04-17T05:47:35Z","zones/asia-northeast2-c":"2026-04-18T16:47:35Z","zones/asia-northeast3-a":"2026-04-13T19:47:35Z","zones/asia-northeast3-b":"2026-04-17T14:47:35Z","zones/asia-northeast3-c":"2026-04-19T01:47:35Z","zones/asia-south1-a":"2026-04-15T17:47:35Z","zones/asia-south1-b":"2026-04-17T13:47:35Z","zones/asia-south1-c":"2026-04-19T00:47:35Z","zones/asia-south2-a":"2026-04-14T11:47:35Z","zones/asia-south2-b":"2026-04-16T07:47:35Z","zones/asia-south2-c":"2026-04-17T18:47:35Z","zones/asia-southeast1-a":"2026-04-15T04:47:35Z","zones/asia-southeast1-b":"2026-04-17T00:47:35Z","zones/asia-southeast1-c":"2026-04-18T11:47:35Z","zones/asia-southeast2-a":"2026-04-14T03:47:35Z","zones/asia-southeast2-b":"2026-04-15T23:47:35Z","zones/asia-southeast2-c":"2026-04-19T09:47:35Z","zones/asia-southeast3-a":"2026-04-15T10:47:35Z","zones/asia-southeast3-b":"2026-04-17T06:47:35Z","zones/asia-southeast3-c":"2026-04-18T17:47:35Z","zones/australia-southeast1-a":"2026-04-14T10:47:35Z","zones/australia-southeast1-b":"2026-04-16T06:47:35Z","zones/australia-southeast1-c":"2026-04-17T17:47:35Z","zones/australia-southeast2-a":"2026-04-15T11:47:35Z","zones/australia-southeast2-b":"2026-04-17T07:47:35Z","zones/australia-southeast2-c":"2026-04-18T18:47:35Z","zones/europe-central2-a":"2026-04-15T01:47:35Z","zones/europe-central2-b":"2026-04-16T21:47:35Z","zones/europe-central2-c":"2026-04-18T08:47:35Z","zones/europe-north1-a":"2026-04-15T06:47:35Z","zones/europe-north1-b":"2026-04-17T02:47:35Z","zones/europe-north1-c":"2026-04-18T13:47:35Z","zones/europe-north2-a":"2026-04-14T20:47:35Z","zones/europe-north2-b":"2026-04-16T16:47:35Z","zones/europe-north2-c":"2026-04-18T03:47:35Z","zones/europe-southwest1-a":"2026-04-14T12:47:35Z","zones/europe-southwest1-b":"2026-04-16T08:47:35Z","zones/europe-southwest1-c":"2026-04-17T19:47:35Z","zones/europe-west1-b":"2026-04-14T16:47:35Z","zones/europe-west1-c":"2026-04-16T12:47:35Z","zones/europe-west1-d":"2026-04-17T23:47:35Z","zones/europe-west10-a":"2026-04-14T13:47:35Z","zones/europe-west10-b":"2026-04-16T09:47:35Z","zones/europe-west10-c":"2026-04-17T20:47:35Z","zones/europe-west12-a":"2026-04-15T12:47:35Z","zones/europe-west12-b":"2026-04-17T08:47:35Z","zones/europe-west12-c":"2026-04-18T19:47:35Z","zones/europe-west15-a":"2026-04-14T17:47:35Z","zones/europe-west15-b":"2026-04-16T13:47:35Z","zones/europe-west15-c":"2026-04-18T00:47:35Z","zones/europe-west2-a":"2026-04-14T00:47:35Z","zones/europe-west2-b":"2026-04-15T20:47:35Z","zones/europe-west2-c":"2026-04-19T06:47:35Z","zones/europe-west3-a":"2026-04-15T16:47:35Z","zones/europe-west3-b":"2026-04-17T12:47:35Z","zones/europe-west3-c":"2026-04-18T23:47:35Z","zones/europe-west4-a":"2026-04-14T08:47:35Z","zones/europe-west4-b":"2026-04-16T04:47:35Z","zones/europe-west4-c":"2026-04-19T14:47:35Z","zones/europe-west6-a":"2026-04-15T13:47:35Z","zones/europe-west6-b":"2026-04-17T09:47:35Z","zones/europe-west6-c":"2026-04-18T20:47:35Z","zones/europe-west8-a":"2026-04-15T07:47:35Z","zones/europe-west8-b":"2026-04-17T03:47:35Z","zones/europe-west8-c":"2026-04-18T14:47:35Z","zones/europe-west9-a":"2026-04-14T14:47:35Z","zones/europe-west9-b":"2026-04-16T10:47:35Z","zones/europe-west9-c":"2026-04-17T21:47:35Z","zones/me-central1-a":"2026-04-15T14:47:35Z","zones/me-central1-b":"2026-04-17T10:47:35Z","zones/me-central1-c":"2026-04-18T21:47:35Z","zones/me-central2-a":"2026-04-14T04:47:35Z","zones/me-central2-b":"2026-04-16T00:47:35Z","zones/me-central2-c":"2026-04-19T10:47:35Z","zones/me-west1-a":"2026-04-14T05:47:35Z","zones/me-west1-b":"2026-04-16T01:47:35Z","zones/me-west1-c":"2026-04-19T11:47:35Z","zones/northamerica-northeast1-a":"2026-04-14T18:47:35Z","zones/northamerica-northeast1-b":"2026-04-16T14:47:35Z","zones/northamerica-northeast1-c":"2026-04-18T01:47:35Z","zones/northamerica-northeast2-a":"2026-04-14T06:47:35Z","zones/northamerica-northeast2-b":"2026-04-16T02:47:35Z","zones/northamerica-northeast2-c":"2026-04-19T12:47:35Z","zones/northamerica-south1-a":"2026-04-14T15:47:35Z","zones/northamerica-south1-b":"2026-04-16T11:47:35Z","zones/northamerica-south1-c":"2026-04-17T22:47:35Z","zones/southamerica-east1-a":"2026-04-15T05:47:35Z","zones/southamerica-east1-b":"2026-04-17T01:47:35Z","zones/southamerica-east1-c":"2026-04-18T12:47:35Z","zones/southamerica-west1-a":"2026-04-14T07:47:35Z","zones/southamerica-west1-b":"2026-04-16T03:47:35Z","zones/southamerica-west1-c":"2026-04-19T13:47:35Z","zones/us-central1-a":"2026-04-15T15:47:35Z","zones/us-central1-b":"2026-04-17T11:47:35Z","zones/us-central1-c":"2026-04-18T22:47:35Z","zones/us-central1-f":"2026-04-19T17:47:35Z","zones/us-central2-a":"2026-04-15T03:47:35Z","zones/us-central2-b":"2026-04-16T23:47:35Z","zones/us-central2-c":"2026-04-18T10:47:35Z","zones/us-central2-d":"2026-04-19T16:47:35Z","zones/us-east1-b":"2026-04-14T22:47:35Z","zones/us-east1-c":"2026-04-16T18:47:35Z","zones/us-east1-d":"2026-04-18T05:47:35Z","zones/us-east4-a":"2026-04-14T23:47:35Z","zones/us-east4-b":"2026-04-16T19:47:35Z","zones/us-east4-c":"2026-04-18T06:47:35Z","zones/us-east5-a":"2026-04-13T20:47:35Z","zones/us-east5-b":"2026-04-17T15:47:35Z","zones/us-east5-c":"2026-04-19T02:47:35Z","zones/us-east7-a":"2026-04-15T02:47:35Z","zones/us-east7-b":"2026-04-16T22:47:35Z","zones/us-east7-c":"2026-04-18T09:47:35Z","zones/us-south1-a":"2026-04-15T08:47:35Z","zones/us-south1-b":"2026-04-17T04:47:35Z","zones/us-south1-c":"2026-04-18T15:47:35Z","zones/us-west1-a":"2026-04-14T19:47:35Z","zones/us-west1-b":"2026-04-16T15:47:35Z","zones/us-west1-c":"2026-04-18T02:47:35Z","zones/us-west2-a":"2026-04-13T21:47:35Z","zones/us-west2-b":"2026-04-17T16:47:35Z","zones/us-west2-c":"2026-04-19T03:47:35Z","zones/us-west3-a":"2026-04-13T22:47:35Z","zones/us-west3-b":"2026-04-15T18:47:35Z","zones/us-west3-c":"2026-04-19T04:47:35Z","zones/us-west4-a":"2026-04-14T21:47:35Z","zones/us-west4-b":"2026-04-16T17:47:35Z","zones/us-west4-c":"2026-04-18T04:47:35Z","zones/us-west8-a":"2026-04-13T23:47:35Z","zones/us-west8-b":"2026-04-15T19:47:35Z","zones/us-west8-c":"2026-04-19T05:47:35Z"},"defaultRolloutTime":"2026-04-19T17:47:35Z"},"architecture":"X86_64","enableConfidentialCompute":false}'
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 15 Apr 2026 11:40:26 GMT
+      Server:
+      - ESF
+      Vary:
+      - Origin
+      - X-Origin
+      - Referer
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - "0"
+    status: 200 OK
+    code: 200
+    duration: ""
+- request:
+    body: ""
+    form: {}
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Terraform/1.14.6 (+https://www.terraform.io) Terraform-Plugin-SDK/2.38.1 terraform-provider-google-beta/acc
+    url: https://cloudresourcemanager.googleapis.com/v3/tagKeys/281483539551707?alt=json
+    method: GET
+  response:
+    body: |
+      {
+        "name": "tagKeys/281483539551707",
+        "parent": "projects/58309184865",
+        "shortName": "image-tag-rvjncqn1wp",
+        "namespacedName": "project-7d9b6b6d-b532-49f1-b60/image-tag-rvjncqn1wp",
+        "description": "Tag key for image acceptance tests",
+        "createTime": "2026-04-15T11:38:33.011346Z",
+        "updateTime": "2026-04-15T11:38:33.011346Z",
+        "etag": "/R3fKhYAhFmyLWFG573PWA=="
+      }
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 15 Apr 2026 11:40:26 GMT
+      Server:
+      - ESF
+      Vary:
+      - Origin
+      - X-Origin
+      - Referer
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - "0"
+    status: 200 OK
+    code: 200
+    duration: ""
+- request:
+    body: ""
+    form: {}
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Terraform/1.14.6 (+https://www.terraform.io) Terraform-Plugin-SDK/2.38.1 terraform-provider-google-beta/acc
+    url: https://cloudresourcemanager.googleapis.com/v3/tagValues/281484123941379?alt=json
+    method: GET
+  response:
+    body: |
+      {
+        "name": "tagValues/281484123941379",
+        "parent": "tagKeys/281483539551707",
+        "shortName": "value-one-rvjncqn1wp",
+        "namespacedName": "project-7d9b6b6d-b532-49f1-b60/image-tag-rvjncqn1wp/value-one-rvjncqn1wp",
+        "description": "First tag value for image acceptance tests",
+        "createTime": "2026-04-15T11:38:35.641943Z",
+        "updateTime": "2026-04-15T11:38:35.641943Z",
+        "etag": "6gv4gVIfPcI2g9YlbjSqHA=="
+      }
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 15 Apr 2026 11:40:26 GMT
+      Server:
+      - ESF
+      Vary:
+      - Origin
+      - X-Origin
+      - Referer
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - "0"
+    status: 200 OK
+    code: 200
+    duration: ""
+- request:
+    body: ""
+    form: {}
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Terraform/1.14.6 (+https://www.terraform.io) Terraform-Plugin-SDK/2.38.1 terraform-provider-google-beta/acc
+    url: https://cloudresourcemanager.googleapis.com/v3/tagValues/281478381708055?alt=json
+    method: GET
+  response:
+    body: |
+      {
+        "name": "tagValues/281478381708055",
+        "parent": "tagKeys/281483539551707",
+        "shortName": "value-two-rvjncqn1wp",
+        "namespacedName": "project-7d9b6b6d-b532-49f1-b60/image-tag-rvjncqn1wp/value-two-rvjncqn1wp",
+        "description": "Second tag value for image acceptance tests",
+        "createTime": "2026-04-15T11:38:48.048253Z",
+        "updateTime": "2026-04-15T11:38:48.048253Z",
+        "etag": "Z564zYB3+9vaZ3NotvljBg=="
+      }
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 15 Apr 2026 11:40:27 GMT
+      Server:
+      - ESF
+      Vary:
+      - Origin
+      - X-Origin
+      - Referer
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - "0"
+    status: 200 OK
+    code: 200
+    duration: ""
+- request:
+    body: ""
+    form: {}
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Terraform/1.14.6 (+https://www.terraform.io) Terraform-Plugin-SDK/2.38.1 terraform-provider-google-beta/acc
+    url: https://compute.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/images/tf-test-image-rmtrvjncqn1wp?alt=json
+    method: GET
+  response:
+    body: |
+      {
+        "kind": "compute#image",
+        "id": "7496525050677478952",
+        "creationTimestamp": "2026-04-15T04:38:47.372-07:00",
+        "name": "tf-test-image-rmtrvjncqn1wp",
+        "sourceType": "RAW",
+        "status": "READY",
+        "archiveSizeBytes": "800284928",
+        "diskSizeGb": "10",
+        "licenses": [
+          "https://www.googleapis.com/compute/beta/projects/debian-cloud/global/licenses/debian-12-bookworm"
+        ],
+        "selfLink": "https://www.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/images/tf-test-image-rmtrvjncqn1wp",
+        "labels": {
+          "goog-terraform-provisioned": "true"
+        },
+        "labelFingerprint": "vezUS-42LLM=",
+        "guestOsFeatures": [
+          {
+            "type": "UEFI_COMPATIBLE"
+          },
+          {
+            "type": "VIRTIO_SCSI_MULTIQUEUE"
+          },
+          {
+            "type": "GVNIC"
+          },
+          {
+            "type": "SEV_CAPABLE"
+          },
+          {
+            "type": "SEV_LIVE_MIGRATABLE_V2"
+          }
+        ],
+        "licenseCodes": [
+          "2147286739765738111"
+        ],
+        "sourceImage": "https://www.googleapis.com/compute/beta/projects/debian-cloud/global/images/debian-12-bookworm-v20260413",
+        "sourceImageId": "1808140243525760693",
+        "storageLocations": [
+          "us"
+        ],
+        "architecture": "X86_64",
+        "enableConfidentialCompute": false
+      }
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 15 Apr 2026 11:40:27 GMT
+      Server:
+      - ESF
+      Vary:
+      - Origin
+      - X-Origin
+      - Referer
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - "0"
+    status: 200 OK
+    code: 200
+    duration: ""
+- request:
+    body: ""
+    form: {}
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Terraform/1.14.6 (+https://www.terraform.io) Terraform-Plugin-SDK/2.38.1 terraform-provider-google-beta/acc
+    url: https://compute.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/images/tf-test-image-rmtrvjncqn1wp?alt=json
+    method: DELETE
+  response:
+    body: |
+      {
+        "kind": "compute#operation",
+        "id": "5096588043971905475",
+        "name": "operation-1776253228033-64f7e2eb0246d-754e56ee-c45e3b79",
+        "operationType": "delete",
+        "targetLink": "https://www.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/images/tf-test-image-rmtrvjncqn1wp",
+        "targetId": "7496525050677478952",
+        "status": "RUNNING",
+        "user": "tsuprik.ilia@gmail.com",
+        "progress": 0,
+        "insertTime": "2026-04-15T04:40:28.100-07:00",
+        "startTime": "2026-04-15T04:40:28.117-07:00",
+        "selfLink": "https://www.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/operations/operation-1776253228033-64f7e2eb0246d-754e56ee-c45e3b79"
+      }
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 15 Apr 2026 11:40:28 GMT
+      Server:
+      - ESF
+      Vary:
+      - Origin
+      - X-Origin
+      - Referer
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - "0"
+    status: 200 OK
+    code: 200
+    duration: ""
+- request:
+    body: ""
+    form: {}
+    headers:
+      User-Agent:
+      - google-api-go-client/0.5 Terraform/1.14.6 (+https://www.terraform.io) Terraform-Plugin-SDK/2.38.1
+        terraform-provider-google-beta/acc
+      X-Goog-Api-Client:
+      - gl-go/1.26.0 gdcl/0.274.0
+    url: https://compute.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/operations/operation-1776253228033-64f7e2eb0246d-754e56ee-c45e3b79?alt=json&prettyPrint=false
+    method: GET
+  response:
+    body: '{"kind":"compute#operation","id":"5096588043971905475","name":"operation-1776253228033-64f7e2eb0246d-754e56ee-c45e3b79","operationType":"delete","targetLink":"https://www.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/images/tf-test-image-rmtrvjncqn1wp","targetId":"7496525050677478952","status":"RUNNING","user":"tsuprik.ilia@gmail.com","progress":0,"insertTime":"2026-04-15T04:40:28.100-07:00","startTime":"2026-04-15T04:40:28.117-07:00","selfLink":"https://www.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/operations/operation-1776253228033-64f7e2eb0246d-754e56ee-c45e3b79"}'
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 15 Apr 2026 11:40:28 GMT
+      Etag:
+      - Uj6TPVh0Qn9Z7eHTHcONDdlWPH8=/LRM-ujzRqREbOY9_joU-iAFFyqM=
+      Server:
+      - ESF
+      Vary:
+      - Origin
+      - X-Origin
+      - Referer
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - "0"
+    status: 200 OK
+    code: 200
+    duration: ""
+- request:
+    body: ""
+    form: {}
+    headers:
+      User-Agent:
+      - google-api-go-client/0.5 Terraform/1.14.6 (+https://www.terraform.io) Terraform-Plugin-SDK/2.38.1
+        terraform-provider-google-beta/acc
+      X-Goog-Api-Client:
+      - gl-go/1.26.0 gdcl/0.274.0
+    url: https://compute.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/operations/operation-1776253228033-64f7e2eb0246d-754e56ee-c45e3b79?alt=json&prettyPrint=false
+    method: GET
+  response:
+    body: '{"kind":"compute#operation","id":"5096588043971905475","name":"operation-1776253228033-64f7e2eb0246d-754e56ee-c45e3b79","operationType":"delete","targetLink":"https://www.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/images/tf-test-image-rmtrvjncqn1wp","targetId":"7496525050677478952","status":"DONE","user":"tsuprik.ilia@gmail.com","progress":100,"insertTime":"2026-04-15T04:40:28.100-07:00","startTime":"2026-04-15T04:40:28.117-07:00","endTime":"2026-04-15T04:40:33.287-07:00","selfLink":"https://www.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/operations/operation-1776253228033-64f7e2eb0246d-754e56ee-c45e3b79"}'
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 15 Apr 2026 11:40:39 GMT
+      Etag:
+      - TEBDhAo4M5zgUPJ2UG3Wsbumye0=/L8KQHBYBNhUTULil9-AH0Vd63IQ=
+      Server:
+      - ESF
+      Vary:
+      - Origin
+      - X-Origin
+      - Referer
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - "0"
+    status: 200 OK
+    code: 200
+    duration: ""
+- request:
+    body: |
+      {"labels":{"goog-terraform-provisioned":"true"},"name":"tf-test-image-rmtrvjncqn1wp","params":{"resourceManagerTags":{"tagKeys/281483539551707":"tagValues/281478381708055"}},"sourceImage":"projects/debian-cloud/global/images/debian-12-bookworm-v20260413"}
+    form: {}
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Terraform/1.14.6 (+https://www.terraform.io) Terraform-Plugin-SDK/2.38.1 terraform-provider-google-beta/acc
+    url: https://compute.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/images?alt=json
+    method: POST
+  response:
+    body: |
+      {
+        "kind": "compute#operation",
+        "id": "5937887182805190616",
+        "name": "operation-1776253239426-64f7e2f5dfd40-b0b43500-503f06b5",
+        "operationType": "insert",
+        "targetLink": "https://www.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/images/tf-test-image-rmtrvjncqn1wp",
+        "targetId": "4056117587857295320",
+        "status": "RUNNING",
+        "user": "tsuprik.ilia@gmail.com",
+        "progress": 0,
+        "insertTime": "2026-04-15T04:40:39.846-07:00",
+        "startTime": "2026-04-15T04:40:39.852-07:00",
+        "selfLink": "https://www.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/operations/operation-1776253239426-64f7e2f5dfd40-b0b43500-503f06b5"
+      }
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 15 Apr 2026 11:40:40 GMT
+      Server:
+      - ESF
+      Vary:
+      - Origin
+      - X-Origin
+      - Referer
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - "0"
+    status: 200 OK
+    code: 200
+    duration: ""
+- request:
+    body: ""
+    form: {}
+    headers:
+      User-Agent:
+      - google-api-go-client/0.5 Terraform/1.14.6 (+https://www.terraform.io) Terraform-Plugin-SDK/2.38.1
+        terraform-provider-google-beta/acc
+      X-Goog-Api-Client:
+      - gl-go/1.26.0 gdcl/0.274.0
+    url: https://compute.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/operations/operation-1776253239426-64f7e2f5dfd40-b0b43500-503f06b5?alt=json&prettyPrint=false
+    method: GET
+  response:
+    body: '{"kind":"compute#operation","id":"5937887182805190616","name":"operation-1776253239426-64f7e2f5dfd40-b0b43500-503f06b5","operationType":"insert","targetLink":"https://www.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/images/tf-test-image-rmtrvjncqn1wp","targetId":"4056117587857295320","status":"RUNNING","user":"tsuprik.ilia@gmail.com","progress":0,"insertTime":"2026-04-15T04:40:39.846-07:00","startTime":"2026-04-15T04:40:39.852-07:00","selfLink":"https://www.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/operations/operation-1776253239426-64f7e2f5dfd40-b0b43500-503f06b5"}'
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 15 Apr 2026 11:40:40 GMT
+      Etag:
+      - 5ZEkc2MvU3UL8cqYqHIKiSI44hg=/YVRysqbq2ADxuzxiScg6cmqlrY4=
+      Server:
+      - ESF
+      Vary:
+      - Origin
+      - X-Origin
+      - Referer
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - "0"
+    status: 200 OK
+    code: 200
+    duration: ""
+- request:
+    body: ""
+    form: {}
+    headers:
+      User-Agent:
+      - google-api-go-client/0.5 Terraform/1.14.6 (+https://www.terraform.io) Terraform-Plugin-SDK/2.38.1
+        terraform-provider-google-beta/acc
+      X-Goog-Api-Client:
+      - gl-go/1.26.0 gdcl/0.274.0
+    url: https://compute.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/operations/operation-1776253239426-64f7e2f5dfd40-b0b43500-503f06b5?alt=json&prettyPrint=false
+    method: GET
+  response:
+    body: '{"kind":"compute#operation","id":"5937887182805190616","name":"operation-1776253239426-64f7e2f5dfd40-b0b43500-503f06b5","operationType":"insert","targetLink":"https://www.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/images/tf-test-image-rmtrvjncqn1wp","targetId":"4056117587857295320","status":"RUNNING","user":"tsuprik.ilia@gmail.com","progress":0,"insertTime":"2026-04-15T04:40:39.846-07:00","startTime":"2026-04-15T04:40:39.852-07:00","selfLink":"https://www.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/operations/operation-1776253239426-64f7e2f5dfd40-b0b43500-503f06b5"}'
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 15 Apr 2026 11:40:51 GMT
+      Etag:
+      - y01Y4Sy8z3bopxNyOybQ1a9qhkk=/E1Mos6HLKERShur92Msb6CsF-Qk=
+      Server:
+      - ESF
+      Vary:
+      - Origin
+      - X-Origin
+      - Referer
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - "0"
+    status: 200 OK
+    code: 200
+    duration: ""
+- request:
+    body: ""
+    form: {}
+    headers:
+      User-Agent:
+      - google-api-go-client/0.5 Terraform/1.14.6 (+https://www.terraform.io) Terraform-Plugin-SDK/2.38.1
+        terraform-provider-google-beta/acc
+      X-Goog-Api-Client:
+      - gl-go/1.26.0 gdcl/0.274.0
+    url: https://compute.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/operations/operation-1776253239426-64f7e2f5dfd40-b0b43500-503f06b5?alt=json&prettyPrint=false
+    method: GET
+  response:
+    body: '{"kind":"compute#operation","id":"5937887182805190616","name":"operation-1776253239426-64f7e2f5dfd40-b0b43500-503f06b5","operationType":"insert","targetLink":"https://www.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/images/tf-test-image-rmtrvjncqn1wp","targetId":"4056117587857295320","status":"RUNNING","user":"tsuprik.ilia@gmail.com","progress":0,"insertTime":"2026-04-15T04:40:39.846-07:00","startTime":"2026-04-15T04:40:39.852-07:00","selfLink":"https://www.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/operations/operation-1776253239426-64f7e2f5dfd40-b0b43500-503f06b5"}'
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 15 Apr 2026 11:41:01 GMT
+      Etag:
+      - W8AsK8VO4a2yhvKYglLhj-YvkQA=/c1yo0PFHyX2k4SI1b_qf_BtqFOc=
+      Server:
+      - ESF
+      Vary:
+      - Origin
+      - X-Origin
+      - Referer
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - "0"
+    status: 200 OK
+    code: 200
+    duration: ""
+- request:
+    body: ""
+    form: {}
+    headers:
+      User-Agent:
+      - google-api-go-client/0.5 Terraform/1.14.6 (+https://www.terraform.io) Terraform-Plugin-SDK/2.38.1
+        terraform-provider-google-beta/acc
+      X-Goog-Api-Client:
+      - gl-go/1.26.0 gdcl/0.274.0
+    url: https://compute.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/operations/operation-1776253239426-64f7e2f5dfd40-b0b43500-503f06b5?alt=json&prettyPrint=false
+    method: GET
+  response:
+    body: '{"kind":"compute#operation","id":"5937887182805190616","name":"operation-1776253239426-64f7e2f5dfd40-b0b43500-503f06b5","operationType":"insert","targetLink":"https://www.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/images/tf-test-image-rmtrvjncqn1wp","targetId":"4056117587857295320","status":"RUNNING","user":"tsuprik.ilia@gmail.com","progress":0,"insertTime":"2026-04-15T04:40:39.846-07:00","startTime":"2026-04-15T04:40:39.852-07:00","selfLink":"https://www.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/operations/operation-1776253239426-64f7e2f5dfd40-b0b43500-503f06b5"}'
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 15 Apr 2026 11:41:11 GMT
+      Etag:
+      - vknaJO_ABOYmTiFUDMYpmW-u-50=/QQ_R4XQC4Gi7T3fl6vfmiNc4-TE=
+      Server:
+      - ESF
+      Vary:
+      - Origin
+      - X-Origin
+      - Referer
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - "0"
+    status: 200 OK
+    code: 200
+    duration: ""
+- request:
+    body: ""
+    form: {}
+    headers:
+      User-Agent:
+      - google-api-go-client/0.5 Terraform/1.14.6 (+https://www.terraform.io) Terraform-Plugin-SDK/2.38.1
+        terraform-provider-google-beta/acc
+      X-Goog-Api-Client:
+      - gl-go/1.26.0 gdcl/0.274.0
+    url: https://compute.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/operations/operation-1776253239426-64f7e2f5dfd40-b0b43500-503f06b5?alt=json&prettyPrint=false
+    method: GET
+  response:
+    body: '{"kind":"compute#operation","id":"5937887182805190616","name":"operation-1776253239426-64f7e2f5dfd40-b0b43500-503f06b5","operationType":"insert","targetLink":"https://www.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/images/tf-test-image-rmtrvjncqn1wp","targetId":"4056117587857295320","status":"RUNNING","user":"tsuprik.ilia@gmail.com","progress":0,"insertTime":"2026-04-15T04:40:39.846-07:00","startTime":"2026-04-15T04:40:39.852-07:00","selfLink":"https://www.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/operations/operation-1776253239426-64f7e2f5dfd40-b0b43500-503f06b5"}'
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 15 Apr 2026 11:41:22 GMT
+      Etag:
+      - 8sd4ygMFf49xrFLjcDRbqvxTf0o=/MtbIYHBT1i96oqSoVXHJW7c6YjI=
+      Server:
+      - ESF
+      Vary:
+      - Origin
+      - X-Origin
+      - Referer
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - "0"
+    status: 200 OK
+    code: 200
+    duration: ""
+- request:
+    body: ""
+    form: {}
+    headers:
+      User-Agent:
+      - google-api-go-client/0.5 Terraform/1.14.6 (+https://www.terraform.io) Terraform-Plugin-SDK/2.38.1
+        terraform-provider-google-beta/acc
+      X-Goog-Api-Client:
+      - gl-go/1.26.0 gdcl/0.274.0
+    url: https://compute.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/operations/operation-1776253239426-64f7e2f5dfd40-b0b43500-503f06b5?alt=json&prettyPrint=false
+    method: GET
+  response:
+    body: '{"kind":"compute#operation","id":"5937887182805190616","name":"operation-1776253239426-64f7e2f5dfd40-b0b43500-503f06b5","operationType":"insert","targetLink":"https://www.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/images/tf-test-image-rmtrvjncqn1wp","targetId":"4056117587857295320","status":"RUNNING","user":"tsuprik.ilia@gmail.com","progress":0,"insertTime":"2026-04-15T04:40:39.846-07:00","startTime":"2026-04-15T04:40:39.852-07:00","selfLink":"https://www.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/operations/operation-1776253239426-64f7e2f5dfd40-b0b43500-503f06b5"}'
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 15 Apr 2026 11:41:32 GMT
+      Etag:
+      - f9b9lLhUkwivDh9eSx9oTfH76vM=/bxndbw_w5-z30W7Lh6CmhOVDOjw=
+      Server:
+      - ESF
+      Vary:
+      - Origin
+      - X-Origin
+      - Referer
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - "0"
+    status: 200 OK
+    code: 200
+    duration: ""
+- request:
+    body: ""
+    form: {}
+    headers:
+      User-Agent:
+      - google-api-go-client/0.5 Terraform/1.14.6 (+https://www.terraform.io) Terraform-Plugin-SDK/2.38.1
+        terraform-provider-google-beta/acc
+      X-Goog-Api-Client:
+      - gl-go/1.26.0 gdcl/0.274.0
+    url: https://compute.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/operations/operation-1776253239426-64f7e2f5dfd40-b0b43500-503f06b5?alt=json&prettyPrint=false
+    method: GET
+  response:
+    body: '{"kind":"compute#operation","id":"5937887182805190616","name":"operation-1776253239426-64f7e2f5dfd40-b0b43500-503f06b5","operationType":"insert","targetLink":"https://www.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/images/tf-test-image-rmtrvjncqn1wp","targetId":"4056117587857295320","status":"RUNNING","user":"tsuprik.ilia@gmail.com","progress":0,"insertTime":"2026-04-15T04:40:39.846-07:00","startTime":"2026-04-15T04:40:39.852-07:00","selfLink":"https://www.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/operations/operation-1776253239426-64f7e2f5dfd40-b0b43500-503f06b5"}'
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 15 Apr 2026 11:41:42 GMT
+      Etag:
+      - P5pwi567cRtK1ym4lOL-rHR4YBU=/37oCwFRFDshMzQ9jTdKcPkg1AHg=
+      Server:
+      - ESF
+      Vary:
+      - Origin
+      - X-Origin
+      - Referer
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - "0"
+    status: 200 OK
+    code: 200
+    duration: ""
+- request:
+    body: ""
+    form: {}
+    headers:
+      User-Agent:
+      - google-api-go-client/0.5 Terraform/1.14.6 (+https://www.terraform.io) Terraform-Plugin-SDK/2.38.1
+        terraform-provider-google-beta/acc
+      X-Goog-Api-Client:
+      - gl-go/1.26.0 gdcl/0.274.0
+    url: https://compute.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/operations/operation-1776253239426-64f7e2f5dfd40-b0b43500-503f06b5?alt=json&prettyPrint=false
+    method: GET
+  response:
+    body: '{"kind":"compute#operation","id":"5937887182805190616","name":"operation-1776253239426-64f7e2f5dfd40-b0b43500-503f06b5","operationType":"insert","targetLink":"https://www.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/images/tf-test-image-rmtrvjncqn1wp","targetId":"4056117587857295320","status":"RUNNING","user":"tsuprik.ilia@gmail.com","progress":0,"insertTime":"2026-04-15T04:40:39.846-07:00","startTime":"2026-04-15T04:40:39.852-07:00","selfLink":"https://www.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/operations/operation-1776253239426-64f7e2f5dfd40-b0b43500-503f06b5"}'
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 15 Apr 2026 11:41:53 GMT
+      Etag:
+      - sRwnanaqkGfFR84OIQqdahb5zPo=/XSHH76M2P1bDwbWIDNVLrJwM_As=
+      Server:
+      - ESF
+      Vary:
+      - Origin
+      - X-Origin
+      - Referer
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - "0"
+    status: 200 OK
+    code: 200
+    duration: ""
+- request:
+    body: ""
+    form: {}
+    headers:
+      User-Agent:
+      - google-api-go-client/0.5 Terraform/1.14.6 (+https://www.terraform.io) Terraform-Plugin-SDK/2.38.1
+        terraform-provider-google-beta/acc
+      X-Goog-Api-Client:
+      - gl-go/1.26.0 gdcl/0.274.0
+    url: https://compute.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/operations/operation-1776253239426-64f7e2f5dfd40-b0b43500-503f06b5?alt=json&prettyPrint=false
+    method: GET
+  response:
+    body: '{"kind":"compute#operation","id":"5937887182805190616","name":"operation-1776253239426-64f7e2f5dfd40-b0b43500-503f06b5","operationType":"insert","targetLink":"https://www.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/images/tf-test-image-rmtrvjncqn1wp","targetId":"4056117587857295320","status":"RUNNING","user":"tsuprik.ilia@gmail.com","progress":0,"insertTime":"2026-04-15T04:40:39.846-07:00","startTime":"2026-04-15T04:40:39.852-07:00","selfLink":"https://www.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/operations/operation-1776253239426-64f7e2f5dfd40-b0b43500-503f06b5"}'
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 15 Apr 2026 11:42:03 GMT
+      Etag:
+      - 1PVBmP3gIVJ7SkCAFvW_HrvjK9c=/M0EL-tPOw-aUy_fOW6DV_B17RSI=
+      Server:
+      - ESF
+      Vary:
+      - Origin
+      - X-Origin
+      - Referer
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - "0"
+    status: 200 OK
+    code: 200
+    duration: ""
+- request:
+    body: ""
+    form: {}
+    headers:
+      User-Agent:
+      - google-api-go-client/0.5 Terraform/1.14.6 (+https://www.terraform.io) Terraform-Plugin-SDK/2.38.1
+        terraform-provider-google-beta/acc
+      X-Goog-Api-Client:
+      - gl-go/1.26.0 gdcl/0.274.0
+    url: https://compute.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/operations/operation-1776253239426-64f7e2f5dfd40-b0b43500-503f06b5?alt=json&prettyPrint=false
+    method: GET
+  response:
+    body: '{"kind":"compute#operation","id":"5937887182805190616","name":"operation-1776253239426-64f7e2f5dfd40-b0b43500-503f06b5","operationType":"insert","targetLink":"https://www.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/images/tf-test-image-rmtrvjncqn1wp","targetId":"4056117587857295320","status":"RUNNING","user":"tsuprik.ilia@gmail.com","progress":0,"insertTime":"2026-04-15T04:40:39.846-07:00","startTime":"2026-04-15T04:40:39.852-07:00","selfLink":"https://www.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/operations/operation-1776253239426-64f7e2f5dfd40-b0b43500-503f06b5"}'
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 15 Apr 2026 11:42:13 GMT
+      Etag:
+      - ZFw0cSP0-a0rk697srJnCJcAy1s=/6WUdDA76cm4c_eRdKWbYAbCnTvM=
+      Server:
+      - ESF
+      Vary:
+      - Origin
+      - X-Origin
+      - Referer
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - "0"
+    status: 200 OK
+    code: 200
+    duration: ""
+- request:
+    body: ""
+    form: {}
+    headers:
+      User-Agent:
+      - google-api-go-client/0.5 Terraform/1.14.6 (+https://www.terraform.io) Terraform-Plugin-SDK/2.38.1
+        terraform-provider-google-beta/acc
+      X-Goog-Api-Client:
+      - gl-go/1.26.0 gdcl/0.274.0
+    url: https://compute.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/operations/operation-1776253239426-64f7e2f5dfd40-b0b43500-503f06b5?alt=json&prettyPrint=false
+    method: GET
+  response:
+    body: '{"kind":"compute#operation","id":"5937887182805190616","name":"operation-1776253239426-64f7e2f5dfd40-b0b43500-503f06b5","operationType":"insert","targetLink":"https://www.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/images/tf-test-image-rmtrvjncqn1wp","targetId":"4056117587857295320","status":"RUNNING","user":"tsuprik.ilia@gmail.com","progress":0,"insertTime":"2026-04-15T04:40:39.846-07:00","startTime":"2026-04-15T04:40:39.852-07:00","selfLink":"https://www.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/operations/operation-1776253239426-64f7e2f5dfd40-b0b43500-503f06b5"}'
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 15 Apr 2026 11:42:24 GMT
+      Etag:
+      - V0wMVNLEJYuvsAzbxGUizrK-xBg=/mQAAKlUTB9pDM4TKfttlovLqAIY=
+      Server:
+      - ESF
+      Vary:
+      - Origin
+      - X-Origin
+      - Referer
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - "0"
+    status: 200 OK
+    code: 200
+    duration: ""
+- request:
+    body: ""
+    form: {}
+    headers:
+      User-Agent:
+      - google-api-go-client/0.5 Terraform/1.14.6 (+https://www.terraform.io) Terraform-Plugin-SDK/2.38.1
+        terraform-provider-google-beta/acc
+      X-Goog-Api-Client:
+      - gl-go/1.26.0 gdcl/0.274.0
+    url: https://compute.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/operations/operation-1776253239426-64f7e2f5dfd40-b0b43500-503f06b5?alt=json&prettyPrint=false
+    method: GET
+  response:
+    body: '{"kind":"compute#operation","id":"5937887182805190616","name":"operation-1776253239426-64f7e2f5dfd40-b0b43500-503f06b5","operationType":"insert","targetLink":"https://www.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/images/tf-test-image-rmtrvjncqn1wp","targetId":"4056117587857295320","status":"RUNNING","user":"tsuprik.ilia@gmail.com","progress":0,"insertTime":"2026-04-15T04:40:39.846-07:00","startTime":"2026-04-15T04:40:39.852-07:00","selfLink":"https://www.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/operations/operation-1776253239426-64f7e2f5dfd40-b0b43500-503f06b5"}'
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 15 Apr 2026 11:42:34 GMT
+      Etag:
+      - 8cdYvOXuhhhmuyLrnTRWgKGaN3c=/ew4_EfGJGQZwe3zvHqAK8l9luY4=
+      Server:
+      - ESF
+      Vary:
+      - Origin
+      - X-Origin
+      - Referer
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - "0"
+    status: 200 OK
+    code: 200
+    duration: ""
+- request:
+    body: ""
+    form: {}
+    headers:
+      User-Agent:
+      - google-api-go-client/0.5 Terraform/1.14.6 (+https://www.terraform.io) Terraform-Plugin-SDK/2.38.1
+        terraform-provider-google-beta/acc
+      X-Goog-Api-Client:
+      - gl-go/1.26.0 gdcl/0.274.0
+    url: https://compute.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/operations/operation-1776253239426-64f7e2f5dfd40-b0b43500-503f06b5?alt=json&prettyPrint=false
+    method: GET
+  response:
+    body: '{"kind":"compute#operation","id":"5937887182805190616","name":"operation-1776253239426-64f7e2f5dfd40-b0b43500-503f06b5","operationType":"insert","targetLink":"https://www.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/images/tf-test-image-rmtrvjncqn1wp","targetId":"4056117587857295320","status":"RUNNING","user":"tsuprik.ilia@gmail.com","progress":0,"insertTime":"2026-04-15T04:40:39.846-07:00","startTime":"2026-04-15T04:40:39.852-07:00","selfLink":"https://www.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/operations/operation-1776253239426-64f7e2f5dfd40-b0b43500-503f06b5"}'
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 15 Apr 2026 11:42:45 GMT
+      Etag:
+      - e5cE6Gz3xqmpHj7qvJqOerFboSo=/DvN_mMVA6bJydvPMKmX7mlwEuJ8=
+      Server:
+      - ESF
+      Vary:
+      - Origin
+      - X-Origin
+      - Referer
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - "0"
+    status: 200 OK
+    code: 200
+    duration: ""
+- request:
+    body: ""
+    form: {}
+    headers:
+      User-Agent:
+      - google-api-go-client/0.5 Terraform/1.14.6 (+https://www.terraform.io) Terraform-Plugin-SDK/2.38.1
+        terraform-provider-google-beta/acc
+      X-Goog-Api-Client:
+      - gl-go/1.26.0 gdcl/0.274.0
+    url: https://compute.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/operations/operation-1776253239426-64f7e2f5dfd40-b0b43500-503f06b5?alt=json&prettyPrint=false
+    method: GET
+  response:
+    body: '{"kind":"compute#operation","id":"5937887182805190616","name":"operation-1776253239426-64f7e2f5dfd40-b0b43500-503f06b5","operationType":"insert","targetLink":"https://www.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/images/tf-test-image-rmtrvjncqn1wp","targetId":"4056117587857295320","status":"RUNNING","user":"tsuprik.ilia@gmail.com","progress":0,"insertTime":"2026-04-15T04:40:39.846-07:00","startTime":"2026-04-15T04:40:39.852-07:00","selfLink":"https://www.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/operations/operation-1776253239426-64f7e2f5dfd40-b0b43500-503f06b5"}'
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 15 Apr 2026 11:42:55 GMT
+      Etag:
+      - -b_ezKWTAiKj8mWlCqV8HcVUK3s=/LBd4tTgrzkJu7731y-mhNe29RJA=
+      Server:
+      - ESF
+      Vary:
+      - Origin
+      - X-Origin
+      - Referer
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - "0"
+    status: 200 OK
+    code: 200
+    duration: ""
+- request:
+    body: ""
+    form: {}
+    headers:
+      User-Agent:
+      - google-api-go-client/0.5 Terraform/1.14.6 (+https://www.terraform.io) Terraform-Plugin-SDK/2.38.1
+        terraform-provider-google-beta/acc
+      X-Goog-Api-Client:
+      - gl-go/1.26.0 gdcl/0.274.0
+    url: https://compute.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/operations/operation-1776253239426-64f7e2f5dfd40-b0b43500-503f06b5?alt=json&prettyPrint=false
+    method: GET
+  response:
+    body: '{"kind":"compute#operation","id":"5937887182805190616","name":"operation-1776253239426-64f7e2f5dfd40-b0b43500-503f06b5","operationType":"insert","targetLink":"https://www.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/images/tf-test-image-rmtrvjncqn1wp","targetId":"4056117587857295320","status":"DONE","user":"tsuprik.ilia@gmail.com","progress":100,"insertTime":"2026-04-15T04:40:39.846-07:00","startTime":"2026-04-15T04:40:39.852-07:00","endTime":"2026-04-15T04:43:01.100-07:00","selfLink":"https://www.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/operations/operation-1776253239426-64f7e2f5dfd40-b0b43500-503f06b5"}'
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 15 Apr 2026 11:43:05 GMT
+      Etag:
+      - 2YFhfy3g4URGBtSl3zDOeO7KV_Q=/-PGbwUlqsN9CBf8N_sixAFbemP8=
+      Server:
+      - ESF
+      Vary:
+      - Origin
+      - X-Origin
+      - Referer
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - "0"
+    status: 200 OK
+    code: 200
+    duration: ""
+- request:
+    body: ""
+    form: {}
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Terraform/1.14.6 (+https://www.terraform.io) Terraform-Plugin-SDK/2.38.1 terraform-provider-google-beta/acc
+    url: https://compute.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/images/tf-test-image-rmtrvjncqn1wp?alt=json
+    method: GET
+  response:
+    body: |
+      {
+        "kind": "compute#image",
+        "id": "4056117587857295320",
+        "creationTimestamp": "2026-04-15T04:40:39.851-07:00",
+        "name": "tf-test-image-rmtrvjncqn1wp",
+        "sourceType": "RAW",
+        "status": "READY",
+        "archiveSizeBytes": "800284928",
+        "diskSizeGb": "10",
+        "licenses": [
+          "https://www.googleapis.com/compute/beta/projects/debian-cloud/global/licenses/debian-12-bookworm"
+        ],
+        "selfLink": "https://www.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/images/tf-test-image-rmtrvjncqn1wp",
+        "labels": {
+          "goog-terraform-provisioned": "true"
+        },
+        "labelFingerprint": "vezUS-42LLM=",
+        "guestOsFeatures": [
+          {
+            "type": "UEFI_COMPATIBLE"
+          },
+          {
+            "type": "VIRTIO_SCSI_MULTIQUEUE"
+          },
+          {
+            "type": "GVNIC"
+          },
+          {
+            "type": "SEV_CAPABLE"
+          },
+          {
+            "type": "SEV_LIVE_MIGRATABLE_V2"
+          }
+        ],
+        "licenseCodes": [
+          "2147286739765738111"
+        ],
+        "sourceImage": "https://www.googleapis.com/compute/beta/projects/debian-cloud/global/images/debian-12-bookworm-v20260413",
+        "sourceImageId": "1808140243525760693",
+        "storageLocations": [
+          "us"
+        ],
+        "architecture": "X86_64",
+        "enableConfidentialCompute": false
+      }
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 15 Apr 2026 11:43:06 GMT
+      Server:
+      - ESF
+      Vary:
+      - Origin
+      - X-Origin
+      - Referer
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - "0"
+    status: 200 OK
+    code: 200
+    duration: ""
+- request:
+    body: ""
+    form: {}
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Terraform/1.14.6 (+https://www.terraform.io) Terraform-Plugin-SDK/2.38.1 terraform-provider-google-beta/acc
+    url: https://compute.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/images/tf-test-image-rmtrvjncqn1wp?alt=json
+    method: GET
+  response:
+    body: |
+      {
+        "kind": "compute#image",
+        "id": "4056117587857295320",
+        "creationTimestamp": "2026-04-15T04:40:39.851-07:00",
+        "name": "tf-test-image-rmtrvjncqn1wp",
+        "sourceType": "RAW",
+        "status": "READY",
+        "archiveSizeBytes": "800284928",
+        "diskSizeGb": "10",
+        "licenses": [
+          "https://www.googleapis.com/compute/beta/projects/debian-cloud/global/licenses/debian-12-bookworm"
+        ],
+        "selfLink": "https://www.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/images/tf-test-image-rmtrvjncqn1wp",
+        "labels": {
+          "goog-terraform-provisioned": "true"
+        },
+        "labelFingerprint": "vezUS-42LLM=",
+        "guestOsFeatures": [
+          {
+            "type": "UEFI_COMPATIBLE"
+          },
+          {
+            "type": "VIRTIO_SCSI_MULTIQUEUE"
+          },
+          {
+            "type": "GVNIC"
+          },
+          {
+            "type": "SEV_CAPABLE"
+          },
+          {
+            "type": "SEV_LIVE_MIGRATABLE_V2"
+          }
+        ],
+        "licenseCodes": [
+          "2147286739765738111"
+        ],
+        "sourceImage": "https://www.googleapis.com/compute/beta/projects/debian-cloud/global/images/debian-12-bookworm-v20260413",
+        "sourceImageId": "1808140243525760693",
+        "storageLocations": [
+          "us"
+        ],
+        "architecture": "X86_64",
+        "enableConfidentialCompute": false
+      }
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 15 Apr 2026 11:43:06 GMT
+      Server:
+      - ESF
+      Vary:
+      - Origin
+      - X-Origin
+      - Referer
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - "0"
+    status: 200 OK
+    code: 200
+    duration: ""
+- request:
+    body: ""
+    form: {}
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Terraform/1.14.6 (+https://www.terraform.io) Terraform-Plugin-SDK/2.38.1 terraform-provider-google-beta/acc
+    url: https://cloudresourcemanager.googleapis.com/v3/tagBindings/?alt=json&pageSize=300&parent=%2F%2Fcompute.googleapis.com%2Fprojects%2Fproject-7d9b6b6d-b532-49f1-b60%2Fglobal%2Fimages%2F4056117587857295320
+    method: GET
+  response:
+    body: |
+      {
+        "tagBindings": [
+          {
+            "name": "tagBindings/%2F%2Fcompute.googleapis.com%2Fprojects%2F58309184865%2Fglobal%2Fimages%2F4056117587857295320/tagValues/281478381708055",
+            "parent": "//compute.googleapis.com/projects/58309184865/global/images/4056117587857295320",
+            "tagValue": "tagValues/281478381708055",
+            "tagValueNamespacedName": "project-7d9b6b6d-b532-49f1-b60/image-tag-rvjncqn1wp/value-two-rvjncqn1wp"
+          }
+        ]
+      }
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 15 Apr 2026 11:43:07 GMT
+      Server:
+      - ESF
+      Vary:
+      - Origin
+      - X-Origin
+      - Referer
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - "0"
+    status: 200 OK
+    code: 200
+    duration: ""
+- request:
+    body: ""
+    form: {}
+    headers:
+      User-Agent:
+      - google-api-go-client/0.5 Terraform/1.14.6 (+https://www.terraform.io) Terraform-Plugin-SDK/2.38.1
+        terraform-provider-google-beta/acc
+      X-Goog-Api-Client:
+      - gl-go/1.26.0 gdcl/0.274.0
+    url: https://compute.googleapis.com/compute/beta/projects/debian-cloud/global/images/family/debian-12?alt=json&prettyPrint=false
+    method: GET
+  response:
+    body: '{"kind":"compute#image","id":"1808140243525760693","creationTimestamp":"2026-04-13T12:47:38.346-07:00","name":"debian-12-bookworm-v20260413","description":"Debian,
+      Debian GNU/Linux, 12 (bookworm), amd64 built on 20260413","sourceType":"RAW","rawDisk":{"source":"","containerType":"TAR"},"status":"READY","archiveSizeBytes":"2400854784","diskSizeGb":"10","licenses":["https://www.googleapis.com/compute/beta/projects/debian-cloud/global/licenses/debian-12-bookworm"],"family":"debian-12","selfLink":"https://www.googleapis.com/compute/beta/projects/debian-cloud/global/images/debian-12-bookworm-v20260413","labels":{"public-image":"true"},"labelFingerprint":"iNBmVNCFF9w=","guestOsFeatures":[{"type":"UEFI_COMPATIBLE"},{"type":"VIRTIO_SCSI_MULTIQUEUE"},{"type":"GVNIC"},{"type":"SEV_CAPABLE"},{"type":"SEV_LIVE_MIGRATABLE_V2"}],"licenseCodes":["2147286739765738111"],"storageLocations":["us","eu","asia"],"rolloutOverride":{"locationRolloutPolicies":{"zones/africa-south1-a":"2026-04-14T02:47:35Z","zones/africa-south1-b":"2026-04-15T22:47:35Z","zones/africa-south1-c":"2026-04-19T08:47:35Z","zones/asia-east1-a":"2026-04-14T09:47:35Z","zones/asia-east1-b":"2026-04-16T05:47:35Z","zones/asia-east1-c":"2026-04-19T15:47:35Z","zones/asia-east2-a":"2026-04-15T00:47:35Z","zones/asia-east2-b":"2026-04-16T20:47:35Z","zones/asia-east2-c":"2026-04-18T07:47:35Z","zones/asia-northeast1-a":"2026-04-14T01:47:35Z","zones/asia-northeast1-b":"2026-04-15T21:47:35Z","zones/asia-northeast1-c":"2026-04-19T07:47:35Z","zones/asia-northeast2-a":"2026-04-15T09:47:35Z","zones/asia-northeast2-b":"2026-04-17T05:47:35Z","zones/asia-northeast2-c":"2026-04-18T16:47:35Z","zones/asia-northeast3-a":"2026-04-13T19:47:35Z","zones/asia-northeast3-b":"2026-04-17T14:47:35Z","zones/asia-northeast3-c":"2026-04-19T01:47:35Z","zones/asia-south1-a":"2026-04-15T17:47:35Z","zones/asia-south1-b":"2026-04-17T13:47:35Z","zones/asia-south1-c":"2026-04-19T00:47:35Z","zones/asia-south2-a":"2026-04-14T11:47:35Z","zones/asia-south2-b":"2026-04-16T07:47:35Z","zones/asia-south2-c":"2026-04-17T18:47:35Z","zones/asia-southeast1-a":"2026-04-15T04:47:35Z","zones/asia-southeast1-b":"2026-04-17T00:47:35Z","zones/asia-southeast1-c":"2026-04-18T11:47:35Z","zones/asia-southeast2-a":"2026-04-14T03:47:35Z","zones/asia-southeast2-b":"2026-04-15T23:47:35Z","zones/asia-southeast2-c":"2026-04-19T09:47:35Z","zones/asia-southeast3-a":"2026-04-15T10:47:35Z","zones/asia-southeast3-b":"2026-04-17T06:47:35Z","zones/asia-southeast3-c":"2026-04-18T17:47:35Z","zones/australia-southeast1-a":"2026-04-14T10:47:35Z","zones/australia-southeast1-b":"2026-04-16T06:47:35Z","zones/australia-southeast1-c":"2026-04-17T17:47:35Z","zones/australia-southeast2-a":"2026-04-15T11:47:35Z","zones/australia-southeast2-b":"2026-04-17T07:47:35Z","zones/australia-southeast2-c":"2026-04-18T18:47:35Z","zones/europe-central2-a":"2026-04-15T01:47:35Z","zones/europe-central2-b":"2026-04-16T21:47:35Z","zones/europe-central2-c":"2026-04-18T08:47:35Z","zones/europe-north1-a":"2026-04-15T06:47:35Z","zones/europe-north1-b":"2026-04-17T02:47:35Z","zones/europe-north1-c":"2026-04-18T13:47:35Z","zones/europe-north2-a":"2026-04-14T20:47:35Z","zones/europe-north2-b":"2026-04-16T16:47:35Z","zones/europe-north2-c":"2026-04-18T03:47:35Z","zones/europe-southwest1-a":"2026-04-14T12:47:35Z","zones/europe-southwest1-b":"2026-04-16T08:47:35Z","zones/europe-southwest1-c":"2026-04-17T19:47:35Z","zones/europe-west1-b":"2026-04-14T16:47:35Z","zones/europe-west1-c":"2026-04-16T12:47:35Z","zones/europe-west1-d":"2026-04-17T23:47:35Z","zones/europe-west10-a":"2026-04-14T13:47:35Z","zones/europe-west10-b":"2026-04-16T09:47:35Z","zones/europe-west10-c":"2026-04-17T20:47:35Z","zones/europe-west12-a":"2026-04-15T12:47:35Z","zones/europe-west12-b":"2026-04-17T08:47:35Z","zones/europe-west12-c":"2026-04-18T19:47:35Z","zones/europe-west15-a":"2026-04-14T17:47:35Z","zones/europe-west15-b":"2026-04-16T13:47:35Z","zones/europe-west15-c":"2026-04-18T00:47:35Z","zones/europe-west2-a":"2026-04-14T00:47:35Z","zones/europe-west2-b":"2026-04-15T20:47:35Z","zones/europe-west2-c":"2026-04-19T06:47:35Z","zones/europe-west3-a":"2026-04-15T16:47:35Z","zones/europe-west3-b":"2026-04-17T12:47:35Z","zones/europe-west3-c":"2026-04-18T23:47:35Z","zones/europe-west4-a":"2026-04-14T08:47:35Z","zones/europe-west4-b":"2026-04-16T04:47:35Z","zones/europe-west4-c":"2026-04-19T14:47:35Z","zones/europe-west6-a":"2026-04-15T13:47:35Z","zones/europe-west6-b":"2026-04-17T09:47:35Z","zones/europe-west6-c":"2026-04-18T20:47:35Z","zones/europe-west8-a":"2026-04-15T07:47:35Z","zones/europe-west8-b":"2026-04-17T03:47:35Z","zones/europe-west8-c":"2026-04-18T14:47:35Z","zones/europe-west9-a":"2026-04-14T14:47:35Z","zones/europe-west9-b":"2026-04-16T10:47:35Z","zones/europe-west9-c":"2026-04-17T21:47:35Z","zones/me-central1-a":"2026-04-15T14:47:35Z","zones/me-central1-b":"2026-04-17T10:47:35Z","zones/me-central1-c":"2026-04-18T21:47:35Z","zones/me-central2-a":"2026-04-14T04:47:35Z","zones/me-central2-b":"2026-04-16T00:47:35Z","zones/me-central2-c":"2026-04-19T10:47:35Z","zones/me-west1-a":"2026-04-14T05:47:35Z","zones/me-west1-b":"2026-04-16T01:47:35Z","zones/me-west1-c":"2026-04-19T11:47:35Z","zones/northamerica-northeast1-a":"2026-04-14T18:47:35Z","zones/northamerica-northeast1-b":"2026-04-16T14:47:35Z","zones/northamerica-northeast1-c":"2026-04-18T01:47:35Z","zones/northamerica-northeast2-a":"2026-04-14T06:47:35Z","zones/northamerica-northeast2-b":"2026-04-16T02:47:35Z","zones/northamerica-northeast2-c":"2026-04-19T12:47:35Z","zones/northamerica-south1-a":"2026-04-14T15:47:35Z","zones/northamerica-south1-b":"2026-04-16T11:47:35Z","zones/northamerica-south1-c":"2026-04-17T22:47:35Z","zones/southamerica-east1-a":"2026-04-15T05:47:35Z","zones/southamerica-east1-b":"2026-04-17T01:47:35Z","zones/southamerica-east1-c":"2026-04-18T12:47:35Z","zones/southamerica-west1-a":"2026-04-14T07:47:35Z","zones/southamerica-west1-b":"2026-04-16T03:47:35Z","zones/southamerica-west1-c":"2026-04-19T13:47:35Z","zones/us-central1-a":"2026-04-15T15:47:35Z","zones/us-central1-b":"2026-04-17T11:47:35Z","zones/us-central1-c":"2026-04-18T22:47:35Z","zones/us-central1-f":"2026-04-19T17:47:35Z","zones/us-central2-a":"2026-04-15T03:47:35Z","zones/us-central2-b":"2026-04-16T23:47:35Z","zones/us-central2-c":"2026-04-18T10:47:35Z","zones/us-central2-d":"2026-04-19T16:47:35Z","zones/us-east1-b":"2026-04-14T22:47:35Z","zones/us-east1-c":"2026-04-16T18:47:35Z","zones/us-east1-d":"2026-04-18T05:47:35Z","zones/us-east4-a":"2026-04-14T23:47:35Z","zones/us-east4-b":"2026-04-16T19:47:35Z","zones/us-east4-c":"2026-04-18T06:47:35Z","zones/us-east5-a":"2026-04-13T20:47:35Z","zones/us-east5-b":"2026-04-17T15:47:35Z","zones/us-east5-c":"2026-04-19T02:47:35Z","zones/us-east7-a":"2026-04-15T02:47:35Z","zones/us-east7-b":"2026-04-16T22:47:35Z","zones/us-east7-c":"2026-04-18T09:47:35Z","zones/us-south1-a":"2026-04-15T08:47:35Z","zones/us-south1-b":"2026-04-17T04:47:35Z","zones/us-south1-c":"2026-04-18T15:47:35Z","zones/us-west1-a":"2026-04-14T19:47:35Z","zones/us-west1-b":"2026-04-16T15:47:35Z","zones/us-west1-c":"2026-04-18T02:47:35Z","zones/us-west2-a":"2026-04-13T21:47:35Z","zones/us-west2-b":"2026-04-17T16:47:35Z","zones/us-west2-c":"2026-04-19T03:47:35Z","zones/us-west3-a":"2026-04-13T22:47:35Z","zones/us-west3-b":"2026-04-15T18:47:35Z","zones/us-west3-c":"2026-04-19T04:47:35Z","zones/us-west4-a":"2026-04-14T21:47:35Z","zones/us-west4-b":"2026-04-16T17:47:35Z","zones/us-west4-c":"2026-04-18T04:47:35Z","zones/us-west8-a":"2026-04-13T23:47:35Z","zones/us-west8-b":"2026-04-15T19:47:35Z","zones/us-west8-c":"2026-04-19T05:47:35Z"},"defaultRolloutTime":"2026-04-19T17:47:35Z"},"architecture":"X86_64","enableConfidentialCompute":false}'
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 15 Apr 2026 11:43:08 GMT
+      Server:
+      - ESF
+      Vary:
+      - Origin
+      - X-Origin
+      - Referer
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - "0"
+    status: 200 OK
+    code: 200
+    duration: ""
+- request:
+    body: ""
+    form: {}
+    headers:
+      User-Agent:
+      - google-api-go-client/0.5 Terraform/1.14.6 (+https://www.terraform.io) Terraform-Plugin-SDK/2.38.1
+        terraform-provider-google-beta/acc
+      X-Goog-Api-Client:
+      - gl-go/1.26.0 gdcl/0.274.0
+    url: https://compute.googleapis.com/compute/beta/projects/debian-cloud/global/images/family/debian-12?alt=json&prettyPrint=false
+    method: GET
+  response:
+    body: '{"kind":"compute#image","id":"1808140243525760693","creationTimestamp":"2026-04-13T12:47:38.346-07:00","name":"debian-12-bookworm-v20260413","description":"Debian,
+      Debian GNU/Linux, 12 (bookworm), amd64 built on 20260413","sourceType":"RAW","rawDisk":{"source":"","containerType":"TAR"},"status":"READY","archiveSizeBytes":"2400854784","diskSizeGb":"10","licenses":["https://www.googleapis.com/compute/beta/projects/debian-cloud/global/licenses/debian-12-bookworm"],"family":"debian-12","selfLink":"https://www.googleapis.com/compute/beta/projects/debian-cloud/global/images/debian-12-bookworm-v20260413","labels":{"public-image":"true"},"labelFingerprint":"iNBmVNCFF9w=","guestOsFeatures":[{"type":"UEFI_COMPATIBLE"},{"type":"VIRTIO_SCSI_MULTIQUEUE"},{"type":"GVNIC"},{"type":"SEV_CAPABLE"},{"type":"SEV_LIVE_MIGRATABLE_V2"}],"licenseCodes":["2147286739765738111"],"storageLocations":["us","eu","asia"],"rolloutOverride":{"locationRolloutPolicies":{"zones/africa-south1-a":"2026-04-14T02:47:35Z","zones/africa-south1-b":"2026-04-15T22:47:35Z","zones/africa-south1-c":"2026-04-19T08:47:35Z","zones/asia-east1-a":"2026-04-14T09:47:35Z","zones/asia-east1-b":"2026-04-16T05:47:35Z","zones/asia-east1-c":"2026-04-19T15:47:35Z","zones/asia-east2-a":"2026-04-15T00:47:35Z","zones/asia-east2-b":"2026-04-16T20:47:35Z","zones/asia-east2-c":"2026-04-18T07:47:35Z","zones/asia-northeast1-a":"2026-04-14T01:47:35Z","zones/asia-northeast1-b":"2026-04-15T21:47:35Z","zones/asia-northeast1-c":"2026-04-19T07:47:35Z","zones/asia-northeast2-a":"2026-04-15T09:47:35Z","zones/asia-northeast2-b":"2026-04-17T05:47:35Z","zones/asia-northeast2-c":"2026-04-18T16:47:35Z","zones/asia-northeast3-a":"2026-04-13T19:47:35Z","zones/asia-northeast3-b":"2026-04-17T14:47:35Z","zones/asia-northeast3-c":"2026-04-19T01:47:35Z","zones/asia-south1-a":"2026-04-15T17:47:35Z","zones/asia-south1-b":"2026-04-17T13:47:35Z","zones/asia-south1-c":"2026-04-19T00:47:35Z","zones/asia-south2-a":"2026-04-14T11:47:35Z","zones/asia-south2-b":"2026-04-16T07:47:35Z","zones/asia-south2-c":"2026-04-17T18:47:35Z","zones/asia-southeast1-a":"2026-04-15T04:47:35Z","zones/asia-southeast1-b":"2026-04-17T00:47:35Z","zones/asia-southeast1-c":"2026-04-18T11:47:35Z","zones/asia-southeast2-a":"2026-04-14T03:47:35Z","zones/asia-southeast2-b":"2026-04-15T23:47:35Z","zones/asia-southeast2-c":"2026-04-19T09:47:35Z","zones/asia-southeast3-a":"2026-04-15T10:47:35Z","zones/asia-southeast3-b":"2026-04-17T06:47:35Z","zones/asia-southeast3-c":"2026-04-18T17:47:35Z","zones/australia-southeast1-a":"2026-04-14T10:47:35Z","zones/australia-southeast1-b":"2026-04-16T06:47:35Z","zones/australia-southeast1-c":"2026-04-17T17:47:35Z","zones/australia-southeast2-a":"2026-04-15T11:47:35Z","zones/australia-southeast2-b":"2026-04-17T07:47:35Z","zones/australia-southeast2-c":"2026-04-18T18:47:35Z","zones/europe-central2-a":"2026-04-15T01:47:35Z","zones/europe-central2-b":"2026-04-16T21:47:35Z","zones/europe-central2-c":"2026-04-18T08:47:35Z","zones/europe-north1-a":"2026-04-15T06:47:35Z","zones/europe-north1-b":"2026-04-17T02:47:35Z","zones/europe-north1-c":"2026-04-18T13:47:35Z","zones/europe-north2-a":"2026-04-14T20:47:35Z","zones/europe-north2-b":"2026-04-16T16:47:35Z","zones/europe-north2-c":"2026-04-18T03:47:35Z","zones/europe-southwest1-a":"2026-04-14T12:47:35Z","zones/europe-southwest1-b":"2026-04-16T08:47:35Z","zones/europe-southwest1-c":"2026-04-17T19:47:35Z","zones/europe-west1-b":"2026-04-14T16:47:35Z","zones/europe-west1-c":"2026-04-16T12:47:35Z","zones/europe-west1-d":"2026-04-17T23:47:35Z","zones/europe-west10-a":"2026-04-14T13:47:35Z","zones/europe-west10-b":"2026-04-16T09:47:35Z","zones/europe-west10-c":"2026-04-17T20:47:35Z","zones/europe-west12-a":"2026-04-15T12:47:35Z","zones/europe-west12-b":"2026-04-17T08:47:35Z","zones/europe-west12-c":"2026-04-18T19:47:35Z","zones/europe-west15-a":"2026-04-14T17:47:35Z","zones/europe-west15-b":"2026-04-16T13:47:35Z","zones/europe-west15-c":"2026-04-18T00:47:35Z","zones/europe-west2-a":"2026-04-14T00:47:35Z","zones/europe-west2-b":"2026-04-15T20:47:35Z","zones/europe-west2-c":"2026-04-19T06:47:35Z","zones/europe-west3-a":"2026-04-15T16:47:35Z","zones/europe-west3-b":"2026-04-17T12:47:35Z","zones/europe-west3-c":"2026-04-18T23:47:35Z","zones/europe-west4-a":"2026-04-14T08:47:35Z","zones/europe-west4-b":"2026-04-16T04:47:35Z","zones/europe-west4-c":"2026-04-19T14:47:35Z","zones/europe-west6-a":"2026-04-15T13:47:35Z","zones/europe-west6-b":"2026-04-17T09:47:35Z","zones/europe-west6-c":"2026-04-18T20:47:35Z","zones/europe-west8-a":"2026-04-15T07:47:35Z","zones/europe-west8-b":"2026-04-17T03:47:35Z","zones/europe-west8-c":"2026-04-18T14:47:35Z","zones/europe-west9-a":"2026-04-14T14:47:35Z","zones/europe-west9-b":"2026-04-16T10:47:35Z","zones/europe-west9-c":"2026-04-17T21:47:35Z","zones/me-central1-a":"2026-04-15T14:47:35Z","zones/me-central1-b":"2026-04-17T10:47:35Z","zones/me-central1-c":"2026-04-18T21:47:35Z","zones/me-central2-a":"2026-04-14T04:47:35Z","zones/me-central2-b":"2026-04-16T00:47:35Z","zones/me-central2-c":"2026-04-19T10:47:35Z","zones/me-west1-a":"2026-04-14T05:47:35Z","zones/me-west1-b":"2026-04-16T01:47:35Z","zones/me-west1-c":"2026-04-19T11:47:35Z","zones/northamerica-northeast1-a":"2026-04-14T18:47:35Z","zones/northamerica-northeast1-b":"2026-04-16T14:47:35Z","zones/northamerica-northeast1-c":"2026-04-18T01:47:35Z","zones/northamerica-northeast2-a":"2026-04-14T06:47:35Z","zones/northamerica-northeast2-b":"2026-04-16T02:47:35Z","zones/northamerica-northeast2-c":"2026-04-19T12:47:35Z","zones/northamerica-south1-a":"2026-04-14T15:47:35Z","zones/northamerica-south1-b":"2026-04-16T11:47:35Z","zones/northamerica-south1-c":"2026-04-17T22:47:35Z","zones/southamerica-east1-a":"2026-04-15T05:47:35Z","zones/southamerica-east1-b":"2026-04-17T01:47:35Z","zones/southamerica-east1-c":"2026-04-18T12:47:35Z","zones/southamerica-west1-a":"2026-04-14T07:47:35Z","zones/southamerica-west1-b":"2026-04-16T03:47:35Z","zones/southamerica-west1-c":"2026-04-19T13:47:35Z","zones/us-central1-a":"2026-04-15T15:47:35Z","zones/us-central1-b":"2026-04-17T11:47:35Z","zones/us-central1-c":"2026-04-18T22:47:35Z","zones/us-central1-f":"2026-04-19T17:47:35Z","zones/us-central2-a":"2026-04-15T03:47:35Z","zones/us-central2-b":"2026-04-16T23:47:35Z","zones/us-central2-c":"2026-04-18T10:47:35Z","zones/us-central2-d":"2026-04-19T16:47:35Z","zones/us-east1-b":"2026-04-14T22:47:35Z","zones/us-east1-c":"2026-04-16T18:47:35Z","zones/us-east1-d":"2026-04-18T05:47:35Z","zones/us-east4-a":"2026-04-14T23:47:35Z","zones/us-east4-b":"2026-04-16T19:47:35Z","zones/us-east4-c":"2026-04-18T06:47:35Z","zones/us-east5-a":"2026-04-13T20:47:35Z","zones/us-east5-b":"2026-04-17T15:47:35Z","zones/us-east5-c":"2026-04-19T02:47:35Z","zones/us-east7-a":"2026-04-15T02:47:35Z","zones/us-east7-b":"2026-04-16T22:47:35Z","zones/us-east7-c":"2026-04-18T09:47:35Z","zones/us-south1-a":"2026-04-15T08:47:35Z","zones/us-south1-b":"2026-04-17T04:47:35Z","zones/us-south1-c":"2026-04-18T15:47:35Z","zones/us-west1-a":"2026-04-14T19:47:35Z","zones/us-west1-b":"2026-04-16T15:47:35Z","zones/us-west1-c":"2026-04-18T02:47:35Z","zones/us-west2-a":"2026-04-13T21:47:35Z","zones/us-west2-b":"2026-04-17T16:47:35Z","zones/us-west2-c":"2026-04-19T03:47:35Z","zones/us-west3-a":"2026-04-13T22:47:35Z","zones/us-west3-b":"2026-04-15T18:47:35Z","zones/us-west3-c":"2026-04-19T04:47:35Z","zones/us-west4-a":"2026-04-14T21:47:35Z","zones/us-west4-b":"2026-04-16T17:47:35Z","zones/us-west4-c":"2026-04-18T04:47:35Z","zones/us-west8-a":"2026-04-13T23:47:35Z","zones/us-west8-b":"2026-04-15T19:47:35Z","zones/us-west8-c":"2026-04-19T05:47:35Z"},"defaultRolloutTime":"2026-04-19T17:47:35Z"},"architecture":"X86_64","enableConfidentialCompute":false}'
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 15 Apr 2026 11:43:09 GMT
+      Server:
+      - ESF
+      Vary:
+      - Origin
+      - X-Origin
+      - Referer
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - "0"
+    status: 200 OK
+    code: 200
+    duration: ""
+- request:
+    body: ""
+    form: {}
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Terraform/1.14.6 (+https://www.terraform.io) Terraform-Plugin-SDK/2.38.1 terraform-provider-google-beta/acc
+    url: https://cloudresourcemanager.googleapis.com/v3/tagKeys/281483539551707?alt=json
+    method: GET
+  response:
+    body: |
+      {
+        "name": "tagKeys/281483539551707",
+        "parent": "projects/58309184865",
+        "shortName": "image-tag-rvjncqn1wp",
+        "namespacedName": "project-7d9b6b6d-b532-49f1-b60/image-tag-rvjncqn1wp",
+        "description": "Tag key for image acceptance tests",
+        "createTime": "2026-04-15T11:38:33.011346Z",
+        "updateTime": "2026-04-15T11:38:33.011346Z",
+        "etag": "/R3fKhYAhFmyLWFG573PWA=="
+      }
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 15 Apr 2026 11:43:09 GMT
+      Server:
+      - ESF
+      Vary:
+      - Origin
+      - X-Origin
+      - Referer
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - "0"
+    status: 200 OK
+    code: 200
+    duration: ""
+- request:
+    body: ""
+    form: {}
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Terraform/1.14.6 (+https://www.terraform.io) Terraform-Plugin-SDK/2.38.1 terraform-provider-google-beta/acc
+    url: https://cloudresourcemanager.googleapis.com/v3/tagValues/281484123941379?alt=json
+    method: GET
+  response:
+    body: |
+      {
+        "name": "tagValues/281484123941379",
+        "parent": "tagKeys/281483539551707",
+        "shortName": "value-one-rvjncqn1wp",
+        "namespacedName": "project-7d9b6b6d-b532-49f1-b60/image-tag-rvjncqn1wp/value-one-rvjncqn1wp",
+        "description": "First tag value for image acceptance tests",
+        "createTime": "2026-04-15T11:38:35.641943Z",
+        "updateTime": "2026-04-15T11:38:35.641943Z",
+        "etag": "6gv4gVIfPcI2g9YlbjSqHA=="
+      }
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 15 Apr 2026 11:43:10 GMT
+      Server:
+      - ESF
+      Vary:
+      - Origin
+      - X-Origin
+      - Referer
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - "0"
+    status: 200 OK
+    code: 200
+    duration: ""
+- request:
+    body: ""
+    form: {}
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Terraform/1.14.6 (+https://www.terraform.io) Terraform-Plugin-SDK/2.38.1 terraform-provider-google-beta/acc
+    url: https://cloudresourcemanager.googleapis.com/v3/tagValues/281478381708055?alt=json
+    method: GET
+  response:
+    body: |
+      {
+        "name": "tagValues/281478381708055",
+        "parent": "tagKeys/281483539551707",
+        "shortName": "value-two-rvjncqn1wp",
+        "namespacedName": "project-7d9b6b6d-b532-49f1-b60/image-tag-rvjncqn1wp/value-two-rvjncqn1wp",
+        "description": "Second tag value for image acceptance tests",
+        "createTime": "2026-04-15T11:38:48.048253Z",
+        "updateTime": "2026-04-15T11:38:48.048253Z",
+        "etag": "Z564zYB3+9vaZ3NotvljBg=="
+      }
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 15 Apr 2026 11:43:11 GMT
+      Server:
+      - ESF
+      Vary:
+      - Origin
+      - X-Origin
+      - Referer
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - "0"
+    status: 200 OK
+    code: 200
+    duration: ""
+- request:
+    body: ""
+    form: {}
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Terraform/1.14.6 (+https://www.terraform.io) Terraform-Plugin-SDK/2.38.1 terraform-provider-google-beta/acc
+    url: https://compute.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/images/tf-test-image-rmtrvjncqn1wp?alt=json
+    method: GET
+  response:
+    body: |
+      {
+        "kind": "compute#image",
+        "id": "4056117587857295320",
+        "creationTimestamp": "2026-04-15T04:40:39.851-07:00",
+        "name": "tf-test-image-rmtrvjncqn1wp",
+        "sourceType": "RAW",
+        "status": "READY",
+        "archiveSizeBytes": "800284928",
+        "diskSizeGb": "10",
+        "licenses": [
+          "https://www.googleapis.com/compute/beta/projects/debian-cloud/global/licenses/debian-12-bookworm"
+        ],
+        "selfLink": "https://www.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/images/tf-test-image-rmtrvjncqn1wp",
+        "labels": {
+          "goog-terraform-provisioned": "true"
+        },
+        "labelFingerprint": "vezUS-42LLM=",
+        "guestOsFeatures": [
+          {
+            "type": "UEFI_COMPATIBLE"
+          },
+          {
+            "type": "VIRTIO_SCSI_MULTIQUEUE"
+          },
+          {
+            "type": "GVNIC"
+          },
+          {
+            "type": "SEV_CAPABLE"
+          },
+          {
+            "type": "SEV_LIVE_MIGRATABLE_V2"
+          }
+        ],
+        "licenseCodes": [
+          "2147286739765738111"
+        ],
+        "sourceImage": "https://www.googleapis.com/compute/beta/projects/debian-cloud/global/images/debian-12-bookworm-v20260413",
+        "sourceImageId": "1808140243525760693",
+        "storageLocations": [
+          "us"
+        ],
+        "architecture": "X86_64",
+        "enableConfidentialCompute": false
+      }
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 15 Apr 2026 11:43:11 GMT
+      Server:
+      - ESF
+      Vary:
+      - Origin
+      - X-Origin
+      - Referer
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - "0"
+    status: 200 OK
+    code: 200
+    duration: ""
+- request:
+    body: ""
+    form: {}
+    headers:
+      User-Agent:
+      - google-api-go-client/0.5 Terraform/1.14.6 (+https://www.terraform.io) Terraform-Plugin-SDK/2.38.1
+        terraform-provider-google-beta/acc
+      X-Goog-Api-Client:
+      - gl-go/1.26.0 gdcl/0.274.0
+    url: https://compute.googleapis.com/compute/beta/projects/debian-cloud/global/images/family/debian-12?alt=json&prettyPrint=false
+    method: GET
+  response:
+    body: '{"kind":"compute#image","id":"1808140243525760693","creationTimestamp":"2026-04-13T12:47:38.346-07:00","name":"debian-12-bookworm-v20260413","description":"Debian,
+      Debian GNU/Linux, 12 (bookworm), amd64 built on 20260413","sourceType":"RAW","rawDisk":{"source":"","containerType":"TAR"},"status":"READY","archiveSizeBytes":"2400854784","diskSizeGb":"10","licenses":["https://www.googleapis.com/compute/beta/projects/debian-cloud/global/licenses/debian-12-bookworm"],"family":"debian-12","selfLink":"https://www.googleapis.com/compute/beta/projects/debian-cloud/global/images/debian-12-bookworm-v20260413","labels":{"public-image":"true"},"labelFingerprint":"iNBmVNCFF9w=","guestOsFeatures":[{"type":"UEFI_COMPATIBLE"},{"type":"VIRTIO_SCSI_MULTIQUEUE"},{"type":"GVNIC"},{"type":"SEV_CAPABLE"},{"type":"SEV_LIVE_MIGRATABLE_V2"}],"licenseCodes":["2147286739765738111"],"storageLocations":["us","eu","asia"],"rolloutOverride":{"locationRolloutPolicies":{"zones/africa-south1-a":"2026-04-14T02:47:35Z","zones/africa-south1-b":"2026-04-15T22:47:35Z","zones/africa-south1-c":"2026-04-19T08:47:35Z","zones/asia-east1-a":"2026-04-14T09:47:35Z","zones/asia-east1-b":"2026-04-16T05:47:35Z","zones/asia-east1-c":"2026-04-19T15:47:35Z","zones/asia-east2-a":"2026-04-15T00:47:35Z","zones/asia-east2-b":"2026-04-16T20:47:35Z","zones/asia-east2-c":"2026-04-18T07:47:35Z","zones/asia-northeast1-a":"2026-04-14T01:47:35Z","zones/asia-northeast1-b":"2026-04-15T21:47:35Z","zones/asia-northeast1-c":"2026-04-19T07:47:35Z","zones/asia-northeast2-a":"2026-04-15T09:47:35Z","zones/asia-northeast2-b":"2026-04-17T05:47:35Z","zones/asia-northeast2-c":"2026-04-18T16:47:35Z","zones/asia-northeast3-a":"2026-04-13T19:47:35Z","zones/asia-northeast3-b":"2026-04-17T14:47:35Z","zones/asia-northeast3-c":"2026-04-19T01:47:35Z","zones/asia-south1-a":"2026-04-15T17:47:35Z","zones/asia-south1-b":"2026-04-17T13:47:35Z","zones/asia-south1-c":"2026-04-19T00:47:35Z","zones/asia-south2-a":"2026-04-14T11:47:35Z","zones/asia-south2-b":"2026-04-16T07:47:35Z","zones/asia-south2-c":"2026-04-17T18:47:35Z","zones/asia-southeast1-a":"2026-04-15T04:47:35Z","zones/asia-southeast1-b":"2026-04-17T00:47:35Z","zones/asia-southeast1-c":"2026-04-18T11:47:35Z","zones/asia-southeast2-a":"2026-04-14T03:47:35Z","zones/asia-southeast2-b":"2026-04-15T23:47:35Z","zones/asia-southeast2-c":"2026-04-19T09:47:35Z","zones/asia-southeast3-a":"2026-04-15T10:47:35Z","zones/asia-southeast3-b":"2026-04-17T06:47:35Z","zones/asia-southeast3-c":"2026-04-18T17:47:35Z","zones/australia-southeast1-a":"2026-04-14T10:47:35Z","zones/australia-southeast1-b":"2026-04-16T06:47:35Z","zones/australia-southeast1-c":"2026-04-17T17:47:35Z","zones/australia-southeast2-a":"2026-04-15T11:47:35Z","zones/australia-southeast2-b":"2026-04-17T07:47:35Z","zones/australia-southeast2-c":"2026-04-18T18:47:35Z","zones/europe-central2-a":"2026-04-15T01:47:35Z","zones/europe-central2-b":"2026-04-16T21:47:35Z","zones/europe-central2-c":"2026-04-18T08:47:35Z","zones/europe-north1-a":"2026-04-15T06:47:35Z","zones/europe-north1-b":"2026-04-17T02:47:35Z","zones/europe-north1-c":"2026-04-18T13:47:35Z","zones/europe-north2-a":"2026-04-14T20:47:35Z","zones/europe-north2-b":"2026-04-16T16:47:35Z","zones/europe-north2-c":"2026-04-18T03:47:35Z","zones/europe-southwest1-a":"2026-04-14T12:47:35Z","zones/europe-southwest1-b":"2026-04-16T08:47:35Z","zones/europe-southwest1-c":"2026-04-17T19:47:35Z","zones/europe-west1-b":"2026-04-14T16:47:35Z","zones/europe-west1-c":"2026-04-16T12:47:35Z","zones/europe-west1-d":"2026-04-17T23:47:35Z","zones/europe-west10-a":"2026-04-14T13:47:35Z","zones/europe-west10-b":"2026-04-16T09:47:35Z","zones/europe-west10-c":"2026-04-17T20:47:35Z","zones/europe-west12-a":"2026-04-15T12:47:35Z","zones/europe-west12-b":"2026-04-17T08:47:35Z","zones/europe-west12-c":"2026-04-18T19:47:35Z","zones/europe-west15-a":"2026-04-14T17:47:35Z","zones/europe-west15-b":"2026-04-16T13:47:35Z","zones/europe-west15-c":"2026-04-18T00:47:35Z","zones/europe-west2-a":"2026-04-14T00:47:35Z","zones/europe-west2-b":"2026-04-15T20:47:35Z","zones/europe-west2-c":"2026-04-19T06:47:35Z","zones/europe-west3-a":"2026-04-15T16:47:35Z","zones/europe-west3-b":"2026-04-17T12:47:35Z","zones/europe-west3-c":"2026-04-18T23:47:35Z","zones/europe-west4-a":"2026-04-14T08:47:35Z","zones/europe-west4-b":"2026-04-16T04:47:35Z","zones/europe-west4-c":"2026-04-19T14:47:35Z","zones/europe-west6-a":"2026-04-15T13:47:35Z","zones/europe-west6-b":"2026-04-17T09:47:35Z","zones/europe-west6-c":"2026-04-18T20:47:35Z","zones/europe-west8-a":"2026-04-15T07:47:35Z","zones/europe-west8-b":"2026-04-17T03:47:35Z","zones/europe-west8-c":"2026-04-18T14:47:35Z","zones/europe-west9-a":"2026-04-14T14:47:35Z","zones/europe-west9-b":"2026-04-16T10:47:35Z","zones/europe-west9-c":"2026-04-17T21:47:35Z","zones/me-central1-a":"2026-04-15T14:47:35Z","zones/me-central1-b":"2026-04-17T10:47:35Z","zones/me-central1-c":"2026-04-18T21:47:35Z","zones/me-central2-a":"2026-04-14T04:47:35Z","zones/me-central2-b":"2026-04-16T00:47:35Z","zones/me-central2-c":"2026-04-19T10:47:35Z","zones/me-west1-a":"2026-04-14T05:47:35Z","zones/me-west1-b":"2026-04-16T01:47:35Z","zones/me-west1-c":"2026-04-19T11:47:35Z","zones/northamerica-northeast1-a":"2026-04-14T18:47:35Z","zones/northamerica-northeast1-b":"2026-04-16T14:47:35Z","zones/northamerica-northeast1-c":"2026-04-18T01:47:35Z","zones/northamerica-northeast2-a":"2026-04-14T06:47:35Z","zones/northamerica-northeast2-b":"2026-04-16T02:47:35Z","zones/northamerica-northeast2-c":"2026-04-19T12:47:35Z","zones/northamerica-south1-a":"2026-04-14T15:47:35Z","zones/northamerica-south1-b":"2026-04-16T11:47:35Z","zones/northamerica-south1-c":"2026-04-17T22:47:35Z","zones/southamerica-east1-a":"2026-04-15T05:47:35Z","zones/southamerica-east1-b":"2026-04-17T01:47:35Z","zones/southamerica-east1-c":"2026-04-18T12:47:35Z","zones/southamerica-west1-a":"2026-04-14T07:47:35Z","zones/southamerica-west1-b":"2026-04-16T03:47:35Z","zones/southamerica-west1-c":"2026-04-19T13:47:35Z","zones/us-central1-a":"2026-04-15T15:47:35Z","zones/us-central1-b":"2026-04-17T11:47:35Z","zones/us-central1-c":"2026-04-18T22:47:35Z","zones/us-central1-f":"2026-04-19T17:47:35Z","zones/us-central2-a":"2026-04-15T03:47:35Z","zones/us-central2-b":"2026-04-16T23:47:35Z","zones/us-central2-c":"2026-04-18T10:47:35Z","zones/us-central2-d":"2026-04-19T16:47:35Z","zones/us-east1-b":"2026-04-14T22:47:35Z","zones/us-east1-c":"2026-04-16T18:47:35Z","zones/us-east1-d":"2026-04-18T05:47:35Z","zones/us-east4-a":"2026-04-14T23:47:35Z","zones/us-east4-b":"2026-04-16T19:47:35Z","zones/us-east4-c":"2026-04-18T06:47:35Z","zones/us-east5-a":"2026-04-13T20:47:35Z","zones/us-east5-b":"2026-04-17T15:47:35Z","zones/us-east5-c":"2026-04-19T02:47:35Z","zones/us-east7-a":"2026-04-15T02:47:35Z","zones/us-east7-b":"2026-04-16T22:47:35Z","zones/us-east7-c":"2026-04-18T09:47:35Z","zones/us-south1-a":"2026-04-15T08:47:35Z","zones/us-south1-b":"2026-04-17T04:47:35Z","zones/us-south1-c":"2026-04-18T15:47:35Z","zones/us-west1-a":"2026-04-14T19:47:35Z","zones/us-west1-b":"2026-04-16T15:47:35Z","zones/us-west1-c":"2026-04-18T02:47:35Z","zones/us-west2-a":"2026-04-13T21:47:35Z","zones/us-west2-b":"2026-04-17T16:47:35Z","zones/us-west2-c":"2026-04-19T03:47:35Z","zones/us-west3-a":"2026-04-13T22:47:35Z","zones/us-west3-b":"2026-04-15T18:47:35Z","zones/us-west3-c":"2026-04-19T04:47:35Z","zones/us-west4-a":"2026-04-14T21:47:35Z","zones/us-west4-b":"2026-04-16T17:47:35Z","zones/us-west4-c":"2026-04-18T04:47:35Z","zones/us-west8-a":"2026-04-13T23:47:35Z","zones/us-west8-b":"2026-04-15T19:47:35Z","zones/us-west8-c":"2026-04-19T05:47:35Z"},"defaultRolloutTime":"2026-04-19T17:47:35Z"},"architecture":"X86_64","enableConfidentialCompute":false}'
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 15 Apr 2026 11:43:12 GMT
+      Server:
+      - ESF
+      Vary:
+      - Origin
+      - X-Origin
+      - Referer
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - "0"
+    status: 200 OK
+    code: 200
+    duration: ""
+- request:
+    body: ""
+    form: {}
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Terraform/1.14.6 (+https://www.terraform.io) Terraform-Plugin-SDK/2.38.1 terraform-provider-google-beta/acc
+    url: https://compute.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/images/tf-test-image-rmtrvjncqn1wp?alt=json
+    method: GET
+  response:
+    body: |
+      {
+        "kind": "compute#image",
+        "id": "4056117587857295320",
+        "creationTimestamp": "2026-04-15T04:40:39.851-07:00",
+        "name": "tf-test-image-rmtrvjncqn1wp",
+        "sourceType": "RAW",
+        "status": "READY",
+        "archiveSizeBytes": "800284928",
+        "diskSizeGb": "10",
+        "licenses": [
+          "https://www.googleapis.com/compute/beta/projects/debian-cloud/global/licenses/debian-12-bookworm"
+        ],
+        "selfLink": "https://www.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/images/tf-test-image-rmtrvjncqn1wp",
+        "labels": {
+          "goog-terraform-provisioned": "true"
+        },
+        "labelFingerprint": "vezUS-42LLM=",
+        "guestOsFeatures": [
+          {
+            "type": "UEFI_COMPATIBLE"
+          },
+          {
+            "type": "VIRTIO_SCSI_MULTIQUEUE"
+          },
+          {
+            "type": "GVNIC"
+          },
+          {
+            "type": "SEV_CAPABLE"
+          },
+          {
+            "type": "SEV_LIVE_MIGRATABLE_V2"
+          }
+        ],
+        "licenseCodes": [
+          "2147286739765738111"
+        ],
+        "sourceImage": "https://www.googleapis.com/compute/beta/projects/debian-cloud/global/images/debian-12-bookworm-v20260413",
+        "sourceImageId": "1808140243525760693",
+        "storageLocations": [
+          "us"
+        ],
+        "architecture": "X86_64",
+        "enableConfidentialCompute": false
+      }
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 15 Apr 2026 11:43:12 GMT
+      Server:
+      - ESF
+      Vary:
+      - Origin
+      - X-Origin
+      - Referer
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - "0"
+    status: 200 OK
+    code: 200
+    duration: ""
+- request:
+    body: ""
+    form: {}
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Terraform/1.14.6 (+https://www.terraform.io) Terraform-Plugin-SDK/2.38.1 terraform-provider-google-beta/acc
+    url: https://compute.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/images/tf-test-image-rmtrvjncqn1wp?alt=json
+    method: DELETE
+  response:
+    body: |
+      {
+        "kind": "compute#operation",
+        "id": "5352471230416078654",
+        "name": "operation-1776253393211-64f7e38889222-94d62803-cc041cc6",
+        "operationType": "delete",
+        "targetLink": "https://www.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/images/tf-test-image-rmtrvjncqn1wp",
+        "targetId": "4056117587857295320",
+        "status": "RUNNING",
+        "user": "tsuprik.ilia@gmail.com",
+        "progress": 0,
+        "insertTime": "2026-04-15T04:43:13.305-07:00",
+        "startTime": "2026-04-15T04:43:13.313-07:00",
+        "selfLink": "https://www.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/operations/operation-1776253393211-64f7e38889222-94d62803-cc041cc6"
+      }
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 15 Apr 2026 11:43:13 GMT
+      Server:
+      - ESF
+      Vary:
+      - Origin
+      - X-Origin
+      - Referer
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - "0"
+    status: 200 OK
+    code: 200
+    duration: ""
+- request:
+    body: ""
+    form: {}
+    headers:
+      User-Agent:
+      - google-api-go-client/0.5 Terraform/1.14.6 (+https://www.terraform.io) Terraform-Plugin-SDK/2.38.1
+        terraform-provider-google-beta/acc
+      X-Goog-Api-Client:
+      - gl-go/1.26.0 gdcl/0.274.0
+    url: https://compute.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/operations/operation-1776253393211-64f7e38889222-94d62803-cc041cc6?alt=json&prettyPrint=false
+    method: GET
+  response:
+    body: '{"kind":"compute#operation","id":"5352471230416078654","name":"operation-1776253393211-64f7e38889222-94d62803-cc041cc6","operationType":"delete","targetLink":"https://www.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/images/tf-test-image-rmtrvjncqn1wp","targetId":"4056117587857295320","status":"RUNNING","user":"tsuprik.ilia@gmail.com","progress":0,"insertTime":"2026-04-15T04:43:13.305-07:00","startTime":"2026-04-15T04:43:13.313-07:00","selfLink":"https://www.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/operations/operation-1776253393211-64f7e38889222-94d62803-cc041cc6"}'
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 15 Apr 2026 11:43:13 GMT
+      Etag:
+      - m-mCrCSaokJibCbgkNJl_sR4B5A=/b92W0cpx_csgcsYXoJ5CclzLDUM=
+      Server:
+      - ESF
+      Vary:
+      - Origin
+      - X-Origin
+      - Referer
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - "0"
+    status: 200 OK
+    code: 200
+    duration: ""
+- request:
+    body: ""
+    form: {}
+    headers:
+      User-Agent:
+      - google-api-go-client/0.5 Terraform/1.14.6 (+https://www.terraform.io) Terraform-Plugin-SDK/2.38.1
+        terraform-provider-google-beta/acc
+      X-Goog-Api-Client:
+      - gl-go/1.26.0 gdcl/0.274.0
+    url: https://compute.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/operations/operation-1776253393211-64f7e38889222-94d62803-cc041cc6?alt=json&prettyPrint=false
+    method: GET
+  response:
+    body: '{"kind":"compute#operation","id":"5352471230416078654","name":"operation-1776253393211-64f7e38889222-94d62803-cc041cc6","operationType":"delete","targetLink":"https://www.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/images/tf-test-image-rmtrvjncqn1wp","targetId":"4056117587857295320","status":"DONE","user":"tsuprik.ilia@gmail.com","progress":100,"insertTime":"2026-04-15T04:43:13.305-07:00","startTime":"2026-04-15T04:43:13.313-07:00","endTime":"2026-04-15T04:43:18.865-07:00","selfLink":"https://www.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/operations/operation-1776253393211-64f7e38889222-94d62803-cc041cc6"}'
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 15 Apr 2026 11:43:24 GMT
+      Etag:
+      - B3e-Hr1KXNK3qWnY9k5llQVctGQ=/eCg9xau3P1vItqUdfUGmrbSDY_M=
+      Server:
+      - ESF
+      Vary:
+      - Origin
+      - X-Origin
+      - Referer
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - "0"
+    status: 200 OK
+    code: 200
+    duration: ""
+- request:
+    body: ""
+    form: {}
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Terraform/1.14.6 (+https://www.terraform.io) Terraform-Plugin-SDK/2.38.1 terraform-provider-google-beta/acc
+    url: https://cloudresourcemanager.googleapis.com/v3/tagValues/281478381708055?alt=json
+    method: DELETE
+  response:
+    body: |
+      {
+        "name": "operations/rdtv.global.6424111783844909584",
+        "metadata": {
+          "@type": "type.googleapis.com/google.cloud.resourcemanager.v3.DeleteTagValueMetadata"
+        }
+      }
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 15 Apr 2026 11:43:25 GMT
+      Server:
+      - ESF
+      Vary:
+      - Origin
+      - X-Origin
+      - Referer
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - "0"
+    status: 200 OK
+    code: 200
+    duration: ""
+- request:
+    body: ""
+    form: {}
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Terraform/1.14.6 (+https://www.terraform.io) Terraform-Plugin-SDK/2.38.1 terraform-provider-google-beta/acc
+    url: https://cloudresourcemanager.googleapis.com/v3/operations/rdtv.global.6424111783844909584?alt=json
+    method: GET
+  response:
+    body: |
+      {
+        "name": "operations/rdtv.global.6424111783844909584",
+        "metadata": {
+          "@type": "type.googleapis.com/google.cloud.resourcemanager.v3.DeleteTagValueMetadata"
+        }
+      }
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 15 Apr 2026 11:43:25 GMT
+      Server:
+      - ESF
+      Vary:
+      - Origin
+      - X-Origin
+      - Referer
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - "0"
+    status: 200 OK
+    code: 200
+    duration: ""
+- request:
+    body: ""
+    form: {}
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Terraform/1.14.6 (+https://www.terraform.io) Terraform-Plugin-SDK/2.38.1 terraform-provider-google-beta/acc
+    url: https://cloudresourcemanager.googleapis.com/v3/operations/rdtv.global.6424111783844909584?alt=json
+    method: GET
+  response:
+    body: |
+      {
+        "name": "operations/rdtv.global.6424111783844909584",
+        "metadata": {
+          "@type": "type.googleapis.com/google.cloud.resourcemanager.v3.DeleteTagValueMetadata"
+        },
+        "done": true,
+        "response": {
+          "@type": "type.googleapis.com/google.cloud.resourcemanager.v3.TagValue",
+          "name": "tagValues/281478381708055",
+          "parent": "tagKeys/281483539551707",
+          "shortName": "value-two-rvjncqn1wp",
+          "namespacedName": "project-7d9b6b6d-b532-49f1-b60/image-tag-rvjncqn1wp/value-two-rvjncqn1wp",
+          "description": "Second tag value for image acceptance tests",
+          "createTime": "2026-04-15T11:38:48.048253Z",
+          "updateTime": "2026-04-15T11:38:48.048253Z",
+          "etag": "Z564zYB3+9vaZ3NotvljBg=="
+        }
+      }
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 15 Apr 2026 11:43:35 GMT
+      Server:
+      - ESF
+      Vary:
+      - Origin
+      - X-Origin
+      - Referer
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - "0"
+    status: 200 OK
+    code: 200
+    duration: ""
+- request:
+    body: ""
+    form: {}
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Terraform/1.14.6 (+https://www.terraform.io) Terraform-Plugin-SDK/2.38.1 terraform-provider-google-beta/acc
+    url: https://cloudresourcemanager.googleapis.com/v3/tagValues/281484123941379?alt=json
+    method: DELETE
+  response:
+    body: |
+      {
+        "name": "operations/rdtv.global.5289534929485534349",
+        "metadata": {
+          "@type": "type.googleapis.com/google.cloud.resourcemanager.v3.DeleteTagValueMetadata"
+        }
+      }
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 15 Apr 2026 11:43:36 GMT
+      Server:
+      - ESF
+      Vary:
+      - Origin
+      - X-Origin
+      - Referer
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - "0"
+    status: 200 OK
+    code: 200
+    duration: ""
+- request:
+    body: ""
+    form: {}
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Terraform/1.14.6 (+https://www.terraform.io) Terraform-Plugin-SDK/2.38.1 terraform-provider-google-beta/acc
+    url: https://cloudresourcemanager.googleapis.com/v3/operations/rdtv.global.5289534929485534349?alt=json
+    method: GET
+  response:
+    body: |
+      {
+        "name": "operations/rdtv.global.5289534929485534349",
+        "metadata": {
+          "@type": "type.googleapis.com/google.cloud.resourcemanager.v3.DeleteTagValueMetadata"
+        }
+      }
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 15 Apr 2026 11:43:37 GMT
+      Server:
+      - ESF
+      Vary:
+      - Origin
+      - X-Origin
+      - Referer
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - "0"
+    status: 200 OK
+    code: 200
+    duration: ""
+- request:
+    body: ""
+    form: {}
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Terraform/1.14.6 (+https://www.terraform.io) Terraform-Plugin-SDK/2.38.1 terraform-provider-google-beta/acc
+    url: https://cloudresourcemanager.googleapis.com/v3/operations/rdtv.global.5289534929485534349?alt=json
+    method: GET
+  response:
+    body: |
+      {
+        "name": "operations/rdtv.global.5289534929485534349",
+        "metadata": {
+          "@type": "type.googleapis.com/google.cloud.resourcemanager.v3.DeleteTagValueMetadata"
+        },
+        "done": true,
+        "response": {
+          "@type": "type.googleapis.com/google.cloud.resourcemanager.v3.TagValue",
+          "name": "tagValues/281484123941379",
+          "parent": "tagKeys/281483539551707",
+          "shortName": "value-one-rvjncqn1wp",
+          "namespacedName": "project-7d9b6b6d-b532-49f1-b60/image-tag-rvjncqn1wp/value-one-rvjncqn1wp",
+          "description": "First tag value for image acceptance tests",
+          "createTime": "2026-04-15T11:38:35.641943Z",
+          "updateTime": "2026-04-15T11:38:35.641943Z",
+          "etag": "6gv4gVIfPcI2g9YlbjSqHA=="
+        }
+      }
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 15 Apr 2026 11:43:47 GMT
+      Server:
+      - ESF
+      Vary:
+      - Origin
+      - X-Origin
+      - Referer
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - "0"
+    status: 200 OK
+    code: 200
+    duration: ""
+- request:
+    body: ""
+    form: {}
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Terraform/1.14.6 (+https://www.terraform.io) Terraform-Plugin-SDK/2.38.1 terraform-provider-google-beta/acc
+    url: https://cloudresourcemanager.googleapis.com/v3/tagKeys/281483539551707?alt=json
+    method: DELETE
+  response:
+    body: |
+      {
+        "name": "operations/rdtk.global.7938319248170152064",
+        "metadata": {
+          "@type": "type.googleapis.com/google.cloud.resourcemanager.v3.DeleteTagKeyMetadata"
+        }
+      }
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 15 Apr 2026 11:43:48 GMT
+      Server:
+      - ESF
+      Vary:
+      - Origin
+      - X-Origin
+      - Referer
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - "0"
+    status: 200 OK
+    code: 200
+    duration: ""
+- request:
+    body: ""
+    form: {}
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Terraform/1.14.6 (+https://www.terraform.io) Terraform-Plugin-SDK/2.38.1 terraform-provider-google-beta/acc
+    url: https://cloudresourcemanager.googleapis.com/v3/operations/rdtk.global.7938319248170152064?alt=json
+    method: GET
+  response:
+    body: |
+      {
+        "name": "operations/rdtk.global.7938319248170152064",
+        "metadata": {
+          "@type": "type.googleapis.com/google.cloud.resourcemanager.v3.DeleteTagKeyMetadata"
+        }
+      }
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 15 Apr 2026 11:43:48 GMT
+      Server:
+      - ESF
+      Vary:
+      - Origin
+      - X-Origin
+      - Referer
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - "0"
+    status: 200 OK
+    code: 200
+    duration: ""
+- request:
+    body: ""
+    form: {}
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Terraform/1.14.6 (+https://www.terraform.io) Terraform-Plugin-SDK/2.38.1 terraform-provider-google-beta/acc
+    url: https://cloudresourcemanager.googleapis.com/v3/operations/rdtk.global.7938319248170152064?alt=json
+    method: GET
+  response:
+    body: |
+      {
+        "name": "operations/rdtk.global.7938319248170152064",
+        "metadata": {
+          "@type": "type.googleapis.com/google.cloud.resourcemanager.v3.DeleteTagKeyMetadata"
+        },
+        "done": true,
+        "response": {
+          "@type": "type.googleapis.com/google.cloud.resourcemanager.v3.TagKey",
+          "name": "tagKeys/281483539551707",
+          "parent": "projects/58309184865",
+          "shortName": "image-tag-rvjncqn1wp",
+          "namespacedName": "project-7d9b6b6d-b532-49f1-b60/image-tag-rvjncqn1wp",
+          "description": "Tag key for image acceptance tests",
+          "createTime": "2026-04-15T11:38:33.011346Z",
+          "updateTime": "2026-04-15T11:38:33.011346Z",
+          "etag": "/R3fKhYAhFmyLWFG573PWA=="
+        }
+      }
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 15 Apr 2026 11:43:58 GMT
+      Server:
+      - ESF
+      Vary:
+      - Origin
+      - X-Origin
+      - Referer
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - "0"
+    status: 200 OK
+    code: 200
+    duration: ""
+- request:
+    body: ""
+    form: {}
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Terraform/1.14.6 (+https://www.terraform.io) Terraform-Plugin-SDK/2.38.1 terraform-provider-google-beta/acc
+    url: https://compute.googleapis.com/compute/beta/projects/project-7d9b6b6d-b532-49f1-b60/global/images/tf-test-image-rmtrvjncqn1wp?alt=json
+    method: GET
+  response:
+    body: |
+      {
+        "error": {
+          "code": 404,
+          "message": "The resource 'projects/project-7d9b6b6d-b532-49f1-b60/global/images/tf-test-image-rmtrvjncqn1wp' was not found",
+          "errors": [
+            {
+              "message": "The resource 'projects/project-7d9b6b6d-b532-49f1-b60/global/images/tf-test-image-rmtrvjncqn1wp' was not found",
+              "domain": "global",
+              "reason": "notFound"
+            }
+          ]
+        }
+      }
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Wed, 15 Apr 2026 11:43:59 GMT
+      Server:
+      - ESF
+      Vary:
+      - Origin
+      - X-Origin
+      - Referer
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - "0"
+    status: 404 Not Found
+    code: 404
+    duration: ""

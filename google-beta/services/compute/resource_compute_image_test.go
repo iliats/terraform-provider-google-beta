@@ -21,10 +21,13 @@ import (
 	"testing"
 
 	"github.com/hashicorp/terraform-provider-google-beta/google-beta/acctest"
+	"github.com/hashicorp/terraform-provider-google-beta/google-beta/envvar"
 	tpgcompute "github.com/hashicorp/terraform-provider-google-beta/google-beta/services/compute"
 	"github.com/hashicorp/terraform-provider-google-beta/google-beta/tpgresource"
+	transport_tpg "github.com/hashicorp/terraform-provider-google-beta/google-beta/transport"
 
 	"github.com/hashicorp/terraform-plugin-testing/helper/resource"
+	"github.com/hashicorp/terraform-plugin-testing/plancheck"
 	"github.com/hashicorp/terraform-plugin-testing/terraform"
 
 	compute "google.golang.org/api/compute/v0.beta"
@@ -1096,4 +1099,180 @@ resource "google_compute_image" "image" {
   ]
 }
 `, kmsRingName, kmsKeyName, suffix, suffix)
+}
+
+func TestAccComputeImage_resourceManagerTags(t *testing.T) {
+	t.Parallel()
+
+	context := map[string]interface{}{
+		"random_suffix": acctest.RandString(t, 10),
+		"project_id":    envvar.GetTestProjectFromEnv(),
+	}
+
+	acctest.VcrTest(t, resource.TestCase{
+		PreCheck:                 func() { acctest.AccTestPreCheck(t) },
+		ProtoV5ProviderFactories: acctest.ProtoV5ProviderFactories(t),
+		CheckDestroy:             testAccCheckComputeImageDestroyProducer(t),
+		Steps: []resource.TestStep{
+			{
+				Config: testAccComputeImage_resourceManagerTags(context),
+				Check: resource.ComposeTestCheckFunc(
+					acctest.CheckTagBindings(t, testAccComputeImageTagBindingCheckConfig(
+						t,
+						"google_compute_image.image_with_resource_manager_tags",
+						[]string{"google_tags_tag_value.tag_value_1"},
+						nil,
+					)),
+				),
+			},
+			{
+				ResourceName:            "google_compute_image.image_with_resource_manager_tags",
+				ImportState:             true,
+				ImportStateVerify:       true,
+				ImportStateVerifyIgnore: []string{"params", "source_image"},
+			},
+			{
+				Config: testAccComputeImage_resourceManagerTagsUpdated(context),
+				ConfigPlanChecks: resource.ConfigPlanChecks{
+					PreApply: []plancheck.PlanCheck{
+						plancheck.ExpectResourceAction("google_compute_image.image_with_resource_manager_tags", plancheck.ResourceActionReplace),
+					},
+				},
+				Check: resource.ComposeTestCheckFunc(
+					acctest.CheckTagBindings(t, testAccComputeImageTagBindingCheckConfig(
+						t,
+						"google_compute_image.image_with_resource_manager_tags",
+						[]string{"google_tags_tag_value.tag_value_2"},
+						[]string{"google_tags_tag_value.tag_value_1"},
+					)),
+				),
+			},
+			{
+				ResourceName:            "google_compute_image.image_with_resource_manager_tags",
+				ImportState:             true,
+				ImportStateVerify:       true,
+				ImportStateVerifyIgnore: []string{"params", "source_image"},
+			},
+		},
+	})
+}
+
+func testAccComputeImage_resourceManagerTags(context map[string]interface{}) string {
+	return acctest.Nprintf(`
+resource "google_tags_tag_key" "tag_key" {
+  parent      = "projects/%{project_id}"
+  short_name  = "image-tag-%{random_suffix}"
+  description = "Tag key for image acceptance tests"
+}
+
+resource "google_tags_tag_value" "tag_value_1" {
+  parent      = google_tags_tag_key.tag_key.id
+  short_name  = "value-one-%{random_suffix}"
+  description = "First tag value for image acceptance tests"
+}
+
+resource "google_tags_tag_value" "tag_value_2" {
+  parent      = google_tags_tag_key.tag_key.id
+  short_name  = "value-two-%{random_suffix}"
+  description = "Second tag value for image acceptance tests"
+
+  # Serialize value creation for stable VCR recordings.
+  depends_on = [google_tags_tag_value.tag_value_1]
+}
+
+data "google_compute_image" "debian" {
+  family  = "debian-12"
+  project = "debian-cloud"
+}
+
+resource "google_compute_image" "image_with_resource_manager_tags" {
+  name         = "tf-test-image-rmt%{random_suffix}"
+  source_image = data.google_compute_image.debian.self_link
+
+  params {
+    resource_manager_tags = {
+      (google_tags_tag_key.tag_key.id) = google_tags_tag_value.tag_value_1.id
+    }
+  }
+}
+`, context)
+}
+
+func testAccComputeImage_resourceManagerTagsUpdated(context map[string]interface{}) string {
+	return acctest.Nprintf(`
+resource "google_tags_tag_key" "tag_key" {
+  parent      = "projects/%{project_id}"
+  short_name  = "image-tag-%{random_suffix}"
+  description = "Tag key for image acceptance tests"
+}
+
+resource "google_tags_tag_value" "tag_value_1" {
+  parent      = google_tags_tag_key.tag_key.id
+  short_name  = "value-one-%{random_suffix}"
+  description = "First tag value for image acceptance tests"
+}
+
+resource "google_tags_tag_value" "tag_value_2" {
+  parent      = google_tags_tag_key.tag_key.id
+  short_name  = "value-two-%{random_suffix}"
+  description = "Second tag value for image acceptance tests"
+
+  # Serialize value creation for stable VCR recordings.
+  depends_on = [google_tags_tag_value.tag_value_1]
+}
+
+data "google_compute_image" "debian" {
+  family  = "debian-12"
+  project = "debian-cloud"
+}
+
+resource "google_compute_image" "image_with_resource_manager_tags" {
+  name         = "tf-test-image-rmt%{random_suffix}"
+  source_image = data.google_compute_image.debian.self_link
+
+  params {
+    resource_manager_tags = {
+      (google_tags_tag_key.tag_key.id) = google_tags_tag_value.tag_value_2.id
+    }
+  }
+}
+`, context)
+}
+
+func testAccComputeImageTagBindingCheckConfig(t *testing.T, resourceName string, expectedTagValueResources, unexpectedTagValueResources []string) acctest.TagBindingCheckConfig {
+	return acctest.TagBindingCheckConfig{
+		ResourceName:                resourceName,
+		ExpectedTagValueResources:   expectedTagValueResources,
+		UnexpectedTagValueResources: unexpectedTagValueResources,
+		BuildParent: func(rs *terraform.ResourceState) (string, error) {
+			project := rs.Primary.Attributes["project"]
+			name := rs.Primary.Attributes["name"]
+
+			if project == "" || name == "" {
+				return "", fmt.Errorf("expected project and name to be set for %s. got project=%q name=%q", resourceName, project, name)
+			}
+
+			config := acctest.GoogleProviderConfig(t)
+			url, err := tpgresource.ReplaceVarsForTest(config, rs, "{{ComputeBasePath}}projects/{{project}}/global/images/{{name}}")
+			if err != nil {
+				return "", err
+			}
+			res, err := transport_tpg.SendRequest(transport_tpg.SendRequestOptions{
+				Config:    config,
+				Method:    "GET",
+				RawURL:    url,
+				UserAgent: config.UserAgent,
+			})
+			if err != nil {
+				return "", err
+			}
+
+			imageID, ok := res["id"].(string)
+			if !ok || imageID == "" {
+				return "", fmt.Errorf("expected id to be set for %s. got id=%q", resourceName, res["id"])
+			}
+
+			return fmt.Sprintf("//compute.googleapis.com/projects/%s/global/images/%s", project, imageID), nil
+		},
+	}
 }
